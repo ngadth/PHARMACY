@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>UR017_TC07_ValidateTimKiemKhoangThoiGianLap</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>63d702a4-8ab4-4824-b939-3b7827abeab5</testCaseGuid>
+</TestCaseEntity>

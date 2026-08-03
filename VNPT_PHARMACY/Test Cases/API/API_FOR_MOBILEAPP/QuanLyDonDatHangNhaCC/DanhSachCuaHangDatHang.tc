@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>DanhSachCuaHangDatHang</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ea8c48f3-2e59-46eb-b8d9-fcc15e0288e5</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC05_BanHangTheoGiaBanBuon</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>fd865645-70c6-46df-8293-48acf443e15e</testCaseGuid>
+</TestCaseEntity>

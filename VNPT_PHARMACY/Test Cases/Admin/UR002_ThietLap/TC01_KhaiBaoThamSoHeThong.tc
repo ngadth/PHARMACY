@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC01_KhaiBaoThamSoHeThong</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b1d2eb4e-33cc-41d1-b5f8-bb3f7d7aa3df</testCaseGuid>
+</TestCaseEntity>

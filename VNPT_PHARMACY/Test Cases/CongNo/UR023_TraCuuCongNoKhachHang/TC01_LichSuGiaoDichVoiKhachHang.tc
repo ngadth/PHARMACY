@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC01_LichSuGiaoDichVoiKhachHang</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c8870e8c-36f5-4f46-9a19-1a2de73f1f2e</testCaseGuid>
+</TestCaseEntity>

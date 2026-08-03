@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>UR017_TC06_ValidateTimKiemTheoCuaHang</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>952816d4-a4ae-4648-abcc-b8acde169202</testCaseGuid>
+</TestCaseEntity>

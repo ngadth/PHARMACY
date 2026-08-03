@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC01_BanThuocTheoDon</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>18018d62-c74a-44f0-9c9e-cd4aeb62f035</testCaseGuid>
+</TestCaseEntity>

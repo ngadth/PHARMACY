@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC16_ThemMoiKhongThanhCongTuDanhMucDQGKhiNhanHuy</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1a48fb65-d312-43f6-9789-878c6225ad81</testCaseGuid>
+</TestCaseEntity>

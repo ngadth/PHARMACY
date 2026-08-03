@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC02_BaoCaoBanHangTheoNhomHangHoaVaChiTietHangHoa</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a30faf8f-c315-4a4b-a5ca-341a4d4b52e1</testCaseGuid>
+</TestCaseEntity>

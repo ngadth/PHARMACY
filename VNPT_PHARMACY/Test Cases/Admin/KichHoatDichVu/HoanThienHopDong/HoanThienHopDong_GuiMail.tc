@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>HoanThienHopDong_GuiMail</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a81ef902-1b2e-4442-bfa8-02ec331b41f4</testCaseGuid>
+</TestCaseEntity>

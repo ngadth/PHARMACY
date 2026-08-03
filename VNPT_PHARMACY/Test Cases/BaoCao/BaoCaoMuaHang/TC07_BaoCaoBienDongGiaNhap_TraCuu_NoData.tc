@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC07_BaoCaoBienDongGiaNhap_TraCuu_NoData</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8093ca6b-baf2-44bd-9ddf-ee3a35f6301e</testCaseGuid>
+</TestCaseEntity>

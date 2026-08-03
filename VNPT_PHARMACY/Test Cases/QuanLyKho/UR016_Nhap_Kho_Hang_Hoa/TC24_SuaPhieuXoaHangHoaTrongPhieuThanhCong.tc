@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC24_SuaPhieuXoaHangHoaTrongPhieuThanhCong</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>be480a36-fc6f-4de2-94e0-e9a8072ecad4</testCaseGuid>
+</TestCaseEntity>

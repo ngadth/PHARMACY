@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC01_TraCuuGiaoDich</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>7c688902-aa97-4dff-9ea7-5d5cb3d9c8d1</testCaseGuid>
+</TestCaseEntity>
