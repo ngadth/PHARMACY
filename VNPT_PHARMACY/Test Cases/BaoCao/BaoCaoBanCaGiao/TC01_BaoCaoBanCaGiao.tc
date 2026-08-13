@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC01_BaoCaoBanCaGiao</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>acb4fd2f-1ecf-4ac9-9341-6609e32d1056</testCaseGuid>
+</TestCaseEntity>

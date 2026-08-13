@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC04_ValidateTruongTenKhachHang</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>5e4f7c9b-3d8a-4e62-b8f9-c4e7d3f5a8b6</testCaseGuid>
+</TestCaseEntity>

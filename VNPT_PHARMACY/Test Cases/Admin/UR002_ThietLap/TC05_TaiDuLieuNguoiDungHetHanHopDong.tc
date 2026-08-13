@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC05_TaiDuLieuNguoiDungHetHanHopDong</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>20ceab46-4b12-48fd-a393-5eb4a00c4963</testCaseGuid>
+</TestCaseEntity>

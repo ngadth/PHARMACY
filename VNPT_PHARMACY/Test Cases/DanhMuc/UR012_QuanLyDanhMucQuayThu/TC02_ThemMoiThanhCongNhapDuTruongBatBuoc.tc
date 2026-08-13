@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC02_ThemMoiThanhCongNhapDuTruongBatBuoc</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e474b456-90f3-4084-ad3f-e4a5ba0d639d</testCaseGuid>
+</TestCaseEntity>

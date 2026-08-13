@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC04_QuanLyThongBaoChucNang</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>4fce3e2c-a71f-498b-a6b4-d78e6ff407ee</testCaseGuid>
+</TestCaseEntity>

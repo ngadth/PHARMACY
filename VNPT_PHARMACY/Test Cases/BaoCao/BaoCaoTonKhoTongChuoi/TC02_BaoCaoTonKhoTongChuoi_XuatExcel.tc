@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC02_BaoCaoTonKhoTongChuoi_XuatExcel</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>eaec600f-61cd-4259-b8d7-942357380112</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC09_CuaHangDaiLyPhanPhoi</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ec67daac-bce0-4ffc-a8ab-b722f3ab73a0</testCaseGuid>
+</TestCaseEntity>

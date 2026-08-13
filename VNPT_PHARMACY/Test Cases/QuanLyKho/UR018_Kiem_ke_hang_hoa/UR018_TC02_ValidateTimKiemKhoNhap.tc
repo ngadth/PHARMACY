@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>UR018_TC02_ValidateTimKiemKhoNhap</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>95f9a0d4-148c-4290-bb26-dd62fb35d6ad</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>UR017_TC05_ValidateTimKiemTheoMaPhieuNhap</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e0ddf854-9902-45ed-8e98-0740b137a640</testCaseGuid>
+</TestCaseEntity>

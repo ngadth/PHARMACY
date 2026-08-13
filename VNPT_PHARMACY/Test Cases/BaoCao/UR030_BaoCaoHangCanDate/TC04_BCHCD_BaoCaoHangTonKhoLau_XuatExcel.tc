@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC04_BCHCD_BaoCaoHangTonKhoLau_XuatExcel</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ea0f98c6-c828-49ca-84f4-5bcc80bd6752</testCaseGuid>
+</TestCaseEntity>

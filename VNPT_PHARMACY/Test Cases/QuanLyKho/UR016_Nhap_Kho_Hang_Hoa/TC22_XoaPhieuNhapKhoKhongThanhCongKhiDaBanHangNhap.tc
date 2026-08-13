@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC22_XoaPhieuNhapKhoKhongThanhCongKhiDaBanHangNhap</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>f8452e05-f667-48eb-95a5-84d07f59a9a9</testCaseGuid>
+</TestCaseEntity>

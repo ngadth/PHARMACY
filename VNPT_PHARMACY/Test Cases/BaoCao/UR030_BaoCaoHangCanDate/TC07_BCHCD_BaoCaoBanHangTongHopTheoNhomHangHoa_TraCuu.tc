@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC07_BCHCD_BaoCaoBanHangTongHopTheoNhomHangHoa_TraCuu</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>bc8c38b0-3038-486a-b87b-94448d5d1df4</testCaseGuid>
+</TestCaseEntity>
