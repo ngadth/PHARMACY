@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC11_ValidateTextboxDiaChi(ThemKH)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>5507588f-3479-43c2-9db7-09af7ac3be27</testCaseGuid>
+</TestCaseEntity>

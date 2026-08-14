@@ -31,42 +31,8 @@ WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Bán hà
 
 WebUI.delay(2)
 
-WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Tìm mặt hàng (F3)', ('index'):'1']), GlobalVariable.maSanPham)
+WebUI.assertElementVisible(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Tìm khách hàng (F4)', ('index'):'2']), 3)
 
-List<WebElement> list = WebUI.findWebElements(findTestObject('XuatKhoBanHang/div_tenThuoc'),5)
-
-for (WebElement element : list) {
-	String tenThuoc = element.getText().trim()
-    assert tenThuoc.toLowerCase().contains(GlobalVariable.maSanPham.toLowerCase())
-}
-
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Tìm khách hàng (F4)', ('index'):'2']), '$#%@#$gvsdf435')
 WebUI.delay(2)
-
-//WebUI.click(findTestObject('XuatKhoBanHang/data_index', [('value') : '0']))
-TestObject dynamicObject = findTestObject('XuatKhoBanHang/data_index', [('value') : '0'])
-
-if (WebUI.verifyElementPresent(dynamicObject, 5, FailureHandling.OPTIONAL)) {
-    WebUI.click(dynamicObject)
-
-    println('Đã click element có value = 0')
-} else {
-    println('Không tìm thấy element có value = 0 → bỏ qua')
-}
-
-GlobalVariable.maKH = 'Auto_test01'
-
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'makh']), GlobalVariable.maKH)
-
-WebUI.click(findTestObject('Common/titlePage_bDynamicLocators', [('text') : GlobalVariable.maKH]))
-
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_kMTrucTiep'), '9999')
-
-//WebUI.clearText(findTestObject('XuatKhoBanHang/input_khachThanhToan'))
-//WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_khachThanhToan'), '500,000')
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/textarea_idDynamicLocators', [('idValue') : 'txtGhichu']), 'Tái khám sau 1 tháng')
-
-WebUI.click(findTestObject('XuatKhoBanHang/button_thanhToan'))
-
-WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Thanh toán thành công, số phiếu: ']), 
-    GlobalVariable.timeout)
-
+WebUI.verifyTextPresent('Không tìm thấy khách hàng nào phù hợp', false)

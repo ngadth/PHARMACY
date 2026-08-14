@@ -31,42 +31,28 @@ WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Bán hà
 
 WebUI.delay(2)
 
-WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Tìm mặt hàng (F3)', ('index'):'1']), GlobalVariable.maSanPham)
+// mac dinh
+String value = WebUI.getAttribute(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), 'value')
+assert value.trim() == '0'
 
-List<WebElement> list = WebUI.findWebElements(findTestObject('XuatKhoBanHang/div_tenThuoc'),5)
+// ky tu
+WebUI.setText(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), '#!dfgsfd')
 
-for (WebElement element : list) {
-	String tenThuoc = element.getText().trim()
-    assert tenThuoc.toLowerCase().contains(GlobalVariable.maSanPham.toLowerCase())
-}
+String value1 = WebUI.getAttribute(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), 'value')
+assert value1.trim() == ''
 
-WebUI.delay(2)
+// <16 
+WebUI.setText(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), '324,123,423,123412')
 
-//WebUI.click(findTestObject('XuatKhoBanHang/data_index', [('value') : '0']))
-TestObject dynamicObject = findTestObject('XuatKhoBanHang/data_index', [('value') : '0'])
+String value2 = WebUI.getAttribute(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), 'value')
+assert value2.size()<16
 
-if (WebUI.verifyElementPresent(dynamicObject, 5, FailureHandling.OPTIONAL)) {
-    WebUI.click(dynamicObject)
+WebUI.setText(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), '11')
 
-    println('Đã click element có value = 0')
-} else {
-    println('Không tìm thấy element có value = 0 → bỏ qua')
-}
+WebUI.sendKeys(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), Keys.chord(Keys.CONTROL, 'A'))
+WebUI.sendKeys(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), Keys.chord(Keys.CONTROL, 'C'))
 
-GlobalVariable.maKH = 'Auto_test01'
+WebUI.setText(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), '')
 
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'makh']), GlobalVariable.maKH)
-
-WebUI.click(findTestObject('Common/titlePage_bDynamicLocators', [('text') : GlobalVariable.maKH]))
-
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_kMTrucTiep'), '9999')
-
-//WebUI.clearText(findTestObject('XuatKhoBanHang/input_khachThanhToan'))
-//WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_khachThanhToan'), '500,000')
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/textarea_idDynamicLocators', [('idValue') : 'txtGhichu']), 'Tái khám sau 1 tháng')
-
-WebUI.click(findTestObject('XuatKhoBanHang/button_thanhToan'))
-
-WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Thanh toán thành công, số phiếu: ']), 
-    GlobalVariable.timeout)
+WebUI.sendKeys(findTestObject('XuatKhoBanHang/textarea_idDynamicLocators',[('idValue'):'txtGhichu']), Keys.chord(Keys.CONTROL, 'V'))
 

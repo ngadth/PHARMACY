@@ -31,42 +31,21 @@ WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Bán hà
 
 WebUI.delay(2)
 
-WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Tìm mặt hàng (F3)', ('index'):'1']), GlobalVariable.maSanPham)
-
-List<WebElement> list = WebUI.findWebElements(findTestObject('XuatKhoBanHang/div_tenThuoc'),5)
-
-for (WebElement element : list) {
-	String tenThuoc = element.getText().trim()
-    assert tenThuoc.toLowerCase().contains(GlobalVariable.maSanPham.toLowerCase())
+String cuaHangvalue ='6'
+// xac nhan chuyen
+String value = WebUI.getAttribute(findTestObject('QuanLyKho/droplist_selectDynamicLast',[('idValue'):'cboCuaHang']),'value')
+if(value.trim() == '6') {
+	cuaHangvalue = '12'
 }
+
+WebUI.selectOptionByValue(findTestObject('QuanLyKho/droplist_selectDynamicLast',[('idValue') : 'cboCuaHang']),cuaHangvalue,false)
+WebUI.delay(2)
+WebUI.verifyTextPresent('Việc chuyển đổi cửa hàng sẽ thực hiện xóa dữ liệu các hóa đơn đang bán. Bạn có chắc chắn muốn chuyển đổi không?', false)
+
+WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocators',[('buttonName'):'Xác nhận chuyển']))
 
 WebUI.delay(2)
 
-//WebUI.click(findTestObject('XuatKhoBanHang/data_index', [('value') : '0']))
-TestObject dynamicObject = findTestObject('XuatKhoBanHang/data_index', [('value') : '0'])
+String value1 = WebUI.getAttribute(findTestObject('QuanLyKho/droplist_selectDynamicLast',[('idValue'):'cboCuaHang']),'value')
 
-if (WebUI.verifyElementPresent(dynamicObject, 5, FailureHandling.OPTIONAL)) {
-    WebUI.click(dynamicObject)
-
-    println('Đã click element có value = 0')
-} else {
-    println('Không tìm thấy element có value = 0 → bỏ qua')
-}
-
-GlobalVariable.maKH = 'Auto_test01'
-
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'makh']), GlobalVariable.maKH)
-
-WebUI.click(findTestObject('Common/titlePage_bDynamicLocators', [('text') : GlobalVariable.maKH]))
-
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_kMTrucTiep'), '9999')
-
-//WebUI.clearText(findTestObject('XuatKhoBanHang/input_khachThanhToan'))
-//WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_khachThanhToan'), '500,000')
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/textarea_idDynamicLocators', [('idValue') : 'txtGhichu']), 'Tái khám sau 1 tháng')
-
-WebUI.click(findTestObject('XuatKhoBanHang/button_thanhToan'))
-
-WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Thanh toán thành công, số phiếu: ']), 
-    GlobalVariable.timeout)
-
+assert value1.trim() == cuaHangvalue

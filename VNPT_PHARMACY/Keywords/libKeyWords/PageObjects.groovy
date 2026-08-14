@@ -152,6 +152,12 @@ public class PageObject {
 		return sdf.format(today)
 	}
 
+	def String getCurrentDateTime() {
+		Date now = new Date()
+		SimpleDateFormat sdf = new SimpleDateFormat("ddMMHHmmss")
+		return sdf.format(now)
+	}
+	
 	//	public static boolean scrollIntoElementCenterView(TestObject TO) {
 	//		try {
 	//			element = WebUiCommonHelper.findWebElement(TO, GlobalVariable.waitPresentTimeout);

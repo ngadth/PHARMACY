@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC03_ValidateTextboxNgayban</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>5cd0b30a-5259-4b9c-945c-ea030f5ef2dc</testCaseGuid>
+</TestCaseEntity>
