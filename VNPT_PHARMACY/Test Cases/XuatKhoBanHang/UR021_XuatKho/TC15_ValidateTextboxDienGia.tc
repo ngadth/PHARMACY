@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC15_ValidateTextboxDienGia</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>9ad8a124-c592-4c33-a49b-e318f008a136</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC08_ValidateTextboxKhoXuat</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>99ce9e9e-f197-4a78-a326-c3b10c57de2d</testCaseGuid>
+</TestCaseEntity>

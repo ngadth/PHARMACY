@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC02_ValidateTextboxTimKiemSoPhieuXuat</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ab93b186-e1fb-48a5-98b0-01995fdde877</testCaseGuid>
+</TestCaseEntity>

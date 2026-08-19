@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC12_ValidateTextboxNguoiNhan</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b8456eee-db68-4373-b8ba-fe5c7debcc04</testCaseGuid>
+</TestCaseEntity>

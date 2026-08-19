@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC05_ValidateTextboxLoaiHangHoa</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>3b381893-9ec7-4f3c-91eb-8c7c4e42ee2f</testCaseGuid>
+</TestCaseEntity>

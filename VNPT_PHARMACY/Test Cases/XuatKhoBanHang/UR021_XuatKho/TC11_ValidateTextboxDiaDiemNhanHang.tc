@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC11_ValidateTextboxDiaDiemNhanHang</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>0aeffed8-09cf-4f47-972d-7dc9285005c2</testCaseGuid>
+</TestCaseEntity>

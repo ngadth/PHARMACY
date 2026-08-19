@@ -244,7 +244,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Apitim'</initValue>
+      <initValue>'Acirax 400'</initValue>
       <name>sanPham</name>
       <protected>false</protected>
       <valueType>STRING</valueType>

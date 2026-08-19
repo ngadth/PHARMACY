@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC14_ValidateTextboxPhuongTienVanChuyen</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>238a89bc-61a4-4fc7-ad63-87cfd59c79df</testCaseGuid>
+</TestCaseEntity>
