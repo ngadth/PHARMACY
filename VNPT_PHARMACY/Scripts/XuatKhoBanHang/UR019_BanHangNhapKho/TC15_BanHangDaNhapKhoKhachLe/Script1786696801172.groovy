@@ -58,12 +58,6 @@ String total = WebUI.getText(findTestObject('XuatKhoBanHang/td_ThanhTien'))
 
 assert total.replace(',', '').toInteger() == value.replace(',', '').toInteger()
 
-GlobalVariable.maKH = 'Auto_test01'
-
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'makh']), GlobalVariable.maKH)
-
-WebUI.click(findTestObject('Common/titlePage_bDynamicLocators', [('text') : GlobalVariable.maKH]))
-
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_kMTrucTiep'), '9999')
 
 //WebUI.clearText(findTestObject('XuatKhoBanHang/input_khachThanhToan'))

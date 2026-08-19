@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>TC06_ValidateTextboxKhachThanhToan</name>
+   <name>TC14_ValidateHetHanKhac</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>8f3bbf42-bd0a-4cc6-bcd5-1fa114c25fcc</testCaseGuid>
+   <testCaseGuid>33b1e4f2-ba14-417c-8210-47cc37470c54</testCaseGuid>
 </TestCaseEntity>

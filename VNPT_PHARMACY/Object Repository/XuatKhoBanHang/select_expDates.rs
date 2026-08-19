@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>label_Required</name>
+   <name>select_expDates</name>
    <tag></tag>
-   <elementGuidId>a3fec8a0-c465-406e-9726-921fffe819b9</elementGuidId>
+   <elementGuidId>edcd2f64-9613-46b5-a6a6-9b79f4959eab</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//label[contains(normalize-space(.), '${fieldName}')]/font)[last()]</value>
+         <value>//select[contains(@class,'exp_dates')]</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>label_Required</name>
+   <name>td_ThanhTien</name>
    <tag></tag>
-   <elementGuidId>a3fec8a0-c465-406e-9726-921fffe819b9</elementGuidId>
+   <elementGuidId>dfa9bd37-58cf-4466-a148-cf8a1dd0e97b</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//label[contains(normalize-space(.), '${fieldName}')]/font)[last()]</value>
+         <value>//td[contains(@class,'price_total')]</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

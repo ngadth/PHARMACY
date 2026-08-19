@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC13_ValidateHetHanTatCa</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a8085a8b-055c-4999-ae8d-c692d7d1872e</testCaseGuid>
+</TestCaseEntity>

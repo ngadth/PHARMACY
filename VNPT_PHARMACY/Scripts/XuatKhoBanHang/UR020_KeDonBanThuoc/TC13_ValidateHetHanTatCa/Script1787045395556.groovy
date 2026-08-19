@@ -20,25 +20,19 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.delay(2)
+WebUI.delay(5)
 
-//CustomKeywords.'libKeyWords.PageObject.openSubmenu'('XUẤT KHO/BÁN HÀNG', 'Bán hàng đã nhập kho')
 WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'XUẤT KHO/BÁN HÀNG']))
 
-WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Bán hàng đã nhập kho']))
+WebUI.waitForElementClickable(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Kê đơn bán thuốc']), 30)
+
+WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Kê đơn bán thuốc']))
 
 WebUI.delay(2)
 
-WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Tìm mặt hàng (F3)', ('index'):'1']), GlobalVariable.maSanPham)
-
-//List<WebElement> list = WebUI.findWebElements(findTestObject('XuatKhoBanHang/div_tenThuoc'),5)
-//
-//for (WebElement element : list) {
-//	String tenThuoc = element.getText().trim()
-//    assert tenThuoc.toLowerCase().contains(GlobalVariable.maSanPham.toLowerCase())
-//}
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Tìm mặt hàng (F3)', ('index'):'1']),'Akiaphan')
 
 WebUI.delay(2)
 
@@ -46,31 +40,39 @@ WebUI.delay(2)
 TestObject dynamicObject = findTestObject('XuatKhoBanHang/data_index', [('value') : '0'])
 
 if (WebUI.verifyElementPresent(dynamicObject, 5, FailureHandling.OPTIONAL)) {
-    WebUI.click(dynamicObject)
+	WebUI.click(dynamicObject)
 
-    println('Đã click element có value = 0')
+	println('Đã click element có value = 0')
 } else {
-    println('Không tìm thấy element có value = 0 → bỏ qua')
+	println('Không tìm thấy element có value = 0 → bỏ qua')
 }
 
-String value = WebUI.getAttribute(findTestObject('XuatKhoBanHang/input_DonGia'), 'value')
-String total = WebUI.getText(findTestObject('XuatKhoBanHang/td_ThanhTien'))
+BigDecimal slTon = new BigDecimal(WebUI.getText(findTestObject('XuatKhoBanHang/td_tonKho')).trim())
 
-assert total.replace(',', '').toInteger() == value.replace(',', '').toInteger()
-
-GlobalVariable.maKH = 'Auto_test01'
-
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'makh']), GlobalVariable.maKH)
-
-WebUI.click(findTestObject('Common/titlePage_bDynamicLocators', [('text') : GlobalVariable.maKH]))
-
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_kMTrucTiep'), '9999')
-
-//WebUI.clearText(findTestObject('XuatKhoBanHang/input_khachThanhToan'))
-//WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_khachThanhToan'), '500,000')
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/textarea_idDynamicLocators', [('idValue') : 'txtGhichu']), 'Tái khám sau 1 tháng')
+WebUI.selectOptionByLabel(findTestObject('XuatKhoBanHang/select_expDates'),'Tất cả',false)
 
 WebUI.click(findTestObject('XuatKhoBanHang/button_thanhToan'))
 
-WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Thanh toán thành công, số phiếu: ']),  GlobalVariable.timeout)
+WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Thanh toán thành công, số phiếu: ']), GlobalVariable.timeout)
 
+WebUI.delay(2)
+
+WebUI.refresh()
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Tìm mặt hàng (F3)', ('index'):'1']),'Akiaphan')
+
+WebUI.delay(2)
+
+//WebUI.click(findTestObject('XuatKhoBanHang/data_index', [('value') : '0']))
+TestObject dynamicObject2 = findTestObject('XuatKhoBanHang/data_index', [('value') : '0'])
+
+if (WebUI.verifyElementPresent(dynamicObject2, 5, FailureHandling.OPTIONAL)) {
+	WebUI.click(dynamicObject2)
+
+	println('Đã click element có value = 0')
+} else {
+	println('Không tìm thấy element có value = 0 → bỏ qua')
+}
+
+BigDecimal slTon2 = new BigDecimal(WebUI.getText(findTestObject('XuatKhoBanHang/td_tonKho')).trim())
+
+assert slTon2 == slTon - 1

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>label_Required</name>
+   <name>td_tonKho</name>
    <tag></tag>
-   <elementGuidId>a3fec8a0-c465-406e-9726-921fffe819b9</elementGuidId>
+   <elementGuidId>d385ecf6-3a34-4262-8a28-6d08edb978a1</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//label[contains(normalize-space(.), '${fieldName}')]/font)[last()]</value>
+         <value>//td[contains(@class,'pslton')]</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

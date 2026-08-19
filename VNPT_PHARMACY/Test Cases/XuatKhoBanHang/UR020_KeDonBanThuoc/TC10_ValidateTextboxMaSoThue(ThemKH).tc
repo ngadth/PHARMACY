@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC10_ValidateTextboxMaSoThue(ThemKH)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c2a8559f-a580-4374-8f1e-36d97a688a00</testCaseGuid>
+</TestCaseEntity>

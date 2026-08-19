@@ -31,28 +31,46 @@ WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Bán hà
 
 WebUI.delay(2)
 
-// mac dinh
-String value = WebUI.getAttribute(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), 'value')
-assert value.trim() == '0'
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Tìm mặt hàng (F3)', ('index'):'1']),'Akiaphan')
 
-// ky tu
-WebUI.setText(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), '#!dfgsfd')
+WebUI.delay(2)
 
-String value1 = WebUI.getAttribute(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), 'value')
-assert value1.trim() == ''
+//WebUI.click(findTestObject('XuatKhoBanHang/data_index', [('value') : '0']))
+TestObject dynamicObject = findTestObject('XuatKhoBanHang/data_index', [('value') : '0'])
 
-// <16 
-WebUI.setText(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), '324,123,423,123412')
+if (WebUI.verifyElementPresent(dynamicObject, 5, FailureHandling.OPTIONAL)) {
+	WebUI.click(dynamicObject)
 
-String value2 = WebUI.getAttribute(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), 'value')
-assert value2.size()<16
+	println('Đã click element có value = 0')
+} else {
+	println('Không tìm thấy element có value = 0 → bỏ qua')
+}
 
-WebUI.setText(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), '11')
+String slTon = WebUI.getText(findTestObject('XuatKhoBanHang/td_tonKho'))
 
-WebUI.sendKeys(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), Keys.chord(Keys.CONTROL, 'A'))
-WebUI.sendKeys(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), Keys.chord(Keys.CONTROL, 'C'))
+WebUI.selectOptionByLabel(findTestObject('XuatKhoBanHang/select_expDates'),'Tất cả',false)
 
-WebUI.setText(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), '')
+WebUI.click(findTestObject('XuatKhoBanHang/button_thanhToan'))
 
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/textarea_idDynamicLocators',[('idValue'):'txtGhichu']), Keys.chord(Keys.CONTROL, 'V'))
+WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Thanh toán thành công, số phiếu: ']), GlobalVariable.timeout)
 
+WebUI.delay(2)
+
+WebUI.refresh()
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Tìm mặt hàng (F3)', ('index'):'1']),'Akiaphan')
+
+WebUI.delay(2)
+
+//WebUI.click(findTestObject('XuatKhoBanHang/data_index', [('value') : '0']))
+TestObject dynamicObject2 = findTestObject('XuatKhoBanHang/data_index', [('value') : '0'])
+
+if (WebUI.verifyElementPresent(dynamicObject2, 5, FailureHandling.OPTIONAL)) {
+	WebUI.click(dynamicObject2)
+
+	println('Đã click element có value = 0')
+} else {
+	println('Không tìm thấy element có value = 0 → bỏ qua')
+}
+
+String slTon2 = WebUI.getText(findTestObject('XuatKhoBanHang/td_tonKho'))
+assert Integer.parseInt(slTon2.trim()) == Integer.parseInt(slTon.trim()) - 1

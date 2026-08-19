@@ -20,40 +20,21 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.delay(2)
+WebUI.delay(5)
 
-//CustomKeywords.'libKeyWords.PageObject.openSubmenu'('XUẤT KHO/BÁN HÀNG', 'Bán hàng đã nhập kho')
 WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'XUẤT KHO/BÁN HÀNG']))
 
-WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Bán hàng đã nhập kho']))
+WebUI.waitForElementClickable(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Kê đơn bán thuốc']), 30)
 
-WebUI.delay(2)
+WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Kê đơn bán thuốc']))
 
-String cuaHangvalue ='6'
-// xac nhan chuyen
-String value = WebUI.getAttribute(findTestObject('QuanLyKho/droplist_selectDynamicLast',[('idValue'):'cboCuaHang']),'value')
-if(value.trim() == '6') {
-	cuaHangvalue = '12'
-}
+WebUI.delay(3)
 
-WebUI.selectOptionByValue(findTestObject('QuanLyKho/droplist_selectDynamicLast',[('idValue') : 'cboCuaHang']),cuaHangvalue,false)
-WebUI.delay(2)
-WebUI.verifyTextPresent('Việc chuyển đổi cửa hàng sẽ thực hiện xóa dữ liệu các hóa đơn đang bán. Bạn có chắc chắn muốn chuyển đổi không?', false)
+// mac dinh
+String currentDate = CustomKeywords.'libKeyWords.PageObject.getCurrentDate'()
 
-WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocators',[('buttonName'):'Xác nhận chuyển']))
+String value = WebUI.getAttribute(findTestObject('XuatKhoBanHang/input_idDynamicLocatorsLast',[('idValue'):'CcTXUAPS']),'value')
 
-WebUI.delay(2)
-
-String value1 = WebUI.getAttribute(findTestObject('QuanLyKho/droplist_selectDynamicLast',[('idValue'):'cboCuaHang']),'value')
-
-assert value1.trim() == cuaHangvalue
-
-if(value1.trim()!= '6') {
-	WebUI.selectOptionByValue(findTestObject('QuanLyKho/droplist_selectDynamicLast',[('idValue') : 'cboCuaHang']),'6',false)
-	WebUI.delay(2)
-	WebUI.verifyTextPresent('Việc chuyển đổi cửa hàng sẽ thực hiện xóa dữ liệu các hóa đơn đang bán. Bạn có chắc chắn muốn chuyển đổi không?', false)
-	
-	WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocators',[('buttonName'):'Xác nhận chuyển']))
-}
+assert value.trim() == currentDate

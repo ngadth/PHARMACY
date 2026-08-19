@@ -20,69 +20,70 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.delay(2)
+WebUI.delay(5)
 
-//CustomKeywords.'libKeyWords.PageObject.openSubmenu'('XUẤT KHO/BÁN HÀNG', 'Bán hàng đã nhập kho')
 WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'XUẤT KHO/BÁN HÀNG']))
 
-WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Bán hàng đã nhập kho']))
+WebUI.waitForElementClickable(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Kê đơn bán thuốc']), 30)
 
-WebUI.delay(2)
+WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Kê đơn bán thuốc']))
+
+WebUI.delay(3)
 
 WebUI.click(findTestObject('Common/dropdown_spanlastDynamicLocators', [('text') : 'Thêm khách hàng']))
 
 // mac dinh
-String value = WebUI.getAttribute(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Mã số thuế']),'value')
+String value = WebUI.getAttribute(findTestObject('QuanLyKho/input_labelIndexDynamicLocators', [('labelValue') : 'Số di động', ('index') : '2']),'value')
 
 assert value.trim() == ''
 
 // truong khong bat buoc
-WebUI.assertElementNotPresent(findTestObject('Common/label_Required',[('fieldName'):'Mã số thuế']), 3)
+WebUI.assertElementNotPresent(findTestObject('Common/label_Required',[('fieldName'):'Số di động']), 3)
 
 // ky tu chu
-WebUI.setText(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Tên KH ']),'trịnh trần phương tuấn')
+WebUI.setText(findTestObject('QuanLyKho/input_labelIndexDynamicLocators', [('labelValue') : 'Tên KH ', ('index') : '2']),'trịnh trần phương tuấn')
 
-WebUI.setText(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Địa chỉ']),'bến tre')
+WebUI.setText(findTestObject('QuanLyKho/input_labelIndexDynamicLocators', [('labelValue') : 'Địa chỉ', ('index') : '5']),'bến tre')
 
-WebUI.setText(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Mã số thuế']),'dsga')
+WebUI.setText(findTestObject('QuanLyKho/input_labelIndexDynamicLocators', [('labelValue') : 'Số di động', ('index') : '2']),'dsga')
 
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast',[('buttonName'):'Lưu']))
 
-WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Vui lòng nhập Mã số thuế chỉ bao gồm các số 0-9 và dấu -']), 3)
+WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Số di dộng gồm 10 số. Vui lòng nhập lại!']), 3)
 
 // html
-WebUI.setText(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Mã số thuế']),'<script>alert(document.cookie)</script>')
+WebUI.setText(findTestObject('QuanLyKho/input_labelIndexDynamicLocators', [('labelValue') : 'Số di động', ('index') : '2']),'<script>alert(document.cookie)</script>')
 
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast',[('buttonName'):'Lưu']))
 
-WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Vui lòng nhập Mã số thuế chỉ bao gồm các số 0-9 và dấu -']), 3)
+WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Số di dộng gồm 10 số. Vui lòng nhập lại!']), 3)
 
 // copy paste
 String soDidong = CustomKeywords.'libKeyWords.PageObject.getCurrentDateTime'()
 
-WebUI.setText(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Mã số thuế']), '0'+soDidong)
+WebUI.setText(findTestObject('QuanLyKho/input_labelIndexDynamicLocators', [('labelValue') : 'Số di động', ('index') : '2']), '0983456718')
 
-WebUI.sendKeys(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Mã số thuế']), Keys.chord(Keys.CONTROL, 'A'))
-WebUI.sendKeys(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Mã số thuế']), Keys.chord(Keys.CONTROL, 'C'))
+WebUI.sendKeys(findTestObject('QuanLyKho/input_labelIndexDynamicLocators', [('labelValue') : 'Số di động', ('index') : '2']), Keys.chord(Keys.CONTROL, 'A'))
+WebUI.sendKeys(findTestObject('QuanLyKho/input_labelIndexDynamicLocators', [('labelValue') : 'Số di động', ('index') : '2']), Keys.chord(Keys.CONTROL, 'C'))
 
-WebUI.setText(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Mã số thuế']), '')
+WebUI.setText(findTestObject('QuanLyKho/input_labelIndexDynamicLocators', [('labelValue') : 'Số di động', ('index') : '2']), '')
 
-WebUI.sendKeys(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Mã số thuế']), Keys.chord(Keys.CONTROL, 'V'))
+WebUI.sendKeys(findTestObject('QuanLyKho/input_labelIndexDynamicLocators', [('labelValue') : 'Số di động', ('index') : '2']), Keys.chord(Keys.CONTROL, 'V'))
 
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast',[('buttonName'):'Lưu']))
 
 WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Đã cập nhật thành công']), 3)
 
-// sdd ton tai
+//// sdd ton tai
 //WebUI.click(findTestObject('Common/dropdown_spanlastDynamicLocators', [('text') : 'Thêm khách hàng']))
 //
-//WebUI.setText(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Tên KH ']),'trịnh trần phương tuấn')
+//WebUI.setText(findTestObject('QuanLyKho/input_labelIndexDynamicLocators', [('labelValue') : 'Tên KH', ('index') : '2']),'trịnh trần phương tuấn')
 //
-//WebUI.setText(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Địa chỉ']),'bến tre')
+//WebUI.setText(findTestObject('QuanLyKho/input_labelIndexDynamicLocators', [('labelValue') : 'Địa chỉ', ('index') : '5']),'bến tre')
 //
-//WebUI.setText(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Số di động']), '0'+soDidong)
+//WebUI.setText(findTestObject('QuanLyKho/input_labelIndexDynamicLocators', [('labelValue') : 'Số di động', ('index') : '2']), '0983456718')
 //
 //WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast',[('buttonName'):'Lưu']))
 //

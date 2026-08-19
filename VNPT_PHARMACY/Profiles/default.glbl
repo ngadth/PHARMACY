@@ -237,7 +237,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'cảm xuyên hương'</initValue>
+      <initValue>'a'</initValue>
       <name>maSanPham</name>
       <protected>false</protected>
       <valueType>STRING</valueType>

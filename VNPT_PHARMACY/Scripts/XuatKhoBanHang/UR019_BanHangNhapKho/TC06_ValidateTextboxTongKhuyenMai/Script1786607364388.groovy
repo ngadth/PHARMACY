@@ -31,29 +31,30 @@ WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Bán hà
 
 WebUI.delay(2)
 
-String cuaHangvalue ='6'
-// xac nhan chuyen
-String value = WebUI.getAttribute(findTestObject('QuanLyKho/droplist_selectDynamicLast',[('idValue'):'cboCuaHang']),'value')
-if(value.trim() == '6') {
-	cuaHangvalue = '12'
-}
+// mac dinh
+String value = WebUI.getAttribute(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), 'value')
+assert value.trim() == '0'
 
-WebUI.selectOptionByValue(findTestObject('QuanLyKho/droplist_selectDynamicLast',[('idValue') : 'cboCuaHang']),cuaHangvalue,false)
-WebUI.delay(2)
-WebUI.verifyTextPresent('Việc chuyển đổi cửa hàng sẽ thực hiện xóa dữ liệu các hóa đơn đang bán. Bạn có chắc chắn muốn chuyển đổi không?', false)
+// ky tu
+WebUI.setText(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), '#!dfgsfd')
 
-WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocators',[('buttonName'):'Xác nhận chuyển']))
+String value1 = WebUI.getAttribute(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), 'value')
+assert value1.trim() == ''
 
-WebUI.delay(2)
+// <16 
+WebUI.setText(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), '324,123,423,123412')
 
-String value1 = WebUI.getAttribute(findTestObject('QuanLyKho/droplist_selectDynamicLast',[('idValue'):'cboCuaHang']),'value')
+String value2 = WebUI.getAttribute(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), 'value')
+assert value2.size()<16
 
-assert value1.trim() == cuaHangvalue
 
-if(value1.trim()!= '6') {
-	WebUI.selectOptionByValue(findTestObject('QuanLyKho/droplist_selectDynamicLast',[('idValue') : 'cboCuaHang']),'6',false)
-	WebUI.delay(2)
-	WebUI.verifyTextPresent('Việc chuyển đổi cửa hàng sẽ thực hiện xóa dữ liệu các hóa đơn đang bán. Bạn có chắc chắn muốn chuyển đổi không?', false)
-	
-	WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocators',[('buttonName'):'Xác nhận chuyển']))
-}
+// copy paste
+WebUI.setText(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), '11')
+
+WebUI.sendKeys(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), Keys.chord(Keys.CONTROL, 'A'))
+WebUI.sendKeys(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), Keys.chord(Keys.CONTROL, 'C'))
+
+WebUI.setText(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), '')
+
+WebUI.sendKeys(findTestObject('Common/input_tdTextDynamicLocators',[('text'):'KM trực tiếp', ('index'):'2']), Keys.chord(Keys.CONTROL, 'V'))
+
