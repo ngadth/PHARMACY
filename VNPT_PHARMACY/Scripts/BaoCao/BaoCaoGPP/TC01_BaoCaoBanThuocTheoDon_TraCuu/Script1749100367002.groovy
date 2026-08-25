@@ -22,6 +22,8 @@ String date			='13/08/2024'
 
 WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
+WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+
 WebUI.click(findTestObject('Common/menu_aDynamicLocators',[('text'):'BÁO CÁO']))
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators',[('text'):'Báo cáo GPP']))

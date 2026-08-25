@@ -23,7 +23,7 @@ WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhC
 
 WebUI.delay(5)
 
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'XUẤT KHO/BÁN HÀNG']))
 
@@ -65,7 +65,12 @@ WebUI.clearText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue')
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'diengiai']), 'Xuất kho bán hàng')
 
+// <101 | <300
+WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'diachinhanhang']), 'Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5')
 
+WebUI.click(findTestObject('XuatKhoBanHang/button_lastDynamicLocators', [('buttonName') : 'Lưu']))
+
+WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Có lỗi trong quá trình cập nhật. Quý khách vui lòng thử lại sau!']), 10)
 
 // copy paste
 WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'diachinhanhang']), 'Đà nẵng')

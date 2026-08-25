@@ -22,6 +22,7 @@ String date = ('20/09/2023' + ' - ') + '20/09/2025'
 String columnTable = "Chứng từ;Ngày";
 
 WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
 
 WebUI.click(findTestObject('Common/menu_baoCao'))
 

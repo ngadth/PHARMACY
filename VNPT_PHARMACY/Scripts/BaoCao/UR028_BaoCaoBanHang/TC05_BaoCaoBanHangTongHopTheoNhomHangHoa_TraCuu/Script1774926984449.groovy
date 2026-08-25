@@ -25,6 +25,8 @@ WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhC
 
 WebUI.delay(5)
 
+WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'BÁO CÁO']))
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Báo cáo bán hàng']))

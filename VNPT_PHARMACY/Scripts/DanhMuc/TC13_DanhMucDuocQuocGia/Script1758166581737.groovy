@@ -67,6 +67,7 @@ WebUI.setText(findTestObject('Common/input_password'), GlobalVariable.passAdmin)
 WebUI.click(findTestObject('Common/btn_DangNhap'))
 
 WebUI.waitForElementVisible(findTestObject('Common/logo_vnpt'), GlobalVariable.timeout)
+WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
 
 CustomKeywords.'libKeyWords.PageObject.openSubmenu'('DANH MỤC', 'Danh mục dược quốc gia')
 

@@ -23,7 +23,7 @@ WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhC
 WebUI.delay(2)
 
 //CustomKeywords.'libKeyWords.PageObject.openSubmenu'('XUẤT KHO/BÁN HÀNG', 'Bán hàng đã nhập kho')
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'XUẤT KHO/BÁN HÀNG']))
 
@@ -64,7 +64,19 @@ WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_kMTrucTiep'), '9999')
 //WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_khachThanhToan'), '500,000')
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/textarea_idDynamicLocators', [('idValue') : 'txtGhichu']), 'Tái khám sau 1 tháng')
 
+String currentTime = CustomKeywords.'libKeyWords.PageObject.getCurrentDateTimeFull'()
+
 WebUI.click(findTestObject('XuatKhoBanHang/button_thanhToan'))
 
 WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Thanh toán thành công, số phiếu: ']),  GlobalVariable.timeout)
 
+WebUI.click(findTestObject('Common/dropdown_account'))
+
+WebUI.click(findTestObject('QuanLyKho/li_aTextDynamicLocators',[('textValue'):'Tra cứu giao dịch bán hàng']))
+
+String value1 = WebUI.getText(findTestObject('Common/cell_tdDynamicLocators',[('index'):'50']))
+
+Date expected = Date.parse('dd/MM/yyyy HH:mm:ss', currentTime)
+Date actual = Date.parse('dd/MM/yyyy HH:mm:ss', value1)
+
+assert actual >= expected

@@ -20,6 +20,7 @@ import org.openqa.selenium.Keys as Keys
 String columnTable = 'Chứng từ;Ngày NK'
 
 WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
 
 //WebUI.click(findTestObject('Common/menu_baoCao'))
 //

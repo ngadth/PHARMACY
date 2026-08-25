@@ -23,7 +23,7 @@ WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhC
 WebUI.delay(2)
 
 //CustomKeywords.'libKeyWords.PageObject.openSubmenu'('XUẤT KHO/BÁN HÀNG', 'Bán hàng đã nhập kho')
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'XUẤT KHO/BÁN HÀNG']))
 
@@ -109,4 +109,10 @@ WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast',[('buttonN
 
 WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Vui lòng nhập tên không chứa thẻ html!']), 3)
 
+// <50 | <300
+WebUI.setText(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Tên KH ']), 'Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5')
+
+WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast',[('buttonName'):'Lưu']))
+
+WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Có lỗi xảy ra. Vui lòng thực hiện lại!']), 3)
 

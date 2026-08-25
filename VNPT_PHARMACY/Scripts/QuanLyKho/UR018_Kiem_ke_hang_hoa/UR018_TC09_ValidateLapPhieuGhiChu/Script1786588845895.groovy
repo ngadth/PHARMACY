@@ -46,6 +46,14 @@ String value1 = WebUI.getAttribute(findTestObject('Common/input_placeholderDynam
 
 assert value1.trim() == 'ABC-234'
 
+//html
+
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Ghi chú', ('index') : 1]), '<script>alert(document.cookie)</script>')
+
+String value2 = WebUI.getAttribute(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Ghi chú', ('index') : 1]), 'value')
+
+assert value2.trim() == '<script>alert(document.cookie)</script>'
+
 // ky tu dac biet
 
 WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Ghi chú', ('index') : 1]), '# "-,/"')
@@ -54,3 +62,10 @@ WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('button
 
 WebUI.assertElementVisible(findTestObject('Common/noti_h4ThanhCong',[('text'):'Có lỗi xảy ra, bạn vui lòng thử lại!']), 5)
 
+////<21
+//
+//WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Ghi chú', ('index') : 1]), 'AGASD-4564562-q52-GSDGSDGFSDF')
+//
+//String value3 = WebUI.getAttribute(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Ghi chú', ('index') : 1]), 'value')
+//
+//assert value3.trim().size() <= 20

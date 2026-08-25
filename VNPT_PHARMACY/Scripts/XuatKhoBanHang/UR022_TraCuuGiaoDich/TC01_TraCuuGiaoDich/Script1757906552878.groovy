@@ -18,12 +18,14 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import internal.GlobalVariable as GlobalVariable
 
-String status = 'Chưa đồng bộ'
-
+//String status = 'Chưa đồng bộ'
+String status = 'Chưa LT'
 //WebUI.callTestCase(findTestCase('Admin/Common/TC01_DangNhap'), [:], FailureHandling.STOP_ON_FAILURE)
 WebUI.callTestCase(findTestCase('XuatKhoBanHang/TC01_BanThuocTheoDon'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.delay(3)
+
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 //CustomKeywords.'libKeyWords.PageObject.openSubmenu'('XUẤT KHO/BÁN HÀNG', 'Tra cứu giao dịch')
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'XUẤT KHO/BÁN HÀNG']))
@@ -33,8 +35,8 @@ WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Tra cứ
 WebUI.verifyElementPresent(findTestObject('Common/titlePage_bDynamicLocators', [('text') : 'Tra cứu giao dịch bán hàng']), 
     3)
 
-WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : '5F5ZDA9f5o..']), 'HUONG6787-Nguyễn Thanh Hương', 
-    false)
+//WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : '5F5ZDA9f5o..']), 'HUONG6787-Nguyễn Thanh Hương', false)
+WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : '5F5ZDA9f5o..']), 'SHOP2-Nhà thuốc Minh Lộc', false)
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'CBtaCy1w6FAl4m..']), GlobalVariable.maDonThuoc)
 
@@ -62,7 +64,7 @@ WebUI.verifyEqual(value4, GlobalVariable.maDonThuoc)
 
 WebUI.verifyEqual(tenKH, GlobalVariable.maKH)
 
-WebUI.verifyEqual(nguoiBan, GlobalVariable.username)
+WebUI.verifyEqual(nguoiBan, GlobalVariable.userAdmin)
 
 WebUI.verifyEqual(trangThai, status)
 

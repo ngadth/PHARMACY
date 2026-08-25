@@ -24,6 +24,7 @@ String columnTable = 'Nhóm hàng hóa;SL bán;Doanh thu;Giá vốn;SL trả;Ti�
 WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 WebUI.delay(2)
+WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
 
 WebUI.click(findTestObject('Common/menu_baoCao'))
 

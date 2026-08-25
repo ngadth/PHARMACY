@@ -23,13 +23,33 @@ WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhC
 WebUI.delay(2)
 
 //CustomKeywords.'libKeyWords.PageObject.openSubmenu'('XUẤT KHO/BÁN HÀNG', 'Bán hàng đã nhập kho')
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'XUẤT KHO/BÁN HÀNG']))
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Bán hàng đã nhập kho']))
 
 WebUI.delay(2)
+
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Tìm mặt hàng (F3)', ('index'):'1']), GlobalVariable.maSanPham)
+
+WebUI.delay(2)
+
+//WebUI.click(findTestObject('XuatKhoBanHang/data_index', [('value') : '0']))
+TestObject dynamicObject = findTestObject('XuatKhoBanHang/data_index', [('value') : '0'])
+
+if (WebUI.verifyElementPresent(dynamicObject, 5, FailureHandling.OPTIONAL)) {
+	WebUI.click(dynamicObject)
+
+	println('Đã click element có value = 0')
+} else {
+	println('Không tìm thấy element có value = 0 → bỏ qua')
+}
+
+String value = WebUI.getAttribute(findTestObject('XuatKhoBanHang/input_DonGia'), 'value')
+String total = WebUI.getText(findTestObject('XuatKhoBanHang/td_ThanhTien'))
+
+assert total.replace(',', '').toInteger() == value.replace(',', '').toInteger()
 
 //mac dinh
 String value = WebUI.getAttribute(findTestObject('XuatKhoBanHang/textarea_idDynamicLocators',[('idValue'):'txtGhichu']), 'value')
@@ -48,3 +68,10 @@ WebUI.sendKeys(findTestObject('XuatKhoBanHang/textarea_idDynamicLocators',[('idV
 
 String value1 = WebUI.getAttribute(findTestObject('XuatKhoBanHang/textarea_idDynamicLocators',[('idValue'):'txtGhichu']), 'value')
 assert value1 == ghiChu
+// html
+
+WebUI.setText(findTestObject('XuatKhoBanHang/textarea_idDynamicLocators',[('idValue'):'txtGhichu']), '<script>alert(document.cookie)</script>')
+
+WebUI.click(findTestObject('XuatKhoBanHang/button_thanhToan'))
+
+WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Thanh toán thành công, số phiếu: ']),  GlobalVariable.timeout)

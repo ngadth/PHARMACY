@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC11_TimKiemGiaoDichBanHang</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>93416dcc-c171-4ed2-a49c-27a40c7c8789</testCaseGuid>
+</TestCaseEntity>

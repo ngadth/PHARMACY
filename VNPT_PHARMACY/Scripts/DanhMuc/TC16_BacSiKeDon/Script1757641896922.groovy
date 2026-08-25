@@ -41,14 +41,16 @@ WebUI.delay(3)
 
 WebUI.click(findTestObject('Common/text_pDynamicLocators', [('text') : GlobalVariable.maKH]))
 
-WebUI.sendKeys(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue') : 'TEN_BAC_SY_HN']), 'Nguyen Quang Tuan')
-
+//WebUI.sendKeys(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue') : 'TEN_BAC_SY_HN']), 'Nguyen Quang Tuan')
+WebUI.sendKeys(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue') : 'TEN_BAC_SY_HN']), 'Phan Văn Giàu Em')
 WebUI.delay(3)
 
-WebUI.click(findTestObject('Common/text_pDynamicLocators', [('text') : 'Nguyễn Quang Tuấn']))
+//WebUI.click(findTestObject('Common/text_pDynamicLocators', [('text') : 'Nguyễn Quang Tuấn']))
+WebUI.click(findTestObject('Common/text_pDynamicLocators', [('text') : 'Phan Văn Giàu Em']))
 
-WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'cboCuaHang']), 'HUONG6787-Nguyễn Thanh Hương', 
-    false)
+//WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'cboCuaHang']), 'HUONG6787-Nguyễn Thanh Hương', false)
+WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'cboCuaHang']), 'SHOP2-Nhà thuốc Minh Lộc', false)
+
 
 WebUI.click(findTestObject('Common/option_aDynamicLocators', [('optionName') : 'Danh sách thuốc']))
 

@@ -23,7 +23,7 @@ WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhC
 
 WebUI.delay(5)
 
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'XUẤT KHO/BÁN HÀNG']))
 
@@ -38,15 +38,8 @@ WebUI.delay(3)
 
 WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Thêm phiếu xuất kho']), 5)
 
-//mac dinh
-String value = WebUI.getAttribute(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'diengiai']),'value')
-
-assert value.trim() == ''
-
-// khong bat buoc
-WebUI.verifyElementNotPresent(findTestObject('Object Repository/Common/label_Required',[('fieldName'):'Diễn giải']), 3)
-
-// hien thi danh sach
+//phieu nhap kho khong thanh cong
+WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Thêm phiếu xuất kho']), 5)
 
 WebUI.click(findTestObject('XuatKhoBanHang/span_idDynamicLocators', [('idValue') : 'select2-khoxuat-container']))
 
@@ -70,14 +63,39 @@ WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') 
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'diengiai']), 'Xuất kho bán hàng')
 
+WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'ngayxuat']),'10/10/2010')
+
 WebUI.click(findTestObject('Common/checkbox_nameDynamicLocators', [('nameValue') : 'IytX4O..']))
 
 WebUI.acceptAlert()
 
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'diengiai']), 'ABC-234')
+WebUI.click(findTestObject('XuatKhoBanHang/button_lastDynamicLocators', [('buttonName') : 'Lưu']))
+
+WebUI.delay(5)
+
+WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Có lỗi trong quá trình cập nhật. Quý khách vui lòng thử lại sau!']), 10)
+
+String currentDate = CustomKeywords.'libKeyWords.PageObject.getCurrentDate'()
+
+WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'ngayxuat']),currentDate)
 
 WebUI.click(findTestObject('XuatKhoBanHang/button_lastDynamicLocators', [('buttonName') : 'Lưu']))
 
 WebUI.delay(5)
 
 WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Cập nhật thành công']), 10)
+
+WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Sửa phiếu xuất kho']), 5)
+
+WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'TFAh6E9X3yxl6B1e43o.']), GlobalVariable.sanPham)
+
+TestObject dynamicObject = findTestObject('XuatKhoBanHang/data_indexFirst', [('value') : '0'])
+
+if (WebUI.verifyElementPresent(dynamicObject, 5, FailureHandling.OPTIONAL)) {
+	WebUI.click(dynamicObject)
+
+	println('Đã click element có value = 0')
+} else {
+	println('Không tìm thấy element có value = 0 → bỏ qua')
+}
+

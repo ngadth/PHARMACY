@@ -158,6 +158,12 @@ public class PageObject {
 		return sdf.format(now)
 	}
 	
+	@Keyword
+	def String getCurrentDateTimeFull() {
+		Date now = new Date()
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
+		return sdf.format(now)
+	}
 	//	public static boolean scrollIntoElementCenterView(TestObject TO) {
 	//		try {
 	//			element = WebUiCommonHelper.findWebElement(TO, GlobalVariable.waitPresentTimeout);

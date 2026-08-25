@@ -23,7 +23,7 @@ WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhC
 
 WebUI.delay(5)
 
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'XUẤT KHO/BÁN HÀNG']))
 
@@ -50,4 +50,9 @@ WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'
 String value1 = WebUI.getAttribute(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Loại hàng hóa', ('index'):'1']),'value')
 assert value1.trim() == 'cảm xuyên hương'
 
-
+//// <21
+//WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Loại hàng hóa', ('index'):'1']), 'cảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hương')
+//WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Loại hàng hóa', ('index'):'1']), Keys.ENTER.toString())
+//
+//String value1 = WebUI.getAttribute(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Loại hàng hóa', ('index'):'1']),'value')
+//assert value1.size() <= 20

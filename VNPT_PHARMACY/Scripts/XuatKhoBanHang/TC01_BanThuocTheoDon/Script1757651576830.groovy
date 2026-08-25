@@ -24,6 +24,8 @@ WebUI.callTestCase(findTestCase('DanhMuc/TC16_BacSiKeDon'), [:], FailureHandling
 
 WebUI.delay(10)
 
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
+
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'XUẤT KHO/BÁN HÀNG']))
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Bán thuốc theo đơn']))
@@ -31,8 +33,8 @@ WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Bán thu
 //CustomKeywords.'libKeyWords.PageObject.openSubmenu'('XUẤT KHO/BÁN HÀNG', 'Bán thuốc theo đơn')
 WebUI.click(findTestObject('XuatKhoBanHang/label_forDynamicLocators', [('idValue') : 'presc_type2']))
 
-WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'cboCuaHang']), 'HUONG6787-Nguyễn Thanh Hương', 
-    false)
+//WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'cboCuaHang']), 'HUONG6787-Nguyễn Thanh Hương', false)
+WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'cboCuaHang']), 'SHOP2-Nhà thuốc Minh Lộc', false)
 
 //WebUI.waitForElementClickable(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Xác nhận chuyển']),30)
 

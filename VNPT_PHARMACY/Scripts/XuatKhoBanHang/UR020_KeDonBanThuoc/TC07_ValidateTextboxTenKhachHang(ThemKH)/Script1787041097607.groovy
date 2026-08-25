@@ -22,7 +22,7 @@ WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhC
 
 WebUI.delay(5)
 
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'XUẤT KHO/BÁN HÀNG']))
 
@@ -99,15 +99,21 @@ WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'�
 
 WebUI.click(findTestObject('Common/dropdown_spanlastDynamicLocators',[('text'):'Xóa khách hàng']))
 
-////<html>
-//WebUI.click(findTestObject('Common/dropdown_spanlastDynamicLocators', [('text') : 'Thêm khách hàng']))
-//
-//WebUI.setText(findTestObject('QuanLyKho/input_labelIndexDynamicLocators', [('labelValue') : 'Tên KH ', ('index') : '2']), '<script>alert(document.cookie)</script>')
-//
-//WebUI.setText(findTestObject('QuanLyKho/input_labelIndexDynamicLocators', [('labelValue') : 'Địa chỉ', ('index') : '5']),'bến tre')
-//
-//WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast',[('buttonName'):'Lưu']))
-//
-//WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Vui lòng nhập tên không chứa thẻ html!']), 3)
+// < 50 | <100
 
+WebUI.click(findTestObject('Common/dropdown_spanlastDynamicLocators', [('text') : 'Thêm khách hàng']))
+
+WebUI.setText(findTestObject('QuanLyKho/input_labelIndexDynamicLocators', [('labelValue') : 'Tên KH ', ('index') : '2']), 'Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5')
+
+WebUI.setText(findTestObject('QuanLyKho/input_labelIndexDynamicLocators', [('labelValue') : 'Địa chỉ', ('index') : '5']),'bến tre')
+
+WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast',[('buttonName'):'Lưu']))
+
+WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Tên KH phải có độ dài nằm trong khoảng 0-100']), 3)
+//<html>
+WebUI.setText(findTestObject('QuanLyKho/input_labelIndexDynamicLocators', [('labelValue') : 'Tên KH ', ('index') : '2']), '<script>alert(document.cookie)</script>')
+
+WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast',[('buttonName'):'Lưu']))
+
+WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Đã cập nhật thành công']), 3)
 

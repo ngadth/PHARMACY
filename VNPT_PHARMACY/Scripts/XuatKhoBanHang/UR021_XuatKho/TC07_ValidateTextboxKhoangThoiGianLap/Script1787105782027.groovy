@@ -23,7 +23,7 @@ WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhC
 
 WebUI.delay(5)
 
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'XUẤT KHO/BÁN HÀNG']))
 
@@ -75,8 +75,6 @@ for (int i = 0; i < invalidDate.size(); i++) {
 	String date2 = invalidDate[i] + ' - ' + invalidDate[i]
 
 	WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo khoảng thời gian', ('index'):'1']),date2)
-
-	WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo khoảng thời gian', ('index'):'1']),Keys.chord(Keys.ENTER))
 
 	WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo khoảng thời gian', ('index'):'1']),Keys.chord(Keys.ENTER))
 	

@@ -71,6 +71,7 @@ WebUI.setText(findTestObject('Common/input_password'), GlobalVariable.password)
 WebUI.click(findTestObject('Common/btn_DangNhap'))
 
 WebUI.waitForElementVisible(findTestObject('Common/logo_vnpt'), GlobalVariable.timeout)
+WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
 
 WebUI.click(findTestObject('Common/menu_baoCao'))
 

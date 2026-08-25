@@ -28,6 +28,7 @@ String dateKT = '18/10/2028'
 WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.delay(5)
+WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'DANH MỤC']))
 

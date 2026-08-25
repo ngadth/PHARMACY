@@ -23,7 +23,7 @@ WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhC
 WebUI.delay(2)
 
 //CustomKeywords.'libKeyWords.PageObject.openSubmenu'('XUẤT KHO/BÁN HÀNG', 'Bán hàng đã nhập kho')
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'XUẤT KHO/BÁN HÀNG']))
 
@@ -56,4 +56,13 @@ if(value1.trim()!= '6') {
 	WebUI.verifyTextPresent('Việc chuyển đổi cửa hàng sẽ thực hiện xóa dữ liệu các hóa đơn đang bán. Bạn có chắc chắn muốn chuyển đổi không?', false)
 	
 	WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocators',[('buttonName'):'Xác nhận chuyển']))
+}
+
+// chu cai dau
+WebUI.sendKeys(findTestObject('Object Repository/Common/input_placeholderDynamicLocators', [('text') : 'Tìm mặt hàng (F3)', ('index') : '1']), 'cảm xuyên hương')
+
+List<WebElement> list = WebUI.findWebElements(findTestObject('XuatKhoBanHang/div_tenThuoc'), 3)
+
+list.each { e ->
+	assert e.getText().toLowerCase().contains('cảm xuyên hương')
 }

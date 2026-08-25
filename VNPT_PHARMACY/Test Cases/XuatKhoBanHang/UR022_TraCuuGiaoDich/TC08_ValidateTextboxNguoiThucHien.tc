@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>TC15_ValidateTextboxDienGia</name>
+   <name>TC08_ValidateTextboxNguoiThucHien</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>9ad8a124-c592-4c33-a49b-e318f008a136</testCaseGuid>
+   <testCaseGuid>8c318cb0-1189-4ff7-b1af-d3cf5818e614</testCaseGuid>
 </TestCaseEntity>

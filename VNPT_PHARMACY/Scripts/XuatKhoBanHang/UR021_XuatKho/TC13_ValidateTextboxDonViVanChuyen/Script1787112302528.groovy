@@ -23,7 +23,7 @@ WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhC
 
 WebUI.delay(5)
 
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'XUẤT KHO/BÁN HÀNG']))
 
@@ -74,7 +74,15 @@ WebUI.click(findTestObject('Common/checkbox_nameDynamicLocators', [('nameValue')
 
 WebUI.acceptAlert()
 
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'donvivanchuyen']), 'ABC-234')
+WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'donvivanchuyen']), 'Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5Shop5')
+
+WebUI.click(findTestObject('XuatKhoBanHang/button_lastDynamicLocators', [('buttonName') : 'Lưu']))
+
+WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Có lỗi trong quá trình cập nhật. Quý khách vui lòng thử lại sau!']), 3)
+
+WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'donvivanchuyen']), 'ABC-234')
+
+WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'donvivanchuyen']), ' <script>alert(document.cookie)</script>')
 
 WebUI.click(findTestObject('XuatKhoBanHang/button_lastDynamicLocators', [('buttonName') : 'Lưu']))
 

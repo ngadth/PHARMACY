@@ -22,7 +22,7 @@ WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhC
 
 WebUI.delay(5)
 
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'XUẤT KHO/BÁN HÀNG']))
 
@@ -31,6 +31,42 @@ WebUI.waitForElementClickable(findTestObject('Common/menu_aDynamicLocators', [('
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Kê đơn bán thuốc']))
 
 WebUI.delay(3)
+
+WebUI.selectOptionByIndex(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'cboCuaHang']), '0', FailureHandling.STOP_ON_FAILURE)
+
+if (WebUI.waitForElementVisible(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Xác nhận chuyển']),
+	10, FailureHandling.OPTIONAL)) {
+	WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Xác nhận chuyển']))
+
+	println('Đã click nút Xác nhận chuyển')
+} else {
+	println('Không có nút Xác nhận chuyển → bỏ qua')
+}
+
+WebUI.sendKeys(findTestObject('Object Repository/Common/input_placeholderDynamicLocators', [('text') : 'Tìm mặt hàng (F3)', ('index') : '1']), 'Acemuc')
+
+WebUI.delay(2)
+
+//WebUI.click(findTestObject('XuatKhoBanHang/data_index', [('value') : '0']))
+TestObject dynamicObject = findTestObject('XuatKhoBanHang/data_index', [('value') : '0'])
+
+if (WebUI.verifyElementPresent(dynamicObject, 5, FailureHandling.OPTIONAL)) {
+	WebUI.click(dynamicObject)
+
+	println('Đã click element có value = 0')
+} else {
+	println('Không tìm thấy element có value = 0 → bỏ qua')
+}
+
+WebUI.sendKeys(findTestObject('Object Repository/Common/input_placeholderDynamicLocators', [('text') : 'Tìm khách hàng (F4)', ('index') : '2']), 'Auto_test01')
+
+WebUI.click(findTestObject('Common/text_divDynamicLocators', [('text') : 'Auto_test01']))
+
+WebUI.sendKeys(findTestObject('Object Repository/Common/input_tdTextDynamicLocators', [('text') : 'Tổng khuyến mại', ('index') : '2']), '9999')
+
+WebUI.clearText(findTestObject('XuatKhoBanHang/input_khachThanhToan'))
+
+WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_khachThanhToan'), '500,000')
 
 //mac dinh
 String value = WebUI.getAttribute(findTestObject('QuanLyKho/textarea_GhiChu'), 'value')
@@ -49,3 +85,9 @@ WebUI.sendKeys(findTestObject('QuanLyKho/textarea_GhiChu'), Keys.chord(Keys.CONT
 
 String value1 = WebUI.getAttribute(findTestObject('QuanLyKho/textarea_GhiChu'), 'value')
 assert value1 == ghiChu
+
+WebUI.setText(findTestObject('QuanLyKho/textarea_GhiChu'), '<script>alert(document.cookie)</script>')
+
+WebUI.click(findTestObject('XuatKhoBanHang/button_thanhToan'))
+
+WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Thanh toán thành công, số phiếu: ']), 20)
