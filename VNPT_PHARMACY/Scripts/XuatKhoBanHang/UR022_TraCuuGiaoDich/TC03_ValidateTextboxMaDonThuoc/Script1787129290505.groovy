@@ -53,3 +53,10 @@ WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'
 String value1 = WebUI.getAttribute(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Mã đơn thuốc', ('index'):'2']), 'value')
 assert value1.trim() == '112'
 
+//// < 12
+//WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Mã đơn thuốc', ('index'):'2']), 'cảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên ')
+//
+//WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Mã đơn thuốc', ('index'):'2']), Keys.ENTER.toString())
+//
+//String value1 = WebUI.getAttribute(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Mã đơn thuốc', ('index'):'2']), 'value')
+//assert value1.trim().size() <= 11

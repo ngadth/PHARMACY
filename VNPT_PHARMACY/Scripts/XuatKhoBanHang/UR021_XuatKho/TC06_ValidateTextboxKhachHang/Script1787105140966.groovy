@@ -50,10 +50,9 @@ WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'
 String value1 = WebUI.getAttribute(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Khách hàng', ('index'):'1']),'value')
 assert value1.trim() == 'cảm xuyên hương'
 
-//// < 21
-//WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Khách hàng', ('index'):'1']), 'cảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hương')
-//
-//WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Khách hàng', ('index'):'1']), Keys.ENTER.toString())
-//
-//String value2 = WebUI.getAttribute(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Khách hàng', ('index'):'1']),'value')
-//assert value2.trim().size()<=20
+// < 21 | < 200
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Khách hàng', ('index'):'1']), 'cảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hươngcảm xuyên hương')
+
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Khách hàng', ('index'):'1']), Keys.ENTER.toString())
+
+WebUI.assertElementVisible(findTestObject('Common/noti_h4ThanhCong',[('text'):'Khách hàng phải có độ dài nằm trong khoảng 0-200']), 3)

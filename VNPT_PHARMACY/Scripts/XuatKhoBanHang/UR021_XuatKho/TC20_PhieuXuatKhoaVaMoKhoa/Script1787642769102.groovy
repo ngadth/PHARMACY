@@ -37,6 +37,18 @@ WebUI.delay(3)
 
 WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Thêm phiếu xuất kho']), 5)
 
+WebUI.click(findTestObject('XuatKhoBanHang/span_idDynamicLocators', [('idValue') : 'select2-khoxuat-container']))
+
+//WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'HUONG6787-Nguyễn Thanh Hương']))
+WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'SHOP2-Nhà thuốc Minh Lộc']))
+WebUI.click(findTestObject('XuatKhoBanHang/span_idDynamicLocators', [('idValue') : 'select2-khonhan-container']))
+
+//WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'CH01-Của hàng 01']))
+WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'CH123-Cửa hàng thuốc Hương']))
+WebUI.clearText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'thukhoxuat']))
+
+WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'thukhoxuat']), 'admin_huong6787')
+
 WebUI.clearText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'nguoinhan']))
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'nguoinhan']), 'Shop5')
@@ -47,6 +59,10 @@ WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') 
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'diengiai']), 'Xuất kho bán hàng')
 
+WebUI.click(findTestObject('Common/checkbox_nameDynamicLocators', [('nameValue') : 'IytX4O..']))
+
+WebUI.acceptAlert()
+
 WebUI.click(findTestObject('XuatKhoBanHang/button_lastDynamicLocators', [('buttonName') : 'Lưu']))
 
 WebUI.delay(5)
@@ -55,7 +71,7 @@ WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') 
 
 WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Sửa phiếu xuất kho']), 5)
 
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'TFAh6E9X3yxl6B1e43o.']), 'MA341')
+WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'TFAh6E9X3yxl6B1e43o.']), GlobalVariable.sanPham)
 
 TestObject dynamicObject = findTestObject('XuatKhoBanHang/data_indexFirst', [('value') : '0'])
 
@@ -71,14 +87,7 @@ if (WebUI.verifyElementPresent(dynamicObject, 5, FailureHandling.OPTIONAL)) {
 
 WebUI.delay(2)
 
-
-WebUI.click(findTestObject('QuanLyKho/select_phieuNhap'))
-
-WebUI.click(findTestObject('QuanLyKho/select_phieuNhapLast'))
-
-WebUI.setText(findTestObject('XuatKhoBanHang/input_tableDynamicLocators'), '1')
-
-WebUI.delay(5)
+WebUI.setText(findTestObject('XuatKhoBanHang/input_tableDynamicLocators'), '2')
 
 WebUI.click(findTestObject('XuatKhoBanHang/button_lastDynamicLocators', [('buttonName') : 'Xuất kho']))
 
@@ -89,18 +98,53 @@ WebUI.click(findTestObject('XuatKhoBanHang/button_lastDynamicLocators', [('butto
 //WebUI.acceptAlert()
 WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Lưu thông tin phiếu thành công!']), 10)
 
-
-
 String soPhieuXuat = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Số phiếu xuất', 0, 'outputtbl')
 
-WebUI.click(findTestObject('Common/input_idDynamicLocators',[('idValue'):'chkAuto']))
+println(soPhieuXuat)
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'ma_xuat']), soPhieuXuat)
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'ma_xuat']), Keys.chord(Keys.ENTER))
 
-String value = WebUI.executeJavaScript("return document.evaluate('(//tbody/tr/td)[2]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.innerText", null)
+WebUI.click(findTestObject('Admin/Common/btn_action'))
 
-assert value.trim() == soPhieuXuat
+WebUI.delay(2)
 
-GlobalVariable.soPhieuXuat = soPhieuXuat
+WebUI.click(findTestObject('Common/option_aDynamicLocators', [('optionName') : 'Sửa phiếu']))
+
+WebUI.delay(2)
+
+WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Sửa phiếu xuất kho']), 5)
+
+WebUI.click(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'chkKhoaPhieu']))
+
+WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Xác nhận KHÓA phiếu']), 5)
+
+WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocators', [('buttonName') : 'Có']))
+
+WebUI.clearText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'diachinhanhang']))
+
+WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'diachinhanhang']), 'Đà nẵng')
+
+WebUI.clearText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'diengiai']))
+
+WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'diengiai']), 'Sửa phiếu Xuất kho bán hàng')
+
+WebUI.click(findTestObject('XuatKhoBanHang/button_lastDynamicLocators', [('buttonName') : 'Lưu thông tin phiếu']))
+
+WebUI.delay(2)
+
+WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Phiếu xuất đã bị KHÓA, bạn không thể chỉnh sửa!']), 10)
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'chkKhoaPhieu']))
+
+WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Xác nhận MỞ  phiếu']), 5)
+
+WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocators', [('buttonName') : 'Có']))
+
+WebUI.click(findTestObject('XuatKhoBanHang/button_lastDynamicLocators', [('buttonName') : 'Lưu thông tin phiếu']))
+
+WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Lưu thông tin phiếu thành công!']), 10)
+

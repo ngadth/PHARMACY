@@ -60,4 +60,10 @@ WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'
 
 WebUI.assertElementVisible(findTestObject('Common/noti_h4ThanhCong',[('text'): 'Số tiền không đúng kiểu số']), 3)
 
+// <22 | <100
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Số tiền',('index'):'1']), '123333123123122223123333123123122223123333123123122223123333123123122223123333123123122223123333123123122223123333123123122223123333123123122223')
+
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Số tiền',('index'):'1']), Keys.ENTER.toString())
+
+WebUI.assertElementVisible(findTestObject('Common/noti_h4ThanhCong',[('text'): 'Số tiền phải có độ dài nằm trong khoảng 0-100']), 3)
 
