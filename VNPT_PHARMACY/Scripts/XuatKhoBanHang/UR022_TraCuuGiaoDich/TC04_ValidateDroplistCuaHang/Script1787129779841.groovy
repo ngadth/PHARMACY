@@ -39,5 +39,13 @@ WebUI.verifyElementPresent(findTestObject('Common/titlePage_bDynamicLocators', [
 String value = WebUI.getAttribute(findTestObject('Common/dropdown_selectDynamicLocators',[('idValue'):'5F5ZDA9f5o..']),'value')
 assert value.trim() == ''
 
+// shop 2
+WebUI.click(findTestObject('Common/dropdown_selectDynamicLocators',[('idValue'):'5F5ZDA9f5o..']))
 
-
+WebUI.click(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/option_textDynamicLocators',[('text'):'SHOP2-Nhà thuốc Minh Lộc']))
+WebUI.delay(2)
+for(int i = 4; i<100;i+=22) {
+	String value1 = WebUI.executeJavaScript("return document.evaluate('(//tbody/tr/td)[${i}]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.innerText", null)
+	
+	assert value1.contains('SHOP2')
+}

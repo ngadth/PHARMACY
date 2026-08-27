@@ -38,7 +38,7 @@ WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators'
 
 //WebUI.waitForElementClickable(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Xác nhận chuyển']),30)
 
-//WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Xác nhận chuyển']))
+WebUI.verifyElementVisible(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Xác nhận chuyển']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Xác nhận chuyển'])) : null
 
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'presc_code']), GlobalVariable.maDonThuoc)
 

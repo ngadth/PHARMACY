@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC05_ValidateTextboxLoaiSPHangTongHop</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a0dd0970-a99e-4802-8bcf-de87bd693bc7</testCaseGuid>
+</TestCaseEntity>

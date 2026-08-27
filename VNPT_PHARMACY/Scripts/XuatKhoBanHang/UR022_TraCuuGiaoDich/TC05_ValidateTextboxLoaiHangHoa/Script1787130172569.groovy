@@ -61,3 +61,23 @@ WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'
 WebUI.assertElementVisible(findTestObject('Common/noti_h4ThanhCong',[('text'): 'Loại SP phải có độ dài nằm trong khoảng 0-100']), 3)
 
 
+// Aziflam
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Loại HH',('index'):'1']), 'Aziflam')
+
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Loại HH',('index'):'1']), Keys.ENTER.toString())
+
+WebUI.delay(2)
+
+WebUI.executeJavaScript("jQuery(document.evaluate(\"(//a[contains(@class,'dropdown-toggle') and @data-hover='dropdown'])[2]\",document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue).dropdown('toggle')", null)
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Common/option_aDynamicLocators', [('optionName') : 'Xem chi tiết']))
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Common/menu_aDynamicLocators',[('text'):'Hàng bán trong phiếu']))
+
+WebUI.verifyTextPresent('Aziflam', false)
+
+
