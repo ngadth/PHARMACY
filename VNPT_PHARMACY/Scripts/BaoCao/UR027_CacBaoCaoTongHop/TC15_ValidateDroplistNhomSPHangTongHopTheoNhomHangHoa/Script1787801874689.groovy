@@ -79,21 +79,20 @@ WebUI.delay(1)
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Các báo cáo tổng hợp']))
 
 WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators', [('text') : 'Báo cáo thống']))
-
 //ban hang chi tiet
 WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Báo cáo Bán hàng TH']))
 
-WebUI.setText(findTestObject('Common/input_search'),'Báo cáo Bán hàng chi tiết')
+WebUI.setText(findTestObject('Common/input_search'),'Báo cáo Bán hàng tổng hợp theo nhóm hàng hóa')
 
-WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'Báo cáo Bán hàng chi tiết']))
+WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'Báo cáo Bán hàng tổng hợp theo nhóm hàng hóa']))
 
 // mac dinh
-String value = WebUI.getText(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Lựa chọn Kho']))
+String value = WebUI.getText(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Lựa chọn nhóm SP']))
 
-assert value == 'Lựa chọn Kho'
+assert value == 'Lựa chọn nhóm SP'
 
 // hien thi danh sach chu cai dau
-WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Lựa chọn Kho']))
+WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Lựa chọn nhóm SP']))
 
 WebUI.setText(findTestObject('Common/input_search'),'k')
 

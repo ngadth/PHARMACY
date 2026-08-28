@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC19_ValidateDroplistKhoTheoKhanhHang</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a38c949d-813e-4937-9e00-1001d81e711d</testCaseGuid>
+</TestCaseEntity>

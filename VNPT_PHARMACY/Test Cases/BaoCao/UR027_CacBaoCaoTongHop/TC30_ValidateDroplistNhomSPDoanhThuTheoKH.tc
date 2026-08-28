@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC30_ValidateDroplistNhomSPDoanhThuTheoKH</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>072fd2a0-eaf8-451f-b958-2bed09ce0387</testCaseGuid>
+</TestCaseEntity>

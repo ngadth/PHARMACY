@@ -22,7 +22,7 @@ import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import org.openqa.selenium.remote.DesiredCapabilities as DesiredCapabilities
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import java.nio.file.*
-import org.openqa.selenium.WebElement
+
 
 String dirName = RunConfiguration.getProjectDir()
 
@@ -80,25 +80,101 @@ WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Các bá
 
 WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators', [('text') : 'Báo cáo thống']))
 
+String currentDate = CustomKeywords.'libKeyWords.PageObject.getCurrentDate'()
+
 //ban hang chi tiet
 WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Báo cáo Bán hàng TH']))
 
-WebUI.setText(findTestObject('Common/input_search'),'Báo cáo Bán hàng chi tiết')
+WebUI.setText(findTestObject('Common/input_search'),'Báo cáo Bán hàng tổng hợp theo nhóm hàng hóa')
 
-WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'Báo cáo Bán hàng chi tiết']))
+WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'Báo cáo Bán hàng tổng hợp theo nhóm hàng hóa']))
 
 // mac dinh
-String value = WebUI.getText(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Lựa chọn Kho']))
+String value = WebUI.getAttribute(findTestObject('Common/input_idDynamicLocators',[('idValue'):'searchDate']),'value')
+assert value.trim().contains(currentDate)
 
-assert value == 'Lựa chọn Kho'
+//khong dung dinh dang
 
-// hien thi danh sach chu cai dau
-WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Lựa chọn Kho']))
+def invalidForm = [
+	'04/30/2026',
+	'2026/30/04',
+	'abcdefgh',
+	'04',
+	'04/08'
+]
 
-WebUI.setText(findTestObject('Common/input_search'),'k')
+for (int i = 0; i < invalidForm.size(); i++) {
 
-List<WebElement> lst = WebUI.findWebElements(findTestObject('QuanLyKho/ul_selectOptions'), 3)
+	String date1 = invalidForm[i] +' - ' +invalidForm[i]
 
-for (WebElement e : lst) {
-	assert e.getText().toLowerCase().contains('k')
+	WebUI.setText(findTestObject('Common/input_idDynamicLocators',[('idValue'):'searchDate']),date1)
+
+	WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators',[('idValue'):'searchDate']),Keys.chord(Keys.ENTER))
+
+	WebUI.verifyElementVisible(findTestObject('Common/noti_h4ThanhCong',[('text'):'Định dạng ngày tháng không hợp lệ!']))
 }
+
+// ngay thang khong hop le
+def invalidDate = [
+	'32/04/2009',
+	'12/14/2009',
+	'31/04/1983',
+	'31/06/1983',
+	'31/09/1983',
+	'31/11/1983',
+	'30/02/1983',
+	'29/02/1983',
+	//'1/2/0999',
+	'1/2/99999'
+]
+
+for (int i = 0; i < invalidDate.size(); i++) {
+
+	String date2 = invalidDate[i] + ' - ' + invalidDate[i]
+
+	WebUI.setText(findTestObject('Common/input_idDynamicLocators',[('idValue'):'searchDate']),date2)
+
+	WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators',[('idValue'):'searchDate']),Keys.chord(Keys.ENTER))
+
+	WebUI.verifyElementVisible(findTestObject('Common/noti_h4ThanhCong',[('text'):'Định dạng ngày tháng không hợp lệ!']))
+	
+}
+
+WebUI.delay(2)
+
+// ngay thang hop le
+def validDate = [
+	'31/01/2026',
+	'29/02/1980',
+	'28/02/1983',
+	'31/03/2026',
+	'30/04/2026',
+	'31/05/2026',
+	'30/06/2026',
+	'31/07/2026',
+	'31/08/2026',
+	'30/09/2026',
+	'31/10/2026',
+	'30/11/2026',
+	'31/12/2026',
+	'10/10/1983',
+	'12/02/2019'
+]
+
+for (int i = 0; i < validDate.size(); i++) {
+	
+	String date3 = validDate[i] +' - ' + validDate[i] 
+
+	WebUI.setText(findTestObject('Common/input_idDynamicLocators',[('idValue'):'searchDate']),date3)
+
+	WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators',[('idValue'):'searchDate']),Keys.chord(Keys.ENTER))
+
+	WebUI.verifyElementNotPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Định dạng ngày tháng không hợp lệ!']), 3)
+	
+}
+
+WebUI.setText(findTestObject('Common/input_idDynamicLocators',[('idValue'):'searchDate']),'12/02/2019 - 01/02/2019')
+
+WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators',[('idValue'):'searchDate']),Keys.chord(Keys.ENTER))
+
+WebUI.verifyElementVisible(findTestObject('Common/noti_h4ThanhCong',[('text'):'Ngày bắt đầu không được lớn hơn ngày kết thúc!']))

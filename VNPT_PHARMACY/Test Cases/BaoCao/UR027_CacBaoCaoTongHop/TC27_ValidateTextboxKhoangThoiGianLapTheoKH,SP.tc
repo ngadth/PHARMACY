@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC27_ValidateTextboxKhoangThoiGianLapTheoKH,SP</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>849c42c7-8591-43a7-848e-f4a9769bca82</testCaseGuid>
+</TestCaseEntity>

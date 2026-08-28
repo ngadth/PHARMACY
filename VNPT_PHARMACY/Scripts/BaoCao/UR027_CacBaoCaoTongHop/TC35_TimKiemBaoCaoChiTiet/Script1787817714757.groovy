@@ -22,7 +22,7 @@ import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import org.openqa.selenium.remote.DesiredCapabilities as DesiredCapabilities
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import java.nio.file.*
-import org.openqa.selenium.WebElement
+
 
 String dirName = RunConfiguration.getProjectDir()
 
@@ -87,18 +87,65 @@ WebUI.setText(findTestObject('Common/input_search'),'Báo cáo Bán hàng chi ti
 
 WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'Báo cáo Bán hàng chi tiết']))
 
-// mac dinh
-String value = WebUI.getText(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Lựa chọn Kho']))
+// kho va khoang thoi gian
 
-assert value == 'Lựa chọn Kho'
+WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators', [('text') : 'Lựa chọn Kho']))
 
-// hien thi danh sach chu cai dau
-WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Lựa chọn Kho']))
+WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : '9481-auto4574']))
 
-WebUI.setText(findTestObject('Common/input_search'),'k')
+WebUI.delay(2)
 
-List<WebElement> lst = WebUI.findWebElements(findTestObject('QuanLyKho/ul_selectOptions'), 3)
+String date = '26/08/2026 - 30/08/2026'
 
-for (WebElement e : lst) {
-	assert e.getText().toLowerCase().contains('k')
-}
+WebUI.click(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'searchDate']))
+
+WebUI.setText(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'searchDate']), date)
+
+WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'searchDate']), Keys.chord(Keys.ENTER))
+
+WebUI.assertElementPresent(findTestObject('Common/text_tdDynamicLocators',[('text'):'admin_huong6787']), 3)
+
+WebUI.refresh()
+
+//ban hang chi tiet
+WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Báo cáo Bán hàng TH']))
+
+WebUI.setText(findTestObject('Common/input_search'),'Báo cáo Bán hàng chi tiết')
+
+WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'Báo cáo Bán hàng chi tiết']))
+
+// nhom sp va khoang thoi gian
+WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators', [('text') : 'Lựa chọn nhóm SP']))
+
+WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'Duoc pham']))
+
+WebUI.click(findTestObject('XuatKhoBanHang/span_idDynamicLocators', [('idValue') : 'select2-loaibc-container']))
+
+WebUI.click(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'searchDate']))
+
+WebUI.setText(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'searchDate']), date)
+
+WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'searchDate']), Keys.chord(Keys.ENTER))
+
+WebUI.assertElementPresent(findTestObject('Common/text_tdDynamicLocators',[('text'):'admin_huong6787']), 3)
+
+WebUI.refresh()
+
+//ban hang chi tiet
+WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Báo cáo Bán hàng TH']))
+
+WebUI.setText(findTestObject('Common/input_search'),'Báo cáo Bán hàng chi tiết')
+
+WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'Báo cáo Bán hàng chi tiết']))
+
+// ten sp va khoang thoi gian
+WebUI.setText(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/input_idDynamicLocators',[('idValue'):'loaisp_ten']),'Saphnelo')
+
+WebUI.click(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'searchDate']))
+
+WebUI.setText(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'searchDate']), date)
+
+WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'searchDate']), Keys.chord(Keys.ENTER))
+
+WebUI.assertElementPresent(findTestObject('Common/text_tdDynamicLocators',[('text'):'admin_huong6787']), 3)
+

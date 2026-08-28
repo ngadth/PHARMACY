@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC35_TimKiemBaoCaoChiTiet</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>4f541295-99aa-490e-a8a0-f14bb5f38a08</testCaseGuid>
+</TestCaseEntity>

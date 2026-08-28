@@ -83,9 +83,9 @@ WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators', [
 //ban hang chi tiet
 WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Báo cáo Bán hàng TH']))
 
-WebUI.setText(findTestObject('Common/input_search'),'Báo cáo Bán hàng chi tiết')
+WebUI.setText(findTestObject('Common/input_search'),'Báo cáo doanh thu theo khách hàng')
 
-WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'Báo cáo Bán hàng chi tiết']))
+WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'Báo cáo doanh thu theo khách hàng']))
 
 // mac dinh
 String value = WebUI.getText(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Lựa chọn Kho']))

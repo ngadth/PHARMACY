@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC25_ValidateDroplistNhomSPTheoKH,SP</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>61dcd237-cf38-488d-8f45-a4e057a662c3</testCaseGuid>
+</TestCaseEntity>

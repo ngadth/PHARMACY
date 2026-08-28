@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC10_ValidateDroplistNhomSPHangChiTiet</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>302e7ffa-0aa8-41bb-94f0-dac43c11c82a</testCaseGuid>
+</TestCaseEntity>

@@ -83,22 +83,44 @@ WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators', [
 //ban hang chi tiet
 WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Báo cáo Bán hàng TH']))
 
-WebUI.setText(findTestObject('Common/input_search'),'Báo cáo Bán hàng chi tiết')
+WebUI.setText(findTestObject('Common/input_search'),'Báo cáo bán hàng theo khách hàng')
 
-WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'Báo cáo Bán hàng chi tiết']))
+WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'Báo cáo bán hàng theo khách hàng']))
 
-// mac dinh
-String value = WebUI.getText(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Lựa chọn Kho']))
+// ngay ban > hien tai
+WebUI.setText(findTestObject('Common/input_idDynamicLocators',[('idValue'):'searchDate']),'25/08/2067 - 27/08/2067')
 
-assert value == 'Lựa chọn Kho'
+WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators',[('idValue'):'searchDate']), Keys.ENTER.toString())
 
-// hien thi danh sach chu cai dau
+WebUI.assertElementVisible(findTestObject('Common/text_tdDynamicLocators',[('text'):'Không tìm thấy dữ liệu...']), 3)
+
+// tu khoa sp ko ton tai
+WebUI.refresh()
+
+WebUI.setText(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/input_idDynamicLocators',[('idValue'):'loaisp_ten']), 'Mạnh Thường Quân')
+
+WebUI.sendKeys(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/input_idDynamicLocators',[('idValue'):'loaisp_ten']), Keys.ENTER.toString())
+
+WebUI.assertElementVisible(findTestObject('Common/text_tdDynamicLocators',[('text'):'Không tìm thấy dữ liệu...']), 3)
+
+//nhom san pham chua ban duoc san pham
+WebUI.refresh()
+
+WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Lựa chọn nhóm SP']))
+
+WebUI.setText(findTestObject('Common/input_search'),'thuốc điều trị tăng lipid máu')
+
+WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'thuốc điều trị tăng lipid máu']))
+
+WebUI.assertElementVisible(findTestObject('Common/text_tdDynamicLocators',[('text'):'Không tìm thấy dữ liệu...']), 3)
+
+//cua hang chua ban duoc san pham
+WebUI.refresh()
+
 WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Lựa chọn Kho']))
 
-WebUI.setText(findTestObject('Common/input_search'),'k')
+WebUI.setText(findTestObject('Common/input_search'),'7995-Cua Hang Automation')
 
-List<WebElement> lst = WebUI.findWebElements(findTestObject('QuanLyKho/ul_selectOptions'), 3)
+WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'7995-Cua Hang Automation']))
 
-for (WebElement e : lst) {
-	assert e.getText().toLowerCase().contains('k')
-}
+WebUI.assertElementVisible(findTestObject('Common/text_tdDynamicLocators',[('text'):'Không tìm thấy dữ liệu...']), 3)

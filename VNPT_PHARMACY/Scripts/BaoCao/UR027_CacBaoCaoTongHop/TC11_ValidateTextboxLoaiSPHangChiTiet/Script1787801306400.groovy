@@ -87,18 +87,26 @@ WebUI.setText(findTestObject('Common/input_search'),'Báo cáo Bán hàng chi ti
 
 WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'Báo cáo Bán hàng chi tiết']))
 
+
 // mac dinh
-String value = WebUI.getText(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Lựa chọn Kho']))
+String value =  WebUI.getAttribute(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/input_idDynamicLocators',[('idValue'):'loaisp_ten']), 'value')
+assert value.trim() == ''
 
-assert value == 'Lựa chọn Kho'
+// copy paste
+WebUI.setText(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/input_idDynamicLocators',[('idValue'):'loaisp_ten']), 'Mạnh Thường Quân')
 
-// hien thi danh sach chu cai dau
-WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Lựa chọn Kho']))
+WebUI.sendKeys(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/input_idDynamicLocators',[('idValue'):'loaisp_ten']), Keys.chord(Keys.CONTROL, 'A'))
+WebUI.sendKeys(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/input_idDynamicLocators',[('idValue'):'loaisp_ten']), Keys.chord(Keys.CONTROL, 'C'))
 
-WebUI.setText(findTestObject('Common/input_search'),'k')
+WebUI.setText(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/input_idDynamicLocators',[('idValue'):'loaisp_ten']), '')
 
-List<WebElement> lst = WebUI.findWebElements(findTestObject('QuanLyKho/ul_selectOptions'), 3)
+WebUI.sendKeys(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/input_idDynamicLocators',[('idValue'):'loaisp_ten']), Keys.chord(Keys.CONTROL, 'V'))
 
-for (WebElement e : lst) {
-	assert e.getText().toLowerCase().contains('k')
-}
+String value1 =  WebUI.getAttribute(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/input_idDynamicLocators',[('idValue'):'loaisp_ten']), 'value')
+assert value1.trim() == 'Mạnh Thường Quân'
+
+//// < 51
+//WebUI.setText(findTestObject('Admin/Common/input_idDynamicLocators',[('idValue'):'loaisp_ten']), 'Mạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường QuânMạnh Thường Quân')
+//
+//String value2 =  WebUI.getAttribute(findTestObject('Admin/Common/input_idDynamicLocators',[('idValue'):'loaisp_ten']), 'value')
+//assert value2.trim().size() < 51

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC14_ValidateDroplistKhoHangTongHopTheoNhomHangHoa</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>7314be61-b67f-4952-af3f-758c81d0a2f8</testCaseGuid>
+</TestCaseEntity>

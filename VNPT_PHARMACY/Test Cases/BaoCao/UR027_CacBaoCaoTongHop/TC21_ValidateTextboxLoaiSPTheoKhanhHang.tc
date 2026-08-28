@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC21_ValidateTextboxLoaiSPTheoKhanhHang</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b94658c5-37f6-4e28-a9fe-4c58002505f3</testCaseGuid>
+</TestCaseEntity>
