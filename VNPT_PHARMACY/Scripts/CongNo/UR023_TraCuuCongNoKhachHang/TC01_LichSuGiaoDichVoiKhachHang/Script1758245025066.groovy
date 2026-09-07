@@ -23,6 +23,8 @@ WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhC
 WebUI.delay(3)
 
 //CustomKeywords.'libKeyWords.PageObject.openSubmenu'('XUẤT KHO/BÁN HÀNG', 'Kê đơn bán thuốc')
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
+
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'XUẤT KHO/BÁN HÀNG']))
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Kê đơn bán thuốc']))
@@ -46,30 +48,30 @@ if (WebUI.verifyElementPresent(dynamicObject, 5, FailureHandling.OPTIONAL)) {
 
 GlobalVariable.name_service = 'Auto_test01'
 
-WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'CBth6o..']), GlobalVariable.name_service)
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Tìm khách hàng (F4)',('index'):'2']), GlobalVariable.name_service)
 
 WebUI.click(findTestObject('Common/text_divDynamicLocators', [('text') : GlobalVariable.name_service]))
 
-WebUI.setText(findTestObject('XuatKhoBanHang/input_idDynamicLocatorsLast', [('idValue') : 'TE9k5x9hCO..']), '9999')
+WebUI.setText(findTestObject('Common/input_tdTextDynamicLocators', [('text') : 'Tổng khuyến mại',('index'):'2']), '9999')
 
 WebUI.clearText(findTestObject('XuatKhoBanHang/input_khachThanhToan'))
 
 WebUI.setText(findTestObject('XuatKhoBanHang/input_khachThanhToan'), '0')
 
-WebUI.setText(findTestObject('XuatKhoBanHang/textarea_idDynamicLocators', [('idValue') : 'TFXwPyXf4yXx']), 'Nợ Kê đơn bán thuốc 30 ngày')
+WebUI.setText(findTestObject('QuanLyKho/textarea_GhiChu'), 'Nợ Kê đơn bán thuốc 30 ngày')
 
 WebUI.click(findTestObject('XuatKhoBanHang/button_thanhToan'))
 
 WebUI.delay(5)
 
-WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Thanh toán thành công, số phiếu: ']), 
-    10)
+WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Thanh toán thành công, số phiếu: ']), 10)
 
 String soPhieu = WebUI.getText(findTestObject('XuatKhoBanHang/get_bSoPhieu'))
 
 WebUI.click(findTestObject('Common/icon_idDynamicLocators', [('idValue') : 'homepage']))
 
 //CustomKeywords.'libKeyWords.PageObject.openSubmenu'('CÔNG NỢ', 'Lịch sử giao dịch với khách hàng')
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'CÔNG NỢ']))
 
@@ -80,7 +82,7 @@ WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Lịch s
 WebUI.waitForElementVisible(findTestObject('XuatKhoBanHang/text_bDynamicLocators', [('text') : 'Tra cứu giao dịch của khách hàng']), 
     10)
 
-WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']), 'HUONG6787-Nguyễn Thanh Hương', 
+WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']), 'SHOP2-Nhà thuốc Minh Lộc', 
     false)
 
 String currentDate = CustomKeywords.'libKeyWords.PageObject.getCurrentDate'()

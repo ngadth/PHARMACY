@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>TC32_ValidateTextboxKhoangThoiGianLapDoanhThuTheoKH</name>
+   <name>TC32_ValidateTextboxKhoangThoiGianLapDoanhThuTheoDoanhThuKH</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>

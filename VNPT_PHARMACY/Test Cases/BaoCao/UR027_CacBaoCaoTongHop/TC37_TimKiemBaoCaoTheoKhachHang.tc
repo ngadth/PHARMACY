@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>TC37_TimKiemBaoCaoTongHopTheoNhomHangHoaChiTiet</name>
+   <name>TC37_TimKiemBaoCaoTheoKhachHang</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>b8bff143-5ea7-4785-a03a-cf1aee6a4e01</testCaseGuid>
+   <testCaseGuid>a3add650-908e-4de6-b159-5c9c4d280b45</testCaseGuid>
 </TestCaseEntity>

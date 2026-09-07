@@ -83,9 +83,9 @@ WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators', [
 //ban hang chi tiet
 WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Báo cáo Bán hàng TH']))
 
-WebUI.setText(findTestObject('Common/input_search'),'Báo cáo Bán hàng chi tiết')
+WebUI.setText(findTestObject('Common/input_search'),'Báo cáo doanh thu theo khách hàng')
 
-WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'Báo cáo Bán hàng chi tiết']))
+WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'Báo cáo doanh thu theo khách hàng']))
 
 // kho va khoang thoi gian
 
@@ -110,9 +110,15 @@ WebUI.refresh()
 //ban hang chi tiet
 WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Báo cáo Bán hàng TH']))
 
-WebUI.setText(findTestObject('Common/input_search'),'Báo cáo Bán hàng chi tiết')
+WebUI.setText(findTestObject('Common/input_search'),'Báo cáo doanh thu theo khách hàng')
 
-WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'Báo cáo Bán hàng chi tiết']))
+WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'Báo cáo doanh thu theo khách hàng']))
+
+WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators', [('text') : 'Lựa chọn Kho']))
+
+WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : '9481-auto4574']))
+
+WebUI.delay(2)
 
 // nhom sp va khoang thoi gian
 WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators', [('text') : 'Lựa chọn nhóm SP']))
@@ -132,11 +138,17 @@ WebUI.assertElementPresent(findTestObject('Common/text_tdDynamicLocators',[('tex
 WebUI.refresh()
 
 //ban hang chi tiet
+WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators', [('text') : 'Lựa chọn Kho']))
+
+WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : '9481-auto4574']))
+
+WebUI.delay(2)
+ 
 WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Báo cáo Bán hàng TH']))
 
-WebUI.setText(findTestObject('Common/input_search'),'Báo cáo Bán hàng chi tiết')
+WebUI.setText(findTestObject('Common/input_search'),'Báo cáo doanh thu theo khách hàng')
 
-WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'Báo cáo Bán hàng chi tiết']))
+WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'Báo cáo doanh thu theo khách hàng']))
 
 // ten sp va khoang thoi gian
 WebUI.setText(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/input_idDynamicLocators',[('idValue'):'loaisp_ten']),'Saphnelo')
