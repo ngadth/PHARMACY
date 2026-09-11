@@ -64,21 +64,27 @@ WebUI.click(findTestObject('Common/checkbox_nameDynamicLocators', [('nameValue')
 
 WebUI.click(findTestObject('XuatKhoBanHang/button_lastDynamicLocators', [('buttonName') : 'Nhập kho']))
 
+WebUI.delay(5)
+
+WebUI.acceptAlert(FailureHandling.OPTIONAL)
+
 WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Nhập kho thành công!']), 5)
 
 WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Sửa phiếu nhập kho trả hàng']), 5)
 
 WebUI.click(findTestObject('QuanLyKho/icon_closeDynamicLocators', [('titleName') : 'Sửa phiếu nhập kho trả hàng']))
 
+WebUI.refresh()
+
 WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Mã phiếu nhập']), GlobalVariable.order_id)
 
 WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Mã phiếu nhập']), Keys.chord(Keys.ENTER))
 
-WebUI.click(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Khoảng thời gian lập']))
+WebUI.click(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Khoảng thời gian lập',('index'):'1']))
 
-WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Khoảng thời gian lập']), date)
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Khoảng thời gian lập',('index'):'1']), date)
 
-WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Khoảng thời gian lập']), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Khoảng thời gian lập',('index'):'1']), Keys.chord(Keys.ENTER))
 
 WebUI.delay(3)
 
