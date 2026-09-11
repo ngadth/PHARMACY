@@ -25,7 +25,6 @@ String diaChiUD = 'Quảng Nam'
 WebUI.callTestCase(findTestCase('Admin/Common/TC01_DangNhap'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 WebUI.delay(3)
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
 
 CustomKeywords.'libKeyWords.PageObject.openSubmenu'('DANH MỤC', 'Khách hàng')
 

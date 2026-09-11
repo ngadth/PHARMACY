@@ -47,10 +47,10 @@ WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators', [
 WebUI.click(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/radio_labelDynamicLocators', [('text') : 'Đã hoàn thiện']))
 
 // Nhập text vào ô input
-WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Mã hợp đồng']), 'CLOUD_003635')
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Mã hợp đồng',('index'):'1']), 'CLOUD_003635')
 
 // Nhấn phím Enter tại ô input đó
-WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Mã hợp đồng']), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Mã hợp đồng',('index'):'1']), Keys.chord(Keys.ENTER))
 
 WebUI.delay(2)
 

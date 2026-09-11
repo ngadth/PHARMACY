@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC40_XuatExcelBaoCaoChiTiet</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>f5a6cfa6-d1ee-463b-a9f4-55926a40d593</testCaseGuid>
+</TestCaseEntity>

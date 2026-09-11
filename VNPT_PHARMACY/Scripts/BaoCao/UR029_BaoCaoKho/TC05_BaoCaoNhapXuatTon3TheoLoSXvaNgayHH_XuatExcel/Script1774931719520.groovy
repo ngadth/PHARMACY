@@ -23,7 +23,6 @@ import org.openqa.selenium.remote.DesiredCapabilities as DesiredCapabilities
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import java.nio.file.*
 
-String date = ('20/09/2025' + ' - ') + '22/09/2025'
 
 String dirName = RunConfiguration.getProjectDir()
 
@@ -70,7 +69,7 @@ WebUI.setText(findTestObject('Common/input_password'), GlobalVariable.password)
 WebUI.click(findTestObject('Common/btn_DangNhap'))
 
 WebUI.waitForElementVisible(findTestObject('Common/logo_vnpt'), GlobalVariable.timeout)
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 WebUI.click(findTestObject('Common/menu_baoCao'))
 
@@ -95,7 +94,9 @@ WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 
 WebUI.delay(2)
 
 WebUI.click(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'searchDate']))
+String currentDate = CustomKeywords.'libKeyWords.PageObject.getCurrentDate'()
 
+String date = ('20/09/2025' + ' - ') + currentDate
 WebUI.setText(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'searchDate']), date)
 
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'searchDate']), Keys.chord(Keys.ENTER))

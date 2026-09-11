@@ -28,7 +28,6 @@ String dateKT = '18/10/2028'
 WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.delay(5)
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'DANH MỤC']))
 
@@ -76,7 +75,7 @@ WebUI.delay(2)
 
 WebUI.click(findTestObject('QuanLyKho/tab_aDynamicLocators', [('tabValue') : 'Danh sách thuốc']))
 
-WebUI.setText(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'TFAh6E9X3yxl6B1e43o.']), 'Apitim')
+WebUI.setText(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'TFAh6E9X3yxl6B1e43o.']), 'Apitec 20-H')
 
 WebUI.delay(3)
 
@@ -157,7 +156,7 @@ WebUI.delay(2)
 
 WebUI.click(findTestObject('QuanLyKho/tab_aDynamicLocators', [('tabValue') : 'Danh sách thuốc']))
 
-WebUI.setText(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'TFAh6E9X3yxl6B1e43o.']), 'B1-B6-B12 USP')
+WebUI.setText(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'TFAh6E9X3yxl6B1e43o.']), 'BIOCALCIUM')
 
 WebUI.delay(3)
 

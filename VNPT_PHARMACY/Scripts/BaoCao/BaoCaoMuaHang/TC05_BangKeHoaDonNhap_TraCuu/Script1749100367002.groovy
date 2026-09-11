@@ -21,8 +21,8 @@ String columnTable = 'Kho;Loại HĐ;Tên NCC;Ngày HĐ;Số HĐ;Tiền hàng;Ch
 
 String date = '29/05/2023'
 
-WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.CONTINUE_ON_FAILURE)
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/TC00_DangNhap'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 CustomKeywords.'libKeyWords.PageObject.openSubmenu'('BÁO CÁO', 'Báo cáo mua hàng')
 

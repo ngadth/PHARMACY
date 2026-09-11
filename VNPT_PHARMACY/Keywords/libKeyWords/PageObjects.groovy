@@ -151,6 +151,16 @@ public class PageObject {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy")
 		return sdf.format(today)
 	}
+	
+	@Keyword
+	def String getCurrentDateMinus1() {
+		Date today = new Date()
+		today = today - 1
+	
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy")
+	
+		return sdf.format(today)
+	}
 
 	def String getCurrentDateTime() {
 		Date now = new Date()

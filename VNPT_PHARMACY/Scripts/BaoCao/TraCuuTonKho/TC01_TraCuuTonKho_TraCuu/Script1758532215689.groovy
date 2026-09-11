@@ -19,12 +19,12 @@ import org.openqa.selenium.Keys as Keys
 
 String columnTable = 'Cửa hàng;Mã hàng;Tên hàng;Đơn vị tính;Số lượng;Ngày HH;Lô SX;Số hóa đơn;Đơn giá;Thành tiền'
 
-String tenSanPham = 'Russell'
+String tenSanPham = 'Amlorus'
 
 WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 WebUI.delay(2)
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 WebUI.click(findTestObject('Common/menu_baoCao'))
 
@@ -36,7 +36,7 @@ WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators', [
 
 WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators', [('text') : 'Lựa chọn Kho']))
 
-WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'CH01-Của hàng 01']))
+WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'SHOP2-Nhà thuốc Minh Lộc']))
 
 WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators', [('text') : 'Lựa chọn nhóm HH']))
 

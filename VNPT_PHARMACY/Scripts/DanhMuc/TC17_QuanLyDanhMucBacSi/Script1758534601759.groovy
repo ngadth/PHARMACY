@@ -20,7 +20,7 @@ import org.openqa.selenium.Keys as Keys
 WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.delay(3)
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 CustomKeywords.'libKeyWords.PageObject.openSubmenu'('DANH MỤC', 'Quản lý danh mục bác sĩ')
 

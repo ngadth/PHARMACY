@@ -18,13 +18,15 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 String columnTable 	= "Ngày BC;Kho;Cửa hàng;Quầy bán;Người bán;Mặt hàng;Đơn vị tính;Số lượng bán;Giá bán;Tổng tiền bán;Số lượng trả lại;Tiền trả lại;Doanh thu;Khuyến mại;Giá vốn;Lợi nhuận";
-String date			='22/06/2025'
+//String date			='22/06/2025'
+String date			='08/09/2026'
 
 WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
+
 WebUI.delay(5)
 
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'BÁO CÁO']))
 
@@ -42,23 +44,29 @@ WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators',[(
 
 WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Kho hàng']))
 
-WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):GlobalVariable.kho]))
+//WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):GlobalVariable.kho]))
+WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'SHOP2-Nhà thuốc Minh Lộc']))
 
 WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Nhóm hàng (tất cả)']))
 
-WebUI.setText(findTestObject('Common/input_search'), 'Duoc pham')
+//WebUI.setText(findTestObject('Common/input_search'), 'Duoc pham')
+WebUI.setText(findTestObject('Common/input_search'), 'thuoc')
 
 WebUI.delay(0.5)
 
-WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'Duoc pham']))
+//WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'Duoc pham']))
+WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'thuốc biệt dược']))
 
-WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo từ khóa loại SP']), 'HAPACOL')
+//WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo từ khóa loại SP']), 'HAPACOL')
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo từ khóa loại SP',('index'):'1']), 'LEANPROTHYROLID')
 
 WebUI.click(findTestObject('Common/input_theoKhoangThoiGian'))
 
+String currentDate = CustomKeywords.'libKeyWords.PageObject.getCurrentDate'()
+
 WebUI.setText(findTestObject('BaoCao/BaoCaoBanHang/input_date',[('date'):'daterangepicker_start']), date)
 
-WebUI.setText(findTestObject('BaoCao/BaoCaoBanHang/input_date',[('date'):'daterangepicker_end']), date)
+WebUI.setText(findTestObject('BaoCao/BaoCaoBanHang/input_date',[('date'):'daterangepicker_end']), currentDate)
 
 WebUI.click(findTestObject('BaoCao/BaoCaoBanHang/button_chonXong'))
 
@@ -66,7 +74,7 @@ WebUI.click(findTestObject('BaoCao/BaoCaoBanHang/dropdown_hinhThucThanhToan'))
 
 WebUI.click(findTestObject('BaoCao/BaoCaoBanHang/option_tienMat'))
 
-WebUI.setText(findTestObject('Common/input_idDynamicLocators',[('idValue'):'vnguoiban']), GlobalVariable.username)
+WebUI.setText(findTestObject('Common/input_idDynamicLocators',[('idValue'):'vnguoiban']), GlobalVariable.userAdmin)
 
 WebUI.delay(2)
 
@@ -77,5 +85,5 @@ for (int i = 0; i < subStr.length; i++){
 
 nguoiBan=WebUI.getText(findTestObject('Common/cell_tdDynamicLocators',[('index'):'5']))
 
-WebUI.verifyEqual(nguoiBan, GlobalVariable.username)
+WebUI.verifyEqual(nguoiBan, GlobalVariable.userAdmin)
 

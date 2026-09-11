@@ -19,12 +19,12 @@ import org.openqa.selenium.Keys as Keys
 
 String columnTable = 'Loại sản phẩm;Số ngày đã lưu kho;Số lượng;Tiền nhập;Lợi nhuận dự kiến'
 
-String loaiSanPham = 'Paracetamol'
-
+//String loaiSanPham = 'Paracetamol'
+String loaiSanPham = 'BIOCALCIUM'
 WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 WebUI.delay(2)
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 WebUI.click(findTestObject('Common/menu_baoCao'))
 
@@ -36,11 +36,11 @@ WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators', [
 
 WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators', [('text') : 'Lựa chọn Kho']))
 
-WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'CH01-Của hàng 01']))
+WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'SHOP2-Nhà thuốc Minh Lộc']))
 
 WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators', [('text') : 'Lựa chọn nhóm SP']))
 
-WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'Duoc pham']))
+WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'thuốc biệt dược']))
 
 WebUI.click(findTestObject('XuatKhoBanHang/span_idDynamicLocators', [('idValue') : 'select2-loaibc-container']))
 
@@ -58,9 +58,9 @@ WebUI.setText(findTestObject('Common/input_idDynamicLocators', [('idValue') : 's
 
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'searchDate']), Keys.chord(Keys.ENTER))
 
-WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo từ khóa loại SP']), loaiSanPham)
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo từ khóa loại SP',('index'):'1']), loaiSanPham)
 
-WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo từ khóa loại SP']), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo từ khóa loại SP',('index'):'1']), Keys.chord(Keys.ENTER))
 
 WebUI.delay(2)
 

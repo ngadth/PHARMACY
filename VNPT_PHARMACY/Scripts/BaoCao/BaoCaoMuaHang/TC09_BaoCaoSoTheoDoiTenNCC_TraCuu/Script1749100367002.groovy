@@ -20,10 +20,10 @@ import org.openqa.selenium.Keys as Keys
 String columnTable 	= "STT;Tên nhà cung cấp;Điện thoại;Địa chỉ liên hệ";
 String date			='23/06/2025'
 
-WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/TC00_DangNhap'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 WebUI.delay(2)
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 CustomKeywords.'libKeyWords.PageObject.openSubmenu'('BÁO CÁO', 'Báo cáo mua hàng')
 

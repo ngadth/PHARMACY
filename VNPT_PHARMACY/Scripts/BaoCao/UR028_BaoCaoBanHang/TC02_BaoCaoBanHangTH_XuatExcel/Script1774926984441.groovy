@@ -23,7 +23,8 @@ import org.openqa.selenium.remote.DesiredCapabilities as DesiredCapabilities
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import java.nio.file.*
 
-String date			='19/06/2025'
+//String date			='19/06/2025'
+String date			='08/09/2026'
 
 String dirName = RunConfiguration.getProjectDir()
 
@@ -63,15 +64,15 @@ WebUI.click(findTestObject('Common/button_advanced'))
 
 WebUI.click(findTestObject('Common/link_unsafe'))
 
-WebUI.setText(findTestObject('Common/input_username'), GlobalVariable.username)
+WebUI.setText(findTestObject('Common/input_username'), GlobalVariable.userAdmin)
 
-WebUI.setText(findTestObject('Common/input_password'), GlobalVariable.password)
+WebUI.setText(findTestObject('Common/input_password'), GlobalVariable.passAdmin)
 
 WebUI.click(findTestObject('Common/btn_DangNhap'))
 
 WebUI.waitForElementVisible(findTestObject('Common/logo_vnpt'), GlobalVariable.timeout)
 
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'BÁO CÁO']))
 
@@ -81,7 +82,8 @@ WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators', [
 
 WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Kho hàng']))
 
-WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'CH01-Của hàng 01']))
+//WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'CH01-Của hàng 01']))
+WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'SHOP2-Nhà thuốc Minh Lộc']))
 
 WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Nhóm hàng (tất cả)']))
 
@@ -89,15 +91,19 @@ WebUI.setText(findTestObject('Common/input_search'), 'thuoc')
 
 WebUI.delay(0.5)
 
-WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'thuoc']))
+//WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'thuoc']))
+WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'thuốc biệt dược']))
 
-WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo từ khóa loại SP']), 'Bom tiem 5CC/K25 (kim dai) h/100 Vinahankook')
+//WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo từ khóa loại SP']), 'Bom tiem 5CC/K25 (kim dai) h/100 Vinahankook')
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo từ khóa loại SP',('index'):'1']), 'LEANPROTHYROLID')
 
 WebUI.click(findTestObject('Common/input_theoKhoangThoiGian'))
 
+String currentDate = CustomKeywords.'libKeyWords.PageObject.getCurrentDate'()
+
 WebUI.setText(findTestObject('BaoCao/BaoCaoBanHang/input_date',[('date'):'daterangepicker_start']), date)
 
-WebUI.setText(findTestObject('BaoCao/BaoCaoBanHang/input_date',[('date'):'daterangepicker_end']), date)
+WebUI.setText(findTestObject('BaoCao/BaoCaoBanHang/input_date',[('date'):'daterangepicker_end']), currentDate)
 
 WebUI.click(findTestObject('BaoCao/BaoCaoBanHang/button_chonXong'))
 

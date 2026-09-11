@@ -19,10 +19,11 @@ import org.openqa.selenium.Keys as Keys
 
 String columnTable 	= "Phiếu BH;Ngày tháng;Bác sĩ kê đơn;Bệnh nhân;Chẩn đoán;Tên thuốc;Tên thương mại;Số đăng ký;Số lô;Hạn dùng;Nồng độ, hàm lượng;Đơn vị;Số lượng;Đơn giá";
 String date			='13/08/2024'
+//String date			='09/09/2026'
 
 WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators',[('text'):'BÁO CÁO']))
 
@@ -37,19 +38,24 @@ for (int i = 0; i < subStr.length; i++){
 
 WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Lựa chọn Kho']))
 
-WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):GlobalVariable.kho]))
+//WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):GlobalVariable.kho]))
+WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'SHOP2-Nhà thuốc Minh Lộc']))
 
 WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Lựa chọn nhóm SP']))
 
-WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'Duoc pham']))
+//WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'Duoc pham']))
+WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'thuốc biệt dược']))
 
-WebUI.setText(findTestObject('BaoCao/BaoCaoGPP/input_theoTuKhoaLoaiSP'), 'ong tiem 5 ml')
+//WebUI.setText(findTestObject('BaoCao/BaoCaoGPP/input_theoTuKhoaLoaiSP'), 'ong tiem 5 ml')
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo từ khóa loại SP',('index'):'1']), 'Harcotin')
+
+String currentDate = CustomKeywords.'libKeyWords.PageObject.getCurrentDate'()
 
 WebUI.click(findTestObject('Common/input_theoKhoangThoiGian'))
 
-WebUI.setText(findTestObject('Common/input_date',[('date'):'daterangepicker_start']), date)
+WebUI.setText(findTestObject('Common/input_date',[('date'):'daterangepicker_start']), '08/09/2026')
 
-WebUI.setText(findTestObject('Common/input_date',[('date'):'daterangepicker_end']), date)
+WebUI.setText(findTestObject('Common/input_date',[('date'):'daterangepicker_end']), '10/09/2026')
 
 WebUI.click(findTestObject('Common/button_buttonDynamicLocators',[('buttonName'):'Chọn xong']))
 
@@ -57,5 +63,5 @@ WebUI.delay(5)
 
 dateSearch=WebUI.getText(findTestObject('Common/cell_tdDynamicLocators',[('index'):'2']))
 
-WebUI.verifyEqual(dateSearch, date)
+WebUI.verifyEqual(dateSearch, '09/09/2026')
 

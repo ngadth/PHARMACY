@@ -67,7 +67,6 @@ WebUI.setText(findTestObject('Common/input_password'), GlobalVariable.passAdmin)
 WebUI.click(findTestObject('Common/btn_DangNhap'))
 
 WebUI.waitForElementVisible(findTestObject('Common/logo_vnpt'), GlobalVariable.timeout)
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
 
 CustomKeywords.'libKeyWords.PageObject.openSubmenu'('DANH MỤC', 'Danh mục dược quốc gia')
 
@@ -76,7 +75,7 @@ WebUI.waitForElementVisible(findTestObject('XuatKhoBanHang/text_bDynamicLocators
 
 WebUI.delay(5)
 
-String maThuoc = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Mã thuốc', 0, 'product')
+String maThuoc = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Mã định danh thuốc', 0, 'product')
 
 WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : '3zPx6yXl4O..']), maThuoc)
 

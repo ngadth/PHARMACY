@@ -21,6 +21,7 @@ WebUI.callTestCase(findTestCase('CongNo/UR026_CapNhatCongNoNCC/TC05_PhaiTraNoNha
 WebUI.delay(3)
 
 //CustomKeywords.'libKeyWords.PageObject.openSubmenu'('CÔNG NỢ', 'Lịch sử giao dịch với NCC')
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'CÔNG NỢ']))
 

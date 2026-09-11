@@ -20,10 +20,10 @@ import org.openqa.selenium.Keys as Keys
 String columnTable 	= "Nhà cung cấp;Kho;Phiếu nhập;Ngày nhập;Người nhập;Diễn giải;Tổng sản phẩm;Tiền hàng";
 String date			='29/05/2023'
 
-WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/TC00_DangNhap'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 WebUI.delay(2)
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 WebUI.click(findTestObject('Common/menu_baoCao'))
 
@@ -48,9 +48,10 @@ WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'HU
 
 WebUI.click(findTestObject('Common/input_theoKhoangThoiGian'))
 
-WebUI.setText(findTestObject('Common/input_date',[('date'):'daterangepicker_start']), date)
+WebUI.setText(findTestObject('Common/input_date',[('date'):'daterangepicker_start']), '21/04/2026')
+String currentDate = CustomKeywords.'libKeyWords.PageObject.getCurrentDate'()
 
-WebUI.setText(findTestObject('Common/input_date',[('date'):'daterangepicker_end']), date)
+WebUI.setText(findTestObject('Common/input_date',[('date'):'daterangepicker_end']), '23/04/2026')
 
 WebUI.click(findTestObject('Common/button_buttonDynamicLocators',[('buttonName'):'Chọn xong']))
 
@@ -63,5 +64,5 @@ for (int i = 0; i < subStr.length; i++){
 
 dateSearch=WebUI.getText(findTestObject('Common/cell_tdDynamicLocators',[('index'):'4']))
 
-WebUI.verifyEqual(dateSearch, date)
+WebUI.verifyEqual(dateSearch, '22/04/2026')
 

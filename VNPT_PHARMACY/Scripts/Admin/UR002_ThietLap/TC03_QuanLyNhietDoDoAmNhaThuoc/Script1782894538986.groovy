@@ -36,11 +36,11 @@ String currentDate = CustomKeywords.'libKeyWords.PageObject.getCurrentDate'()
 
 String date = (currentDate + ' - ') + currentDate
 
-WebUI.click(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Khoảng thời gian tạo']))
+WebUI.click(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Khoảng thời gian tạo',('index'):'1']))
 
-WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Khoảng thời gian tạo']), date)
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Khoảng thời gian tạo',('index'):'1']), date)
 
-WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Khoảng thời gian tạo']), Keys.chord(
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Khoảng thời gian tạo',('index'):'1']), Keys.chord(
         Keys.ENTER))
 
 value = WebUI.getText(findTestObject('QuanLyKho/cell_table', [('idValue') : '4']))

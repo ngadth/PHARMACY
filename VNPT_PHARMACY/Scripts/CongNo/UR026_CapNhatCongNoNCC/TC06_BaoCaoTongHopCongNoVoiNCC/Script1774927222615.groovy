@@ -69,6 +69,8 @@ WebUI.click(findTestObject('Common/btn_DangNhap'))
 
 WebUI.waitForElementVisible(findTestObject('Common/logo_vnpt'), GlobalVariable.timeout)
 
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
+
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'CÔNG NỢ']))
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Báo cáo tổng hợp công nợ với NCC']))

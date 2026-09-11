@@ -17,14 +17,14 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-String nhomHH = 'Duoc pham'
+String nhomHH = 'thuốc biệt dược'
 
 String columnTable = 'Nhóm hàng hóa;SL bán;Doanh thu;Giá vốn;SL trả;Tiền trả lại;Doanh thu thuần'
 
 WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 WebUI.delay(2)
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 WebUI.click(findTestObject('Common/menu_baoCao'))
 
@@ -36,11 +36,11 @@ WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators', [
 
 WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators', [('text') : 'Lựa chọn Kho']))
 
-WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'CH01-Của hàng 01']))
+WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'SHOP2-Nhà thuốc Minh Lộc']))
 
 WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators', [('text') : 'Lựa chọn nhóm SP']))
 
-WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'Duoc pham']))
+WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'thuốc biệt dược']))
 
 WebUI.click(findTestObject('XuatKhoBanHang/span_idDynamicLocators', [('idValue') : 'select2-loaibc-container']))
 
@@ -48,7 +48,9 @@ WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 
 
 WebUI.delay(2)
 
-String date = ('15/09/2025' + ' - ') + '22/09/2025'
+String currentDate = CustomKeywords.'libKeyWords.PageObject.getCurrentDate'()
+
+String date = ('29/05/2023' + ' - ') + currentDate
 
 WebUI.click(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'searchDate']))
 

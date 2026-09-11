@@ -44,3 +44,31 @@ WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'
 WebUI.delay(2)
 
 WebUI.verifyTextPresent('Không có dữ liệu phù hợp thông tin tra cứu.', false)
+
+// cua hang + ten
+WebUI.refresh()
+
+WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : '5F5ZDA9f5o..']), 'SHOP2-Nhà thuốc Minh Lộc', false)
+
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Mã, tên khách hàng',('index'):'1']), 'Auto_test01')
+
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Mã, tên khách hàng',('index'):'1']), Keys.ENTER.toString())
+
+WebUI.verifyElementVisible(findTestObject('Common/text_spanDynamicLocators',[('textValue'):'Tổng số bản ghi']))
+
+// ten
+WebUI.refresh()
+
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Mã, tên khách hàng',('index'):'1']), 'Auto_test01')
+
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Mã, tên khách hàng',('index'):'1']), Keys.ENTER.toString())
+
+WebUI.verifyElementVisible(findTestObject('Common/text_spanDynamicLocators',[('textValue'):'Tổng số bản ghi']))
+
+// nguoi thuc hien
+
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Người thực hiện',('index'):'1']), 'baoht')
+
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Người thực hiện',('index'):'1']), Keys.ENTER.toString())
+
+WebUI.verifyElementVisible(findTestObject('Common/text_spanDynamicLocators',[('textValue'):'Tổng số bản ghi']))

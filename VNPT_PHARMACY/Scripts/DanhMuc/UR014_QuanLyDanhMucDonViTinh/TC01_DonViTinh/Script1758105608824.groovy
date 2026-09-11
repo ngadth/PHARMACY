@@ -21,7 +21,6 @@ import internal.GlobalVariable as GlobalVariable
 WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 WebUI.delay(3)
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
 
 CustomKeywords.'libKeyWords.PageObject.openSubmenu'('DANH MỤC', 'Đơn vị tính')
 

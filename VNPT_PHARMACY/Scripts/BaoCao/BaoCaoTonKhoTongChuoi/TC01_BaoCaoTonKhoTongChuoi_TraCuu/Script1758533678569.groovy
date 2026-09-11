@@ -19,12 +19,12 @@ import org.openqa.selenium.Keys as Keys
 
 String columnTable = 'Tên thuốc;Số đăng ký;Đơn vị tính;Số tồn'
 
-String tenThuoc1 = 'Russell'
+String tenThuoc1 = 'Amlorus'
 
 WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 WebUI.delay(2)
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 WebUI.click(findTestObject('Common/menu_baoCao'))
 

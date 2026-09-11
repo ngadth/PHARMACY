@@ -70,7 +70,7 @@ WebUI.setText(findTestObject('Common/input_password'), GlobalVariable.password)
 WebUI.click(findTestObject('Common/btn_DangNhap'))
 
 WebUI.waitForElementVisible(findTestObject('Common/logo_vnpt'), GlobalVariable.timeout)
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 CustomKeywords.'libKeyWords.PageObject.openSubmenu'('BÁO CÁO', 'Báo cáo mua hàng')
 
@@ -87,8 +87,9 @@ WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'HU
 WebUI.click(findTestObject('Common/input_theoKhoangThoiGian'))
 
 WebUI.setText(findTestObject('Common/input_date',[('date'):'daterangepicker_start']), date)
+String currentDate = CustomKeywords.'libKeyWords.PageObject.getCurrentDate'()
 
-WebUI.setText(findTestObject('Common/input_date',[('date'):'daterangepicker_end']), date)
+WebUI.setText(findTestObject('Common/input_date',[('date'):'daterangepicker_end']), currentDate)
 
 WebUI.click(findTestObject('Common/button_buttonDynamicLocators',[('buttonName'):'Chọn xong']))
 

@@ -77,11 +77,11 @@ String currentDate = CustomKeywords.'libKeyWords.PageObject.getCurrentDate'()
 
 String date = (currentDate + ' - ') + currentDate
 
-WebUI.click(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Theo khoảng thời gian']))
+WebUI.click(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Theo khoảng thời gian', ('index'):'1']))
 
-WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Theo khoảng thời gian']), date)
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Theo khoảng thời gian', ('index'):'1']), date)
 
-WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Theo khoảng thời gian']), Keys.chord(
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Theo khoảng thời gian', ('index'):'1']), Keys.chord(
 		Keys.ENTER))
 
 WebUI.delay(2)

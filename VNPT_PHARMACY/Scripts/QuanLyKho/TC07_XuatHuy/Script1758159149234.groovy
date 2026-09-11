@@ -27,8 +27,8 @@ WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName'
 
 WebUI.delay(3)
 
-WebUI.selectOptionByLabel(findTestObject('QuanLyKho/droplist_selectDynamicLast', [('idValue') : 'khoxuat']), 'HUONG6787-Nguyễn Thanh Hương', 
-    false)
+//WebUI.selectOptionByLabel(findTestObject('QuanLyKho/droplist_selectDynamicLast', [('idValue') : 'khoxuat']), 'HUONG6787-Nguyễn Thanh Hương', false)
+WebUI.selectOptionByLabel(findTestObject('QuanLyKho/droplist_selectDynamicLast', [('idValue') : 'khoxuat']), 'SHOP2-Nhà thuốc Minh Lộc', false)
 
 WebUI.setText(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue') : 'thukhoxuat']), 'Thai Bao')
 
@@ -48,8 +48,8 @@ WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('button
 
 WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Cập nhật thành công']), 5)
 
-GlobalVariable.maDonHang = 'Apitim 5 v/10 h/30 t/6480'
-
+//GlobalVariable.maDonHang = 'Apitim 5 v/10 h/30 t/6480'
+GlobalVariable.maDonHang = 'Anphachoay2 500mg'
 WebUI.setText(findTestObject('QuanLyKho/input_idDivDynamicLocators', [('idValue') : 'kw']), GlobalVariable.maDonHang)
 
 WebUI.delay(0.5)
@@ -94,8 +94,8 @@ WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') :
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'ma_xuat']), Keys.chord(Keys.ENTER))
 
-WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']), 'HUONG6787-Nguyễn Thanh Hương', 
-    false)
+//WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']), 'HUONG6787-Nguyễn Thanh Hương', false)
+WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']), 'SHOP2-Nhà thuốc Minh Lộc', false)
 
 WebUI.click(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'ngay_xuat']))
 
@@ -153,8 +153,8 @@ WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') :
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'ma_xuat']), Keys.chord(Keys.ENTER))
 
-WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']), 'HUONG6787-Nguyễn Thanh Hương', 
-    false)
+//WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']), 'HUONG6787-Nguyễn Thanh Hương', false)
+WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']), 'SHOP2-Nhà thuốc Minh Lộc', false)
 
 WebUI.click(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'ngay_xuat']))
 

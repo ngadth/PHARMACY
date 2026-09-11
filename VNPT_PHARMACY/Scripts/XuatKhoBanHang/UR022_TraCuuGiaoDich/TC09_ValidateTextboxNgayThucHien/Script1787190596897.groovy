@@ -36,28 +36,86 @@ WebUI.verifyElementPresent(findTestObject('Common/titlePage_bDynamicLocators', [
 
 //WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : '5F5ZDA9f5o..']), 'HUONG6787-Nguyễn Thanh Hương', false)
 // mac dinh
-String value = WebUI.getAttribute(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Người thực hiện',('index'):'1']),'value')
-assert value.trim() == ''
+String currentDate = CustomKeywords.'libKeyWords.PageObject.getCurrentDate'()
 
-// copy paste
-WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Người thực hiện',('index'):'1']), 'admin')
+String value = WebUI.getAttribute(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Ngày bán',('index'):'1']),'value')
+assert value.trim().contains(currentDate)
 
-WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Người thực hiện',('index'):'1']), Keys.chord(Keys.CONTROL, 'A'))
-WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Người thực hiện',('index'):'1']), Keys.chord(Keys.CONTROL, 'C'))
+// khong dung dinh dang
+def invalidForm = [
+	'04/30/2026',
+	'2026/30/04',
+	'abcdefgh',
+	'30',
+	'30/01'
+]
 
-WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Người thực hiện',('index'):'1']), '')
+for (int i = 0; i < invalidForm.size(); i++) {
 
-WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Người thực hiện',('index'):'1']), Keys.chord(Keys.CONTROL, 'V'))
-WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Người thực hiện',('index'):'1']), Keys.ENTER.toString())
+	String date1 = invalidForm[i] + ' - ' + invalidForm[i] 
 
-String value1 = WebUI.getAttribute(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Người thực hiện',('index'):'1']), 'value')
-assert value1.trim() == 'admin'
+	WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Ngày bán',('index'):'1']),date1)
 
-// < 51 | < 100
-WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Người thực hiện',('index'):'1']), 'cảm xuyên hương cảm xuyên hương cảm xuyên hương cảm xuyên hương cảm xuyên hương cảm xuyên hương cảm xuyên hương cảm xuyên hương cảm xuyên hương cảm xuyên hương cảm xuyên hương cảm xuyên hương cảm xuyên hương cảm xuyên hương cảm xuyên hương cảm xuyên hương cảm xuyên hương cảm xuyên hương ')
+	WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Ngày bán',('index'):'1']),Keys.chord(Keys.ENTER))
+	WebUI.delay(0.5)
+	WebUI.verifyElementVisible(findTestObject('Common/text_spanDynamicLocators',[('textValue'):'Tổng số bản ghi']))
+	
+}
 
-WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Người thực hiện',('index'):'1']), Keys.ENTER.toString())
+// ngay thang khong hop le
+def invalidDate = [
+	'32/04/2009',
+	'12/14/2009',
+	'31/04/1983',
+	'31/06/1983',
+	'31/09/1983',
+	'31/11/1983',
+	'30/02/1983',
+	'29/02/1983',
+	//'1/2/0999',
+	'1/2/99999'
+]
 
-WebUI.assertElementVisible(findTestObject('Common/noti_h4ThanhCong',[('text'): 'Người bán phải có độ dài nằm trong khoảng 0-100']), 3)
+for (int i = 0; i < invalidDate.size(); i++) {
 
+	String date2 = invalidDate[i] + ' - ' + invalidDate[i] 
 
+	WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Ngày bán',('index'):'1']),date2)
+
+	WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Ngày bán',('index'):'1']),Keys.chord(Keys.ENTER))
+	WebUI.delay(0.5)
+	WebUI.verifyElementVisible(findTestObject('Common/text_spanDynamicLocators',[('textValue'):'Tổng số bản ghi']))
+}
+
+// ngay thang hop le
+def validDate = [
+	'31/01/2026',
+	'29/02/1980',
+	'28/02/1983',
+	'31/03/2026',
+	'30/04/2026',
+	'31/05/2026',
+	'30/06/1999',
+	'31/07/1999',
+	'31/08/1999',
+	'30/09/1999',
+	'31/10/1999',
+	'30/11/1999',
+	'31/12/1999',
+	'10/10/1983',
+	'01/02/1000',
+	'01/02/9999',
+	//'20/02/2019'
+]
+
+for (int i = 0; i < validDate.size(); i++) {
+	
+	String date3 = validDate[i]  + ' - ' + validDate[i]
+
+	WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Ngày bán',('index'):'1']),date3)
+	
+	WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Ngày bán',('index'):'1']),Keys.chord(Keys.ENTER))
+	WebUI.delay(1)
+	WebUI.verifyElementVisible(findTestObject('Common/text_tdDynamicLocators',[('text'):'Không có dữ liệu phù hợp thông tin tra cứu.']))
+}
+	
