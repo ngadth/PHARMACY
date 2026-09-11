@@ -20,7 +20,6 @@ import org.openqa.selenium.Keys as Keys
 String soLuong = '2'
 
 WebUI.callTestCase(findTestCase('QuanLyKho/UR016_Nhap_Kho_Hang_Hoa/TC00_NhapKho'), [:], FailureHandling.STOP_ON_FAILURE)
-
 WebUI.delay(5)
 
 //CustomKeywords.'libKeyWords.PageObject.openSubmenu'('QUẢN LÝ KHO', 'Xuất trả hàng NCC')
@@ -36,8 +35,7 @@ WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators',
 
 WebUI.click(findTestObject('QuanLyKho/icon_searchClass', [('classValue') : 'fa fa-search']))
 
-//WebUI.selectOptionByLabel(findTestObject('QuanLyKho/droplist_selectDynamicLast', [('idValue') : 'khoxuat']), 'HUONG6787-Nguyễn Thanh Hương',false)
-WebUI.selectOptionByLabel(findTestObject('QuanLyKho/droplist_selectDynamicLast', [('idValue') : 'khoxuat']), 'SHOP2-Nhà thuốc Minh Lộc',false)
+WebUI.selectOptionByLabel(findTestObject('QuanLyKho/droplist_selectDynamicLast', [('idValue') : 'khoxuat']), 'HUONG6787-Nguyễn Thanh Hương',false)
 //WebUI.click(findTestObject('QuanLyKho/droplist_selectDynamicLast', [('idValue') : 'khoxuat']))
 
 //WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'SHOP6-CH 6']))
@@ -87,7 +85,7 @@ WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : '
 WebUI.click(findTestObject('XuatKhoBanHang/span_idDynamicLocators', [('idValue') : 'select2-khoxuat-container']))
 
 //WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'HUONG6787-Nguyễn Thanh Hương']))
-WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'SHOP2-Nhà thuốc Minh Lộc']))
+WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'HUONG6787-Nguyễn Thanh Hương']))
 
 //WebUI.click(findTestObject('XuatKhoBanHang/span_idDynamicLocators', [('idValue') : 'select2-khoxuat-container']))
 

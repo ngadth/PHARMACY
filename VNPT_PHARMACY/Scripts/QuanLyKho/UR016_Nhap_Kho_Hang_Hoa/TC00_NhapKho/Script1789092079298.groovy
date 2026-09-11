@@ -19,7 +19,7 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import java.util.Arrays
 
-WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/TC00_DangNhap'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.delay(3)
 
@@ -35,19 +35,22 @@ WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators',
 WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'inputType']), 'Nhập kho từ danh mục hàng hóa', 
     false)
 
-WebUI.sendKeys(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Thủ kho nhập ']), 'SHOP2-Nhà thuốc Minh Lộc')
+WebUI.sendKeys(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Thủ kho nhập ']), 'Shop5')
 
 WebUI.click(findTestObject('QuanLyKho/select_labelSpanDynamicLocators', [('labelValue') : 'Kho nhập']))
 
-TestObject firstKhoNhapOption = new TestObject('firstKhoNhapOption')
+WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'HUONG6787-Nguyễn Thanh Hương']))
 
-firstKhoNhapOption.addProperty('xpath', ConditionType.EQUALS, "(//ul[contains(@class,'select2-results__options')]//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message'))])[1]")
-
-WebUI.click(firstKhoNhapOption)
+//TestObject firstKhoNhapOption = new TestObject('firstKhoNhapOption')
+//
+//firstKhoNhapOption.addProperty('xpath', ConditionType.EQUALS, "(//ul[contains(@class,'select2-results__options')]//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message'))])[1]")
+//
+//WebUI.click(firstKhoNhapOption)
 
 WebUI.click(findTestObject('QuanLyKho/select_labelSpanDynamicLocators', [('labelValue') : 'Nhà cung cấp']))
 
-WebUI.click(firstKhoNhapOption)
+WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'MTV - Công ty TNHH MTV']))
+//WebUI.click(firstKhoNhapOption)
 
 String currentDate = CustomKeywords.'libKeyWords.PageObject.getCurrentDate'()
 
@@ -145,6 +148,8 @@ WebUI.delay(2)
 WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Lưu thông tin phiếu thành công!']), 10)
 
 WebUI.click(findTestObject('QuanLyKho/icon_close'))
+
+WebUI.refresh()
 
 WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Mã phiếu nhập']), phieuID)
 
