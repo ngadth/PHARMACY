@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC08_ValidateDroplistNhomSPHangTongHop</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>925101eb-4b1c-48af-86cb-1a15c019b05c</testCaseGuid>
+</TestCaseEntity>

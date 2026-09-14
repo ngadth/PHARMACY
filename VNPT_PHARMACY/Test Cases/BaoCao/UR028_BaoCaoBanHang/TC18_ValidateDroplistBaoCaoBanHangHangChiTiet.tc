@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC18_ValidateDroplistBaoCaoBanHangHangChiTiet</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>55b50573-3963-4d6c-a602-6b5fc0fc8e3c</testCaseGuid>
+</TestCaseEntity>

@@ -36,7 +36,7 @@ WebUI.click(findTestObject('XuatKhoBanHang/label_forDynamicLocators', [('idValue
 //WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'cboCuaHang']), 'HUONG6787-Nguyễn Thanh Hương', false)
 WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'cboCuaHang']), 'SHOP2-Nhà thuốc Minh Lộc', false)
 
-//WebUI.waitForElementClickable(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Xác nhận chuyển']),30)
+WebUI.waitForElementClickable(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Xác nhận chuyển']),10)
 
 WebUI.verifyElementVisible(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Xác nhận chuyển']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Xác nhận chuyển'])) : null
 

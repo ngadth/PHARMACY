@@ -19,6 +19,8 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.callTestCase(findTestCase('XuatKhoBanHang/UR020_KeDonBanThuoc/TC01_KeDonBanThuoc'), [:], FailureHandling.STOP_ON_FAILURE)
 
+WebUI.refresh()
+
 WebUI.click(findTestObject('Common/icon_idDynamicLocators', [('idValue') : 'homepage']))
 
 WebUI.delay(3)
