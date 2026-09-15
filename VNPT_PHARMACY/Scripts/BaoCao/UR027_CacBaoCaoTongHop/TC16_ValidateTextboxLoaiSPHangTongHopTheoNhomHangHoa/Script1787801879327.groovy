@@ -24,85 +24,46 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import java.nio.file.*
 import org.openqa.selenium.WebElement
 
-String dirName = RunConfiguration.getProjectDir()
+String columnTable = 'Nhóm hàng hóa;SL bán;Doanh thu;Giá vốn;SL trả;Tiền trả lại;Doanh thu thuần'
 
-String downloadPath = dirName + '\\Data Files' // Thư mục tải file
+//String date = '22/06/2025'
+String date			='08/09/2026'
 
-String pathFileDownload = downloadPath.replaceAll('/', '\\\\')
+WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
-String startName = 'BaoCaoBHTHNHH'
+WebUI.delay(5)
 
-String endName = '.xls'
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
-//// Cấu hình Chrome Options để tải file mà không hiển thị popups
-Map<String, Object> prefs = new HashMap()
+WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'BÁO CÁO']))
 
-prefs.put('download.default_directory', pathFileDownload)
+WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Báo cáo bán hàng']))
 
-prefs.put('download.prompt_for_download', false)
+//CustomKeywords.'libKeyWords.PageObject.openSubmenu'('BÁO CÁO', 'Báo cáo bán hàng')
 
-prefs.put('profile.default_content_settings.popups', 0)
+WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators', [('text') : 'Báo cáo Bán hàng TH']))
 
-ChromeOptions options = new ChromeOptions()
+WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators', [('text') : 'Báo cáo Bán hàng TH']))
 
-options.setExperimentalOption('prefs', prefs)
+WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'Báo cáo Bán hàng tổng hợp theo nhóm hàng hóa']))
 
-// Khởi tạo ChromeDriver thủ công với cấu hình
-ChromeDriver driver = new ChromeDriver(options)
-
-DriverFactory.changeWebDriver(driver)
-
-// Gán driver cho Katalon
-// Gán driver cho Katalon
-WebUI.navigateToUrl(GlobalVariable.URL)
-
-WebUI.maximizeWindow()
-
-//WebUI.delay(5)
-WebUI.click(findTestObject('Common/button_advanced'))
-
-WebUI.click(findTestObject('Common/link_unsafe'))
-
-WebUI.setText(findTestObject('Common/input_username'), GlobalVariable.username)
-
-WebUI.setText(findTestObject('Common/input_password'), GlobalVariable.password)
-
-WebUI.click(findTestObject('Common/btn_DangNhap'))
-
-WebUI.waitForElementVisible(findTestObject('Common/logo_vnpt'), GlobalVariable.timeout)
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
-
-WebUI.click(findTestObject('Common/menu_baoCao'))
-
-WebUI.delay(1)
-
-WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Các báo cáo tổng hợp']))
-
-WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators', [('text') : 'Báo cáo thống']))
-
-//ban hang chi tiet
-WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Báo cáo Bán hàng TH']))
-
-WebUI.setText(findTestObject('Common/input_search'),'Báo cáo Bán hàng tổng hợp theo nhóm hàng hóa')
-
-WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'Báo cáo Bán hàng tổng hợp theo nhóm hàng hóa']))
-
+WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators', [('text') : 'Báo cáo Bán hàng tổng hợp theo nhóm hàng hóa']))
 
 // mac dinh
-String value =  WebUI.getAttribute(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/input_idDynamicLocators',[('idValue'):'loaisp_ten']), 'value')
+String value =  WebUI.getAttribute(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo từ khóa loại SP',('index'):'1']), 'value')
 assert value.trim() == ''
 
 // copy paste
-WebUI.setText(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/input_idDynamicLocators',[('idValue'):'loaisp_ten']), 'Mạnh Thường Quân')
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo từ khóa loại SP',('index'):'1']), 'Mạnh Thường Quân')
 
-WebUI.sendKeys(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/input_idDynamicLocators',[('idValue'):'loaisp_ten']), Keys.chord(Keys.CONTROL, 'A'))
-WebUI.sendKeys(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/input_idDynamicLocators',[('idValue'):'loaisp_ten']), Keys.chord(Keys.CONTROL, 'C'))
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo từ khóa loại SP',('index'):'1']), Keys.chord(Keys.CONTROL, 'A'))
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo từ khóa loại SP',('index'):'1']), Keys.chord(Keys.CONTROL, 'C'))
 
-WebUI.setText(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/input_idDynamicLocators',[('idValue'):'loaisp_ten']), '')
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo từ khóa loại SP',('index'):'1']), '')
 
-WebUI.sendKeys(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/input_idDynamicLocators',[('idValue'):'loaisp_ten']), Keys.chord(Keys.CONTROL, 'V'))
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo từ khóa loại SP',('index'):'1']), Keys.chord(Keys.CONTROL, 'V'))
 
-String value1 =  WebUI.getAttribute(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/input_idDynamicLocators',[('idValue'):'loaisp_ten']), 'value')
+String value1 =  WebUI.getAttribute(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo từ khóa loại SP',('index'):'1']), 'value')
 assert value1.trim() == 'Mạnh Thường Quân'
 
 //// < 51

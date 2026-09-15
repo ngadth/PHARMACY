@@ -23,71 +23,32 @@ import org.openqa.selenium.remote.DesiredCapabilities as DesiredCapabilities
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import java.nio.file.*
 
+String columnTable = 'Nhóm hàng hóa;SL bán;Doanh thu;Giá vốn;SL trả;Tiền trả lại;Doanh thu thuần'
 
-String dirName = RunConfiguration.getProjectDir()
+//String date = '22/06/2025'
+String date			='08/09/2026'
 
-String downloadPath = dirName + '\\Data Files' // Thư mục tải file
+WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
-String pathFileDownload = downloadPath.replaceAll('/', '\\\\')
+WebUI.delay(5)
 
-String startName = 'BaoCaoBHTHNHH'
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
-String endName = '.xls'
+WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'BÁO CÁO']))
 
-//// Cấu hình Chrome Options để tải file mà không hiển thị popups
-Map<String, Object> prefs = new HashMap()
+WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Báo cáo bán hàng']))
 
-prefs.put('download.default_directory', pathFileDownload)
+//CustomKeywords.'libKeyWords.PageObject.openSubmenu'('BÁO CÁO', 'Báo cáo bán hàng')
 
-prefs.put('download.prompt_for_download', false)
+WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators', [('text') : 'Báo cáo Bán hàng TH']))
 
-prefs.put('profile.default_content_settings.popups', 0)
+WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators', [('text') : 'Báo cáo Bán hàng TH']))
 
-ChromeOptions options = new ChromeOptions()
+WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'Báo cáo Bán hàng tổng hợp theo nhóm hàng hóa']))
 
-options.setExperimentalOption('prefs', prefs)
-
-// Khởi tạo ChromeDriver thủ công với cấu hình
-ChromeDriver driver = new ChromeDriver(options)
-
-DriverFactory.changeWebDriver(driver)
-
-// Gán driver cho Katalon
-// Gán driver cho Katalon
-WebUI.navigateToUrl(GlobalVariable.URL)
-
-WebUI.maximizeWindow()
-
-//WebUI.delay(5)
-WebUI.click(findTestObject('Common/button_advanced'))
-
-WebUI.click(findTestObject('Common/link_unsafe'))
-
-WebUI.setText(findTestObject('Common/input_username'), GlobalVariable.username)
-
-WebUI.setText(findTestObject('Common/input_password'), GlobalVariable.password)
-
-WebUI.click(findTestObject('Common/btn_DangNhap'))
-
-WebUI.waitForElementVisible(findTestObject('Common/logo_vnpt'), GlobalVariable.timeout)
-WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
-
-WebUI.click(findTestObject('Common/menu_baoCao'))
-
-WebUI.delay(1)
-
-WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Các báo cáo tổng hợp']))
-
-WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators', [('text') : 'Báo cáo thống']))
+WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators', [('text') : 'Báo cáo Bán hàng tổng hợp theo nhóm hàng hóa']))
 
 String currentDate = CustomKeywords.'libKeyWords.PageObject.getCurrentDate'()
-
-//ban hang chi tiet
-WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Báo cáo Bán hàng TH']))
-
-WebUI.setText(findTestObject('Common/input_search'),'Báo cáo Bán hàng tổng hợp theo nhóm hàng hóa')
-
-WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'Báo cáo Bán hàng tổng hợp theo nhóm hàng hóa']))
 
 // mac dinh
 String value = WebUI.getAttribute(findTestObject('Common/input_idDynamicLocators',[('idValue'):'searchDate']),'value')
