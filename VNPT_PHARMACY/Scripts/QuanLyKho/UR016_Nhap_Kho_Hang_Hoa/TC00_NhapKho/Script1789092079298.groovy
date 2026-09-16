@@ -28,12 +28,17 @@ WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'QUẢN L
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Nhập kho']))
 
+WebUI.refresh()
+
 WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Nhập kho']))
 
 WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Lập phiếu nhập kho']), 5)
 
-WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'inputType']), 'Nhập kho từ danh mục hàng hóa', 
-    false)
+WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'inputType']), 'Nhập kho từ danh mục hàng hóa', false)
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Thủ kho nhập ']))
 
 WebUI.sendKeys(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Thủ kho nhập ']), 'Shop5')
 
@@ -147,9 +152,11 @@ WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('button
 
 WebUI.delay(2)
 
+WebUI.acceptAlert(FailureHandling.OPTIONAL)
+
 WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Lưu thông tin phiếu thành công!']), 10)
 
-WebUI.click(findTestObject('QuanLyKho/icon_close'))
+//WebUI.click(findTestObject('QuanLyKho/icon_close'))
 
 WebUI.refresh()
 

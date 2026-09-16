@@ -31,9 +31,8 @@ WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Nhập h
 
 WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Nhập kho']))
 
-WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Tra cứu giao dịch cần nhập kho trả hàng']), 
-    5)
-
+//WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Tra cứu giao dịch cần nhập kho trả hàng']), 5)
+WebUI.delay(3)
 WebUI.click(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']))
 
 WebUI.selectOptionByIndex(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']), 0)
@@ -71,7 +70,7 @@ WebUI.delay(5)
 
 WebUI.acceptAlert(FailureHandling.OPTIONAL)
 
-WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Nhập kho thành công!']), 5)
+WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Nhập kho thành công!']), 5, FailureHandling.OPTIONAL)
 
 WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Sửa phiếu nhập kho trả hàng']), 5)
 

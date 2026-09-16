@@ -35,7 +35,10 @@ WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName'
 
 GlobalVariable.maKH = 'Auto_test01'
 
-WebUI.sendKeys(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue') : 'patientName']), GlobalVariable.maKH)
+WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong',[('text'):'Thêm đơn thuốc']), 5)
+
+//WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'patientName']), GlobalVariable.maKH)
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Tìm bệnh nhân',('index'):'1']), GlobalVariable.maKH)
 
 WebUI.delay(3)
 

@@ -53,8 +53,9 @@ if (WebUI.verifyElementPresent(dynamicObject, 5, FailureHandling.OPTIONAL)) {
 }
 
 //WebUI.click(findTestObject('XuatKhoBanHang/data_index', [('value') : '0']))
+WebUI.delay(2)
 
-WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Bắt đầu bán theo đơn này']))
+WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('buttonName') : 'Bắt đầu bán theo đơn này']))
 
 WebUI.delay(3)
 
