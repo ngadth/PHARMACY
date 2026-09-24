@@ -26,7 +26,6 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook
 import org.apache.poi.hssf.usermodel.HSSFWorkbook
 import java.io.FileInputStream
 
-String date			='08/09/2026'
 
 String dirName = RunConfiguration.getProjectDir()
 
@@ -34,7 +33,7 @@ String downloadPath = dirName + '\\Data Files\\BaoCao' // Thư mục tải file
 
 String pathFileDownload = downloadPath.replaceAll('/', '\\\\')
 
-String startName = 'BaoCaoBanHangChiTiet'
+String startName = 'BaoCaoBHTHNHH'
 
 String endName = '.xls'
 
@@ -67,63 +66,47 @@ WebUI.click(findTestObject('Common/button_advanced'))
 
 WebUI.click(findTestObject('Common/link_unsafe'))
 
-WebUI.setText(findTestObject('Common/input_username'), GlobalVariable.userAdmin)
+WebUI.setText(findTestObject('Common/input_username'), GlobalVariable.username)
 
-WebUI.setText(findTestObject('Common/input_password'), GlobalVariable.passAdmin)
+WebUI.setText(findTestObject('Common/input_password'), GlobalVariable.password)
 
 WebUI.click(findTestObject('Common/btn_DangNhap'))
 
 WebUI.waitForElementVisible(findTestObject('Common/logo_vnpt'), GlobalVariable.timeout)
+WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']))
 
-WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
+WebUI.click(findTestObject('Common/menu_baoCao'))
 
-WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'BÁO CÁO']))
+WebUI.delay(1)
 
-WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Báo cáo bán hàng']))
+WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Các báo cáo tổng hợp']))
 
-WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators', [('text') : 'Báo cáo Bán hàng TH']))
+WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators', [('text') : 'Báo cáo thống']))
 
+//ban hang chi tiet
 WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Báo cáo Bán hàng TH']))
 
-WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'Báo cáo Bán hàng chi tiết']))
+WebUI.setText(findTestObject('Common/input_search'),'Báo cáo Bán hàng tổng hợp theo nhóm hàng hóa')
 
-WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators',[('text'):'Báo cáo Bán hàng chi tiết']))
+WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'Báo cáo Bán hàng tổng hợp theo nhóm hàng hóa']))
 
-WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Kho hàng']))
+// kho va khoang thoi gian
 
-//WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):GlobalVariable.kho]))
-WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'SHOP2-Nhà thuốc Minh Lộc']))
+WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators', [('text') : 'Lựa chọn Kho']))
 
-WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Nhóm hàng (tất cả)']))
-
-//WebUI.setText(findTestObject('Common/input_search'), 'Duoc pham')
-WebUI.setText(findTestObject('Common/input_search'), 'thuoc')
-
-WebUI.delay(0.5)
-
-//WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'Duoc pham']))
-WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'thuốc biệt dược']))
-
-//WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo từ khóa loại SP']), 'HAPACOL ĐAU NHỨC')
-WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo từ khóa loại SP',('index'):'1']), 'LEANPROTHYROLID')
-
-WebUI.click(findTestObject('Common/input_theoKhoangThoiGian'))
-
-String currentDate = CustomKeywords.'libKeyWords.PageObject.getCurrentDate'()
-
-WebUI.setText(findTestObject('BaoCao/BaoCaoBanHang/input_date',[('date'):'daterangepicker_start']), date)
-
-WebUI.setText(findTestObject('BaoCao/BaoCaoBanHang/input_date',[('date'):'daterangepicker_end']), currentDate)
-
-WebUI.click(findTestObject('BaoCao/BaoCaoBanHang/button_chonXong'))
-
-WebUI.click(findTestObject('BaoCao/BaoCaoBanHang/dropdown_hinhThucThanhToan'))
-
-WebUI.click(findTestObject('BaoCao/BaoCaoBanHang/option_tienMat'))
-
-WebUI.setText(findTestObject('Common/input_idDynamicLocators',[('idValue'):'vnguoiban']), GlobalVariable.userAdmin)
+WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : '9481-auto4574']))
 
 WebUI.delay(2)
+
+String date = '26/08/2026 - 30/08/2026'
+
+WebUI.click(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'searchDate']))
+
+WebUI.setText(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'searchDate']), date)
+
+WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'searchDate']), Keys.chord(Keys.ENTER))
+
+WebUI.assertElementPresent(findTestObject('Common/text_tdDynamicLocators',[('text'):'Duoc pham']), 3)
 
 //Xóa file
 CustomKeywords.'libKeyWords.PageObject.deleteFilesWithPrefixStartEnd'(pathFileDownload, startName, endName)
@@ -150,10 +133,10 @@ if (latestFile.name.toLowerCase().endsWith('.xls')) {
 
 def sheet = workbook.getSheetAt(0)
 
-def valueI7 = sheet.getRow(6).getCell(8).toString()
-def valueK7 = sheet.getRow(6).getCell(10).toString()
+def valueC10 = sheet.getRow(9).getCell(2).toString()
+def valueD10 = sheet.getRow(9).getCell(3).toString()
 
-WebUI.verifyMatch(valueI7, '15.0', false)
-WebUI.verifyMatch(valueK7, '5890500.0', false)
+WebUI.verifyMatch(valueC10, '2.0', false)
+WebUI.verifyMatch(valueD10, '600.0', false)
 
 workbook.close()

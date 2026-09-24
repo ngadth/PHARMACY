@@ -74,6 +74,8 @@ WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators'
 
 WebUI.sendKeys(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'cbotrangthai']), Keys.chord(Keys.ENTER))
 
+WebUI.delay(2)
+
 String maBSCell = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Mã BS', 0, 'product')
 
 String tenBSCell = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Tên BS', 0, 'product')
@@ -132,6 +134,8 @@ WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators'
     false)
 
 WebUI.sendKeys(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'cbotrangthai']), Keys.chord(Keys.ENTER))
+
+WebUI.delay(2)
 
 String tenBSCellUD = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Tên BS', 0, 'product')
 

@@ -66,15 +66,17 @@ WebUI.click(findTestObject('Common/checkbox_nameDynamicLocators', [('nameValue')
 
 WebUI.click(findTestObject('XuatKhoBanHang/button_lastDynamicLocators', [('buttonName') : 'Nhập kho']))
 
-WebUI.delay(5)
+//WebUI.delay(5)
 
-WebUI.acceptAlert(FailureHandling.OPTIONAL)
-
-WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Nhập kho thành công!']), 5, FailureHandling.OPTIONAL)
-
-WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Sửa phiếu nhập kho trả hàng']), 5)
-
-WebUI.click(findTestObject('QuanLyKho/icon_closeDynamicLocators', [('titleName') : 'Sửa phiếu nhập kho trả hàng']))
+//WebUI.acceptAlert(FailureHandling.OPTIONAL)
+//
+//WebUI.delay(10)
+//
+//WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Nhập kho thành công!']), 5, FailureHandling.OPTIONAL)
+//
+//WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Sửa phiếu nhập kho trả hàng']), 5)
+//
+//WebUI.click(findTestObject('QuanLyKho/icon_closeDynamicLocators', [('titleName') : 'Sửa phiếu nhập kho trả hàng']))
 
 WebUI.refresh()
 

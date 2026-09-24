@@ -82,8 +82,10 @@ WebUI.delay(0.5)
 
 WebUI.click(findTestObject('Common/option_aDynamicLocators', [('optionName') : 'Cập nhật dữ liệu chi tiết']))
 
-WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'CcXX4zAk5yLXDt9f5o..']), 
-    'Duoc pham', false)
+//WebUI.delay(2)
+WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong',[('text'):'Cập nhật giá bán']), 5)
+
+WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'CcXX4zAk5yLXDt9f5o..']), 'Duoc pham', false)
 
 WebUI.setText(findTestObject('QuanLyKho/input_idDivDynamicLocators', [('idValue') : 'CBtiCytfDzo.']), 'Aclovia')
 

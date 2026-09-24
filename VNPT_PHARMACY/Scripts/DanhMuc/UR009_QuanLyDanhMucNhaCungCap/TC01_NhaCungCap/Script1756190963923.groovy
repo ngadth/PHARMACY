@@ -32,11 +32,15 @@ WebUI.sendKeys(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue
 
 WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Lưu']))
 
+WebUI.refresh()
+
 WebUI.click(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'org_code']))
 
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'org_code']), code)
 
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'org_code']), Keys.chord(Keys.ENTER))
+
+WebUI.delay(2)
 
 String value = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Mã NCC', 0, 'searchUnitTable')
 
@@ -48,18 +52,23 @@ WebUI.click(findTestObject('Common/option_aDynamicLocators', [('optionName') : '
 
 String code2 = "CODE" + CustomKeywords.'libKeyWords.PageObject.randomString'('123456ABCDRFGLJH', 3)
 
-WebUI.sendKeys(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue') : 'txtCode1_e']), Keys.chord(
-        Keys.CONTROL, 'a'))
-
-WebUI.sendKeys(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue') : 'txtCode1_e']), code2)
+//WebUI.sendKeys(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue') : 'txtCode1_e']), Keys.chord(
+//        Keys.CONTROL, 'a'))
+//
+//WebUI.sendKeys(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue') : 'txtCode1_e']), code2)
+WebUI.setText(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue') : 'txtCode1_e']), code2)
 
 WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Lưu']))
+
+WebUI.refresh()
 
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'org_code']), Keys.chord(Keys.CONTROL, 'a'))
 
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'org_code']), code2)
 
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'org_code']), Keys.chord(Keys.ENTER))
+
+WebUI.delay(2)
 
 String value2 = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Mã NCC', 0, 'searchUnitTable')
 

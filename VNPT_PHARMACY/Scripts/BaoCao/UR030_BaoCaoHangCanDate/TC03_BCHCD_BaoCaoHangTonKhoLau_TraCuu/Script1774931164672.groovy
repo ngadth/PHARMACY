@@ -62,7 +62,7 @@ WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text')
 
 WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo từ khóa loại SP',('index'):'1']), Keys.chord(Keys.ENTER))
 
-WebUI.delay(2)
+WebUI.delay(3)
 
 String[] subStr = columnTable.split(';')
 

@@ -109,8 +109,9 @@ WebUI.acceptAlert()
 
 WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Cập nhật thành công']), 10)
 
-GlobalVariable.phieuban_id = WebUI.getAttribute(findTestObject('DanhMuc/get_labelInputDynamicLocators', [('labelValue') : 'Mã HH']), 
-    'value')
+WebUI.delay(5)
+
+GlobalVariable.phieuban_id = WebUI.getAttribute(findTestObject('DanhMuc/get_labelInputDynamicLocators', [('labelValue') : 'Mã HH']), 'value')
 
 println('Mã HH là: ' + GlobalVariable.phieuban_id)
 
@@ -148,6 +149,8 @@ WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 
 WebUI.setText(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'CBtVCFLm']), GlobalVariable.phieuban_id)
 
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'CBtVCFLm']), Keys.chord(Keys.ENTER))
+
+WebUI.delay(2)
 
 String maLoaiHang = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Mã loại hàng', 0, 'product')
 

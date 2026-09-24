@@ -46,9 +46,10 @@ WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 
 
 WebUI.setText(findTestObject('XuatKhoBanHang/input_idDynamicLocatorsLast', [('idValue') : 'CE9X63Lm3zPbCW..']), tenThuoc1)
 
+WebUI.delay(1)
+
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_idDynamicLocatorsLast', [('idValue') : 'CE9X63Lm3zPbCW..']), Keys.chord(Keys.ENTER))
 
-WebUI.delay(2)
 
 String[] subStr = columnTable.split(';')
 

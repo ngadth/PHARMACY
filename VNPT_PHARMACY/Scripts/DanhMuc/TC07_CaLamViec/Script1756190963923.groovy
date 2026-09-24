@@ -24,9 +24,13 @@ CustomKeywords.'libKeyWords.PageObject.openSubmenu'('DANH MỤC', 'Ca làm việ
 
 WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Thêm mới']))
 
+WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong',[('text'):'Thêm ca làm việc']), 5)
+
 String code = CustomKeywords.'libKeyWords.PageObject.randomString'('1234567890', 3)
 
 WebUI.sendKeys(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue') : 'wsname']), code)
+
+WebUI.delay(1)
 
 WebUI.sendKeys(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue') : 'wsstart']), '07:57')
 
@@ -34,11 +38,15 @@ WebUI.sendKeys(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue
 
 WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Lưu']))
 
+WebUI.delay(1)
+
 WebUI.click(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'wsname']))
 
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'wsname']), code)
 
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'wsname']), Keys.chord(Keys.ENTER))
+
+WebUI.delay(2)
 
 String value = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Tên ca', 0, 'wstbl')
 
@@ -48,12 +56,15 @@ WebUI.mouseOver(findTestObject('Admin/Common/btn_action'))
 
 WebUI.click(findTestObject('Common/option_aDynamicLocators', [('optionName') : 'Sửa đổi']))
 
+WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong',[('text'):'Sửa ca làm việc']), 5)
+
 String code2 = CustomKeywords.'libKeyWords.PageObject.randomString'('1234567890', 3)
 
-WebUI.sendKeys(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue') : 'wsname']), Keys.chord(Keys.CONTROL, 
-        'a'))
-
-WebUI.sendKeys(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue') : 'wsname']), code2)
+//WebUI.sendKeys(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue') : 'wsname']), Keys.chord(Keys.CONTROL, 
+//        'a'))
+//
+//WebUI.sendKeys(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue') : 'wsname']), code2)
+WebUI.setText(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue') : 'wsname']), code2)
 
 WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Lưu']))
 
@@ -63,6 +74,8 @@ WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : '
 
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'wsname']), Keys.chord(Keys.ENTER))
 
+WebUI.delay(2)
+
 String value2 = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Tên ca', 0, 'wstbl')
 
 WebUI.verifyEqual(value2, code2)
@@ -70,6 +83,8 @@ WebUI.verifyEqual(value2, code2)
 WebUI.mouseOver(findTestObject('Admin/Common/btn_action'))
 
 WebUI.click(findTestObject('Common/option_aDynamicLocators', [('optionName') : 'Xóa']))
+
+WebUI.waitForElementVisible(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Xác nhận xóa']), 5)
 
 WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Xác nhận xóa']))
 

@@ -60,6 +60,8 @@ WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') :
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'ms_thue']), Keys.chord(Keys.ENTER))
 
+WebUI.delay(2)
+
 String tenKHCell = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Tên KH', 0, 'table_phieu')
 
 String maKH = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Mã KH', 0, 'table_phieu')
@@ -109,6 +111,8 @@ WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') :
 WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'ms_thue']), mstUD)
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'ms_thue']), Keys.chord(Keys.ENTER))
+
+WebUI.delay(2)
 
 String tenKHUD = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Tên KH', 0, 'table_phieu')
 

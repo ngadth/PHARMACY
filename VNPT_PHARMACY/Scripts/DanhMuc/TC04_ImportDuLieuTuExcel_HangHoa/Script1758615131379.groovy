@@ -68,6 +68,8 @@ WebUI.setText(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'C
 
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'CBtVCFLm']), Keys.chord(Keys.ENTER))
 
+WebUI.delay(2)
+
 String maLoaiHang = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Mã loại hàng', 0, 'product')
 
 String tenLoaiHang = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Tên loại hàng', 0, 'product')

@@ -54,7 +54,7 @@ WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') :
 WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'txtTenQuayThu']), GlobalVariable.name_service)
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'txtTenQuayThu']), Keys.chord(Keys.ENTER))
-
+WebUI.delay(2)
 String maQuay = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Mã quầy', 0, 'table_quaythu')
 
 String tenQuay = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Tên quầy', 0, 'table_quaythu')
@@ -94,6 +94,8 @@ WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') :
 WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'txtTenQuayThu']), GlobalVariable.name_service)
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'txtTenQuayThu']), Keys.chord(Keys.ENTER))
+
+WebUI.delay(2)
 
 String maQuayUD = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Mã quầy', 0, 'table_quaythu')
 

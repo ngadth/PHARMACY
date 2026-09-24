@@ -36,6 +36,7 @@ String pathFileDownload = downloadPath.replaceAll('/', '\\\\')
 String startName = 'BaoCaoBanHangTongHop'
 
 String endName = '.xls'
+String date			='08/09/2026'
 
 //// Cấu hình Chrome Options để tải file mà không hiển thị popups
 Map<String, Object> prefs = new HashMap()
@@ -66,9 +67,9 @@ WebUI.click(findTestObject('Common/button_advanced'))
 
 WebUI.click(findTestObject('Common/link_unsafe'))
 
-WebUI.setText(findTestObject('Common/input_username'), GlobalVariable.username)
+WebUI.setText(findTestObject('Common/input_username'), GlobalVariable.userAdmin)
 
-WebUI.setText(findTestObject('Common/input_password'), GlobalVariable.password)
+WebUI.setText(findTestObject('Common/input_password'), GlobalVariable.passAdmin)
 
 WebUI.click(findTestObject('Common/btn_DangNhap'))
 
@@ -79,27 +80,42 @@ WebUI.click(findTestObject('Common/menu_baoCao'))
 
 WebUI.delay(1)
 
-WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Các báo cáo tổng hợp']))
+WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Báo cáo bán hàng']))
 
-WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators', [('text') : 'Báo cáo thống']))
+WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators', [('text') : 'Báo cáo Bán hàng TH']))
 
-// kho va khoang thoi gian
+WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Kho hàng']))
 
-WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators', [('text') : 'Lựa chọn Kho']))
+//WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'CH01-Của hàng 01']))
+WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'SHOP2-Nhà thuốc Minh Lộc']))
 
-WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : '9481-auto4574']))
+WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Nhóm hàng (tất cả)']))
+
+WebUI.setText(findTestObject('Common/input_search'), 'thuoc')
+
+WebUI.delay(0.5)
+
+//WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'thuoc']))
+WebUI.click(findTestObject('Common/option_liDynamicLocators',[('optionName'):'thuốc biệt dược']))
+
+//WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo từ khóa loại SP']), 'Bom tiem 5CC/K25 (kim dai) h/100 Vinahankook')
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Theo từ khóa loại SP',('index'):'1']), 'LEANPROTHYROLID')
+
+WebUI.click(findTestObject('Common/input_theoKhoangThoiGian'))
+
+String currentDate = CustomKeywords.'libKeyWords.PageObject.getCurrentDate'()
+
+WebUI.setText(findTestObject('BaoCao/BaoCaoBanHang/input_date',[('date'):'daterangepicker_start']), date)
+
+WebUI.setText(findTestObject('BaoCao/BaoCaoBanHang/input_date',[('date'):'daterangepicker_end']), currentDate)
+
+WebUI.click(findTestObject('BaoCao/BaoCaoBanHang/button_chonXong'))
+
+WebUI.click(findTestObject('BaoCao/BaoCaoBanHang/dropdown_hinhThucThanhToan'))
+
+WebUI.click(findTestObject('BaoCao/BaoCaoBanHang/option_tienMat'))
 
 WebUI.delay(2)
-
-String date = '26/08/2026 - 30/08/2026'
-
-WebUI.click(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'searchDate']))
-
-WebUI.setText(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'searchDate']), date)
-
-WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'searchDate']), Keys.chord(Keys.ENTER))
-
-WebUI.assertElementPresent(findTestObject('Common/text_tdDynamicLocators',[('text'):'Duoc pham']), 3)
 
 //Xóa file
 CustomKeywords.'libKeyWords.PageObject.deleteFilesWithPrefixStartEnd'(pathFileDownload, startName, endName)
@@ -129,7 +145,7 @@ def sheet = workbook.getSheetAt(0)
 def valueH11 = sheet.getRow(10).getCell(7).toString()
 def valueI11 = sheet.getRow(10).getCell(8).toString()
 
-WebUI.verifyMatch(valueH11, '2.0', false)
-WebUI.verifyMatch(valueI11, '600.0', false)
+WebUI.verifyMatch(valueH11, '15.0', false)
+WebUI.verifyMatch(valueI11, '5890500.0', false)
 
 workbook.close()
