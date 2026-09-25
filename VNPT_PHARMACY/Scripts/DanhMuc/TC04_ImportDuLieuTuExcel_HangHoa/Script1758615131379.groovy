@@ -56,6 +56,8 @@ WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') 
 
 WebUI.click(findTestObject('QuanLyKho/icon_closeDynamicLocators', [('titleName') : 'Nhập hàng hóa từ file dữ liệu']))
 
+WebUI.refresh()
+
 WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'rdTK']), 'Danh mục', false)
 
 WebUI.click(findTestObject('XuatKhoBanHang/span_idDynamicLocators', [('idValue') : 'select2-5zHlT3pVDFHl5FAZTo-container']))
@@ -68,7 +70,7 @@ WebUI.setText(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'C
 
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'CBtVCFLm']), Keys.chord(Keys.ENTER))
 
-WebUI.delay(2)
+WebUI.delay(3)
 
 String maLoaiHang = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Mã loại hàng', 0, 'product')
 

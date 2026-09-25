@@ -58,6 +58,8 @@ WebUI.click(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/icon_more'))
 
 WebUI.click(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/text_xuLyHopDong'))
 
+WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Xử lý hợp đồng']), 5)
+
 WebUI.verifyElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Xử lý hợp đồng']))
 
 WebUI.setText(findTestObject('XuatKhoBanHang/input_idDynamicLocatorsFirst', [('idValue') : 'EMAIL']), 'khanhvip8044@gmail.com')
@@ -76,13 +78,15 @@ WebUI.click(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/icon_more'))
 
 WebUI.click(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/text_xuLyHopDong'))
 
+WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Xử lý hợp đồng']), 5)
+
 WebUI.verifyElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Xử lý hợp đồng']))
 
 WebUI.click(findTestObject('Admin/Common/button_idDynamicLocators', [('idValue') : 'cmdEmail']))
 
 WebUI.acceptAlert()
 
-WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Gửi email thành công !']), 30)
+WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Gửi email thành công !']), 10)
 
 WebUI.verifyElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Gửi email thành công !']))
 

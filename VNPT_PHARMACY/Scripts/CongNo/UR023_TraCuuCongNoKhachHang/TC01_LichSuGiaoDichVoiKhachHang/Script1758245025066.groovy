@@ -18,7 +18,7 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/TC00_DangNhap'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.delay(3)
 
@@ -30,6 +30,10 @@ WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'XUẤT K
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Kê đơn bán thuốc']))
 
 GlobalVariable.maDonHang = 'ATORVASTATIN'
+
+WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators',[('idValue'):'cboCuaHang']), 'HUONG6787-Nguyễn Thanh Hương', false)
+
+WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocators',[('buttonName'):'Xác nhận chuyển']), FailureHandling.OPTIONAL)
 
 WebUI.setText(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'TFAh6E9X']), GlobalVariable.maDonHang)
 
@@ -54,7 +58,7 @@ WebUI.click(findTestObject('Common/text_divDynamicLocators', [('text') : GlobalV
 
 WebUI.setText(findTestObject('Common/input_tdTextDynamicLocators', [('text') : 'Tổng khuyến mại',('index'):'2']), '9999')
 
-WebUI.clearText(findTestObject('XuatKhoBanHang/input_khachThanhToan'))
+//WebUI.clearText(findTestObject('XuatKhoBanHang/input_khachThanhToan'))
 
 WebUI.setText(findTestObject('XuatKhoBanHang/input_khachThanhToan'), '0')
 
@@ -62,9 +66,7 @@ WebUI.setText(findTestObject('QuanLyKho/textarea_GhiChu'), 'Nợ Kê đơn bán 
 
 WebUI.click(findTestObject('XuatKhoBanHang/button_thanhToan'))
 
-WebUI.delay(5)
-
-WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Thanh toán thành công, số phiếu: ']), 10)
+WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Thanh toán thành công, số phiếu: ']), 20)
 
 String soPhieu = WebUI.getText(findTestObject('XuatKhoBanHang/get_bSoPhieu'))
 
@@ -79,11 +81,11 @@ WebUI.waitForElementVisible(findTestObject('Common/menu_aDynamicLocators',[('tex
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Lịch sử giao dịch với khách hàng']))
 
-WebUI.waitForElementVisible(findTestObject('XuatKhoBanHang/text_bDynamicLocators', [('text') : 'Tra cứu giao dịch của khách hàng']), 
-    10)
+WebUI.waitForElementVisible(findTestObject('XuatKhoBanHang/text_bDynamicLocators', [('text') : 'Tra cứu giao dịch của khách hàng']),  10)
 
-WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']), 'SHOP2-Nhà thuốc Minh Lộc', 
-    false)
+WebUI.waitForElementVisible(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']),5)
+
+WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']), 'HUONG6787-Nguyễn Thanh Hương', false)
 
 String currentDate = CustomKeywords.'libKeyWords.PageObject.getCurrentDate'()
 
@@ -107,6 +109,7 @@ String GDLQ = WebUI.getText(findTestObject('QuanLyKho/cell_table', [('idValue') 
 
 println(GDLQ)
 
+WebUI.delay(2)
 // Lấy tất cả chữ số trong chuỗi
 String giaoDich = GDLQ.replaceAll('\\D+', '')
 

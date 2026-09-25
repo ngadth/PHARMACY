@@ -164,6 +164,8 @@ WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('
 
 WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Mã phiếu nhập']), Keys.chord(Keys.ENTER))
 
+WebUI.waitForElementVisible(findTestObject('Common/text_tdDynamicLocators',[('text'):phieuID]), 5)
+
 String maPhieuCell = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Mã phiếu', 0, 'inputtbl')
 
 WebUI.verifyEqual(maPhieuCell, GlobalVariable.po_phieu_id)

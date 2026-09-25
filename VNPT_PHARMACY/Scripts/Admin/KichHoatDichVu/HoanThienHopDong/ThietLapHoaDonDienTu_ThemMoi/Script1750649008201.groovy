@@ -51,6 +51,8 @@ WebUI.click(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/icon_more'))
 
 WebUI.click(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/text_xuLyHopDong'))
 
+WebUI.delay(2)
+
 WebUI.verifyElementVisible(findTestObject('Admin/Common/text_hDynamicLocators',[('text'):'Xử lý hợp đồng']))
 
 WebUI.click(findTestObject('Common/text_aDynamicLocators',[('text'):'Thiết lập hóa đơn điện tử']))

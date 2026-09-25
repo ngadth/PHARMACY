@@ -98,21 +98,25 @@ WebUI.click(findTestObject('XuatKhoBanHang/button_lastDynamicLocators', [('butto
 //WebUI.acceptAlert()
 WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Lưu thông tin phiếu thành công!']), 10)
 
+WebUI.waitForElementVisible(findTestObject('Common/titlePage_bDynamicLocators', [('text') : 'Quản lý xuất kho']), 5)
+
+WebUI.delay(2)
+
 String soPhieuXuat = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Số phiếu xuất', 0, 'outputtbl')
 
 println(soPhieuXuat)
+
+WebUI.refresh()
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'ma_xuat']), soPhieuXuat)
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'ma_xuat']), Keys.chord(Keys.ENTER))
 
+WebUI.waitForElementNotVisible(findTestObject('Common/text_tdDynamicLocators',[('text'):soPhieuXuat]), 5)
+
 WebUI.click(findTestObject('Admin/Common/btn_action'))
 
-WebUI.delay(2)
-
 WebUI.click(findTestObject('Common/option_aDynamicLocators', [('optionName') : 'Sửa phiếu']))
-
-WebUI.delay(2)
 
 WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Sửa phiếu xuất kho']), 5)
 

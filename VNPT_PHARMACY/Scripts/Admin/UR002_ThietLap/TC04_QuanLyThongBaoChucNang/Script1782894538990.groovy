@@ -24,6 +24,8 @@ CustomKeywords.'libKeyWords.PageObject.openSubmenu'('THIẾT LẬP', 'Quản lý
 
 WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Thêm mới']))
 
+WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong',[('text'):'Thêm mới thông báo']), 5)
+
 String tieude = 'Hoan thanh ke hoach quy ' + CustomKeywords.'libKeyWords.PageObject.randomString'('123456ABCDRFGLJH', 3)
 
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'tieudetb_add']), tieude)
@@ -36,6 +38,10 @@ WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : '
 
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'tieudetb']), Keys.chord(Keys.ENTER))
 
+WebUI.delay(1)
+
+WebUI.waitForElementVisible(findTestObject('Common/text_tdDynamicLocators',[('text'):tieude]), 5)
+
 String value = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Tiêu đề thông báo', 0, 'product')
 
 WebUI.verifyEqual(value, tieude)
@@ -46,17 +52,23 @@ WebUI.click(findTestObject('Common/option_aDynamicLocators', [('optionName') : '
 
 String tieude2 = 'Hoan thanh ke hoach quy update' + CustomKeywords.'libKeyWords.PageObject.randomString'('123456ABCDRFGLJH', 3)
 
-WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'tieudetb_e']), Keys.chord(Keys.CONTROL, 'a'))
+//WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'tieudetb_e']), Keys.chord(Keys.CONTROL, 'a'))
+//
+//WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'tieudetb_e']), tieude2)
 
-WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'tieudetb_e']), tieude2)
+WebUI.setText(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'tieudetb_e']), tieude2)
 
 WebUI.click(findTestObject('Admin/Common/button_divDynamicLocators', [('idValue') : 'modalEdit_thongbao', ('buttonName') : 'Lưu']))
 
-WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'tieudetb']), Keys.chord(Keys.CONTROL, 'a'))
+//WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'tieudetb']), Keys.chord(Keys.CONTROL, 'a'))
+//
+//WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'tieudetb']), tieude2)
 
-WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'tieudetb']), tieude2)
+WebUI.setText(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'tieudetb']), tieude2)
 
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'tieudetb']), Keys.chord(Keys.ENTER))
+
+WebUI.delay(2)
 
 String value2 = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Tiêu đề thông báo', 0, 'product')
 

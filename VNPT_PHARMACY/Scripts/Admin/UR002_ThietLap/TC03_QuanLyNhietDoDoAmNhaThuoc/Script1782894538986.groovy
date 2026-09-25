@@ -48,6 +48,8 @@ value = WebUI.getText(findTestObject('QuanLyKho/cell_table', [('idValue') : '4']
 //String value = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Nhiệt độ (°C)', 0, 'temhum_tbl')
 WebUI.verifyEqual(value, nhietdo)
 
+WebUI.delay(2)
+
 WebUI.click(findTestObject('Admin/Common/btn_action'))
 
 WebUI.click(findTestObject('Common/option_aDynamicLocators', [('optionName') : 'Cập nhật dữ liệu']))
@@ -61,7 +63,11 @@ WebUI.sendKeys(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue
 
 WebUI.sendKeys(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue') : 'nhietdo_edit']), nhietdo2)
 
+WebUI.delay(2)
+
 WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Lưu']))
+
+WebUI.delay(2)
 
 value2 = WebUI.getText(findTestObject('QuanLyKho/cell_table', [('idValue') : '4']))
 

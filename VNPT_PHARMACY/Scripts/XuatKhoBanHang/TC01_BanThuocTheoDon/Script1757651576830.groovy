@@ -40,7 +40,9 @@ WebUI.waitForElementClickable(findTestObject('Common/button_buttonDynamicLocator
 
 WebUI.verifyElementVisible(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Xác nhận chuyển']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Xác nhận chuyển'])) : null
 
-WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'presc_code']), GlobalVariable.maDonThuoc)
+//WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'presc_code']), GlobalVariable.maDonThuoc)
+
+WebUI.setText(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'presc_code']), GlobalVariable.maDonThuoc)
 
 TestObject dynamicObject = findTestObject('XuatKhoBanHang/data_index', [('value') : '0'])
 
@@ -60,6 +62,8 @@ WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('button
 WebUI.delay(3)
 
 WebUI.click(findTestObject('XuatKhoBanHang/button_thanhToan'))
+
+WebUI.delay(3)
 
 WebUI.click(findTestObject('Common/icon_idDynamicLocators', [('idValue') : 'homepage']))
 

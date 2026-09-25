@@ -77,6 +77,8 @@ WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('
 
 WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Khoảng thời gian lập']), Keys.chord(Keys.ENTER))
 
+WebUI.delay(2)
+
 String maPhieu1 = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Mã phiếu', 0, 'inputtbl')
 
 String ghiChu = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Ghi chú', 0, 'inputtbl')

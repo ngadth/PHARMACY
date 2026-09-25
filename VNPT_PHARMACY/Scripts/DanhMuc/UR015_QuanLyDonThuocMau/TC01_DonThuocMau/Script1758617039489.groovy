@@ -107,7 +107,7 @@ WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') :
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'tukhoa']), Keys.chord(Keys.ENTER))
 
-WebUI.waitForElementVisible(findTestObject('Common/text_tdDynamicLocators',[('text'):GlobalVariable.maKH]), 5)
+WebUI.delay(2)
 
 String tenDonThuoc = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Tên đơn thuốc', 0, 'inputtbl')
 
@@ -181,7 +181,7 @@ WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') :
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'tukhoa']), Keys.chord(Keys.ENTER))
 
-WebUI.waitForElementVisible(findTestObject('Common/text_tdDynamicLocators',[('text'):GlobalVariable.maKH]), 5)
+WebUI.delay(2)
 
 String tenDTUD = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Tên đơn thuốc', 0, 'inputtbl')
 

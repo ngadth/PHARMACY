@@ -17,7 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/TC00_DangNhap'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.delay(3)
 
@@ -27,8 +27,8 @@ WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName'
 
 WebUI.delay(3)
 
-//WebUI.selectOptionByLabel(findTestObject('QuanLyKho/droplist_selectDynamicLast', [('idValue') : 'khoxuat']), 'HUONG6787-Nguyễn Thanh Hương', false)
-WebUI.selectOptionByLabel(findTestObject('QuanLyKho/droplist_selectDynamicLast', [('idValue') : 'khoxuat']), 'SHOP2-Nhà thuốc Minh Lộc', false)
+WebUI.selectOptionByLabel(findTestObject('QuanLyKho/droplist_selectDynamicLast', [('idValue') : 'khoxuat']), 'HUONG6787-Nguyễn Thanh Hương', false)
+//WebUI.selectOptionByLabel(findTestObject('QuanLyKho/droplist_selectDynamicLast', [('idValue') : 'khoxuat']), 'SHOP2-Nhà thuốc Minh Lộc', false)
 
 WebUI.setText(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue') : 'thukhoxuat']), 'Thai Bao')
 
@@ -48,8 +48,8 @@ WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('button
 
 WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Cập nhật thành công']), 5)
 
-//GlobalVariable.maDonHang = 'Apitim 5 v/10 h/30 t/6480'
-GlobalVariable.maDonHang = 'Anphachoay2 500mg'
+GlobalVariable.maDonHang = 'Apitim 5 v/10 h/30 t/6480'
+//GlobalVariable.maDonHang = 'Anphachoay2 500mg'
 WebUI.setText(findTestObject('QuanLyKho/input_idDivDynamicLocators', [('idValue') : 'kw']), GlobalVariable.maDonHang)
 
 WebUI.delay(0.5)
@@ -62,7 +62,7 @@ WebUI.setText(findTestObject('XuatKhoBanHang/input_lyDoHuyTable'), 'Lý do Xuấ
 
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocators', [('buttonName') : 'Xuất hủy']))
 
-WebUI.delay(0.5)
+WebUI.delay(2)
 
 String soPhieu = WebUI.getText(findTestObject('QuanLyKho/get_labelDynamicLocators', [('labelValue') : 'Số phiếu']))
 
@@ -87,15 +87,15 @@ WebUI.setText(findTestObject('XuatKhoBanHang/input_tableDynamicLocators'), '2')
 WebUI.setText(findTestObject('XuatKhoBanHang/input_lyDoHuyTable'), 'Lý do Xuất Hủy ')
 
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocators', [('buttonName') : 'Xuất hủy']))
-
+WebUI.delay(2)
 WebUI.click(findTestObject('QuanLyKho/icon_closeDynamicLocators', [('titleName') : 'Sửa phiếu xuất hủy']))
 
 WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'ma_xuat']), GlobalVariable.po_phieu_id)
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'ma_xuat']), Keys.chord(Keys.ENTER))
 
-//WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']), 'HUONG6787-Nguyễn Thanh Hương', false)
-WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']), 'SHOP2-Nhà thuốc Minh Lộc', false)
+WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']), 'HUONG6787-Nguyễn Thanh Hương', false)
+//WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']), 'SHOP2-Nhà thuốc Minh Lộc', false)
 
 WebUI.click(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'ngay_xuat']))
 
@@ -106,7 +106,7 @@ WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : '
 WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'CE9X63Lm3zPbCW..']), GlobalVariable.maDonHang)
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'CE9X63Lm3zPbCW..']), Keys.chord(Keys.ENTER))
-
+WebUI.delay(2)
 String soPhieuCell = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Số phiếu xuất', 0, 'outputtbl')
 
 WebUI.verifyEqual(soPhieuCell, GlobalVariable.po_phieu_id)
@@ -145,16 +145,18 @@ WebUI.setText(findTestObject('XuatKhoBanHang/input_lyDoHuyTable'), 'Lý do Xuấ
 
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocators', [('buttonName') : 'Lưu thông tin']))
 
-WebUI.delay(5)
+WebUI.delay(2)
 
-WebUI.acceptAlert()
+WebUI.acceptAlert(FailureHandling.OPTIONAL)
 
 WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'ma_xuat']), GlobalVariable.po_phieu_id)
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'ma_xuat']), Keys.chord(Keys.ENTER))
 
-//WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']), 'HUONG6787-Nguyễn Thanh Hương', false)
-WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']), 'SHOP2-Nhà thuốc Minh Lộc', false)
+WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']), 'HUONG6787-Nguyễn Thanh Hương', false)
+//WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']), 'SHOP2-Nhà thuốc Minh Lộc', false)
+
+WebUI.delay(1)
 
 WebUI.click(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'ngay_xuat']))
 
@@ -165,6 +167,8 @@ WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : '
 WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'CE9X63Lm3zPbCW..']), GlobalVariable.maDonHang)
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'CE9X63Lm3zPbCW..']), Keys.chord(Keys.ENTER))
+
+WebUI.delay(2)
 
 String soPhieuCell1 = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Số phiếu xuất', 0, 'outputtbl')
 

@@ -52,6 +52,8 @@ WebUI.click(findTestObject('XuatKhoBanHang/button_lastDynamicLocators', [('butto
 
 WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Cập nhật dữ liệu thành công!']), 10)
 
+WebUI.delay(2)
+
 soPhieu = WebUI.getText(findTestObject('QuanLyKho/get_labelMaPhieu'))
 
 println('Số phiếu: ' + soPhieu)

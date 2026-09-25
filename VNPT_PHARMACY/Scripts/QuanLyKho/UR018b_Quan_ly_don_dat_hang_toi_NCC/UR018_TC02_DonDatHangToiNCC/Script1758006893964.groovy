@@ -25,6 +25,8 @@ WebUI.delay(3)
 
 CustomKeywords.'libKeyWords.PageObject.openSubmenu'('QUẢN LÝ KHO', 'Đơn đặt hàng tới NCC')
 
+WebUI.waitForElementVisible(findTestObject('XuatKhoBanHang/text_bDynamicLocators',[('text'):'Đơn đặt hàng tới nhà cung cấp']),5)
+
 WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : ' Thêm mới']))
 
 WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Lập đơn đặt hàng']), 5)

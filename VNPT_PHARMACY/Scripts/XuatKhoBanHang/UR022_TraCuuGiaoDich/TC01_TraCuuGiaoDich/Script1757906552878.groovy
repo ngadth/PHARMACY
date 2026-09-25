@@ -33,8 +33,9 @@ WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'XUẤT K
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Tra cứu giao dịch']))
 
-WebUI.verifyElementPresent(findTestObject('Common/titlePage_bDynamicLocators', [('text') : 'Tra cứu giao dịch bán hàng']), 
-    3)
+WebUI.waitForElementVisible(findTestObject('Common/titlePage_bDynamicLocators', [('text') : 'Tra cứu giao dịch bán hàng']), 10)
+
+WebUI.verifyElementPresent(findTestObject('Common/titlePage_bDynamicLocators', [('text') : 'Tra cứu giao dịch bán hàng']), 3)
 
 //WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : '5F5ZDA9f5o..']), 'HUONG6787-Nguyễn Thanh Hương', false)
 WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : '5F5ZDA9f5o..']), 'SHOP2-Nhà thuốc Minh Lộc', false)

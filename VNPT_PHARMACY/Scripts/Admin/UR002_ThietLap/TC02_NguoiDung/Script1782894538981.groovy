@@ -24,7 +24,7 @@ CustomKeywords.'libKeyWords.PageObject.openSubmenu'('THIẾT LẬP', 'Người d
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'txtUSERID']), GlobalVariable.username)
 
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'txtUSERID']), Keys.chord(Keys.ENTER))
-
+WebUI.delay(2)
 String value = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Tên truy cập', 0, 'userListTable')
 
 WebUI.verifyEqual(value, GlobalVariable.username)

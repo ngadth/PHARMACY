@@ -16,6 +16,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.testobject.ConditionType
 
 String soLuong = '2'
 
@@ -51,6 +52,13 @@ WebUI.click(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'fro
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'from_date']), date)
 
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'from_date']), Keys.chord(Keys.ENTER))
+
+//WebUI.click(findTestObject('Common/dropdown_selectDynamicLocators',[('idValue'):'khoxuat']))
+//
+//WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators',[('idValue'):'khoxuat']), 'HUONG6787-Nguyễn Thanh Hương' , false)
+WebUI.delay(2)
+
+WebUI.selectOptionByLabel(findTestObject('QuanLyKho/droplist_selectDynamicLast',[('idValue'):'khoxuat']), 'HUONG6787-Nguyễn Thanh Hương', false)
 
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsFirst', [('buttonName') : 'Chọn']))
 
@@ -100,6 +108,8 @@ WebUI.click(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'nga
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'ngay_xuat']), date)
 
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'ngay_xuat']), Keys.chord(Keys.ENTER))
+
+WebUI.delay(2)
 
 String soPhieuXuat = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Số phiếu xuất', 0, 'outputtbl')
 

@@ -34,9 +34,8 @@ WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Báo cá
 
 WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators', [('text') : 'Báo cáo tồn kho tổng chuỗi']))
 
-WebUI.click(findTestObject('XuatKhoBanHang/span_idDynamicLocators', [('idValue') : 'select2-CcXX4zAk5yLXDt9f5o-container']))
-
 WebUI.delay(1)
+WebUI.click(findTestObject('XuatKhoBanHang/span_idDynamicLocators', [('idValue') : 'select2-CcXX4zAk5yLXDt9f5o-container']))
 
 WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'Duoc pham']))
 
@@ -46,10 +45,11 @@ WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 
 
 WebUI.setText(findTestObject('XuatKhoBanHang/input_idDynamicLocatorsLast', [('idValue') : 'CE9X63Lm3zPbCW..']), tenThuoc1)
 
-WebUI.delay(1)
+WebUI.delay(3)
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_idDynamicLocatorsLast', [('idValue') : 'CE9X63Lm3zPbCW..']), Keys.chord(Keys.ENTER))
 
+WebUI.delay(1)
 
 String[] subStr = columnTable.split(';')
 
