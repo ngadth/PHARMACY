@@ -21,6 +21,8 @@ WebUI.callTestCase(findTestCase('Admin/Common/TC01_DangNhap'), [:], FailureHandl
 
 WebUI.delay(3)
 
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
+
 CustomKeywords.'libKeyWords.PageObject.openSubmenu'('QUẢN LÝ KHO', 'Kiểm kê hàng hóa')
 
 WebUI.waitForElementVisible(findTestObject('XuatKhoBanHang/text_bDynamicLocators', [('text') : 'Kiểm kê hàng hóa']), 3)
@@ -29,7 +31,7 @@ WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName'
 
 WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Lập phiếu kiểm kê']), 5)
 
-WebUI.click(findTestObject('XuatKhoBanHang/span_idDynamicLocators', [('idValue') : 'select2-TFXwQyXlRcXXDsba-container']))
+WebUI.click(findTestObject('QuanLyKho/select_labelSpanDynamicLocators', [('labelValue') : 'Kho']))
 
 WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'SHOP6-CH 6']))
 
@@ -37,16 +39,16 @@ String ghichu = CustomKeywords.'libKeyWords.PageObject.randomString'('QWERTYUIAS
 
 GlobalVariable.name_service = ('ghiChu' + ghichu)
 
-WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'TFXwPEbbCaTf4Ba.']), GlobalVariable.name_service)
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Ghi chú', ('index') : 1]), GlobalVariable.name_service)
 
 String currentDate = CustomKeywords.'libKeyWords.PageObject.getCurrentDate'()
 
 String date = (currentDate + ' - ') + currentDate
 
-WebUI.click(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'TFXwRcTXUS1e43o.']))
+WebUI.click(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Ngày nhập']))
 
-WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'TFXwRcTXUS1e43o.']), currentDate)
-WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'TFXwRcTXUS1e43o.']), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Ngày nhập']), currentDate)
+WebUI.sendKeys(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Ngày nhập']), Keys.chord(Keys.ENTER))
 
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('buttonName') : 'Lưu']))
 
@@ -68,7 +70,7 @@ WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') 
 
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('buttonName') : 'Cân kho']))
 
-WebUI.click(findTestObject('XuatKhoBanHang/span_idDynamicLocators', [('idValue') : 'select2-4yHlQyXlRcXXDo-container']))
+WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators', [('text') : 'Kho nhập (tất cả)']))
 
 WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'SHOP6-CH 6']))
 
@@ -78,9 +80,9 @@ WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') :
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'checkDateRange']), Keys.chord(Keys.ENTER))
 
-WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'CE9X63Lm3zPbCW..']), hangHoa)
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Loại hàng hóa', ('index') : '1']), hangHoa)
 
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'CE9X63Lm3zPbCW..']), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Loại hàng hóa', ('index') : '1']), Keys.chord(Keys.ENTER))
 
 WebUI.delay(2)
 
@@ -104,7 +106,7 @@ String ghichuUD = CustomKeywords.'libKeyWords.PageObject.randomString'('QWERTYUI
 
 GlobalVariable.name_service = ('UDghiChu' + ghichuUD)
 
-WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'TFXwPEbbCaTf4Ba.']), GlobalVariable.name_service)
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Ghi chú', ('index') : 1]), GlobalVariable.name_service)
 
 WebUI.delay(0.5)
 
@@ -114,7 +116,7 @@ WebUI.delay(0.5)
 
 WebUI.click(findTestObject('QuanLyKho/input_idDivDynamicLocators', [('idValue') : 'nhomhanghoa']))
 
-WebUI.click(findTestObject('XuatKhoBanHang/span_idDynamicLocators', [('idValue') : 'select2-4yHY3y1eCyxe6o-container']))
+WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators', [('text') : 'Không chọn']))
 
 WebUI.setText(findTestObject('Common/input_search'), 'KD6')
 
@@ -129,12 +131,11 @@ WebUI.setText(findTestObject('QuanLyKho/input_soluongClass'), '2')
 //WebUI.setText(findTestObject('XuatKhoBanHang/input_idDynamicLocatorsLast', [('idValue') : 'quantity_in_warehouse_207383_1']), '2')
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('buttonName') : 'Lưu']))
 
-WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Sửa thông tin phiếu kiểm kê thành công']), 
-    5)
+WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Sửa thông tin phiếu kiểm kê thành công']), 5)
 
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('buttonName') : 'Cân kho']))
 
-WebUI.click(findTestObject('XuatKhoBanHang/span_idDynamicLocators', [('idValue') : 'select2-4yHlQyXlRcXXDo-container']))
+WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators', [('text') : 'Kho nhập (tất cả)']))
 
 WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'SHOP6-CH 6']))
 
@@ -144,11 +145,11 @@ WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') :
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'checkDateRange']), Keys.chord(Keys.ENTER))
 
-WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'CE9X63Lm3zPbCW..']), hangHoa)
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Loại hàng hóa', ('index') : '1']), hangHoa)
 
-WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'TFXwRBtM6Etm']), soPhieu)
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Số phiếu', ('index') : '1']), soPhieu)
 
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'CE9X63Lm3zPbCW..']), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Loại hàng hóa', ('index') : '1']), Keys.chord(Keys.ENTER))
 
 WebUI.delay(2)
 
@@ -171,9 +172,9 @@ WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('button
 
 WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Xóa phiếu kiểm kê thành công']), 5)
 
-WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'TFXwRBtM6Etm']), soPhieu)
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Số phiếu', ('index') : '1']), soPhieu)
 
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'CE9X63Lm3zPbCW..']), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Loại hàng hóa', ('index') : '1']), Keys.chord(Keys.ENTER))
 
 WebUI.verifyElementPresent(findTestObject('Common/text_tdDynamicLocators', [('text') : 'Không có dữ liệu.']), 2)
 

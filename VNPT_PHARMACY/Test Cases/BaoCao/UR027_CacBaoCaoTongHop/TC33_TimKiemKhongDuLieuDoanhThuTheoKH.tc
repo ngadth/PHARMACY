@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC33_TimKiemKhongDuLieuDoanhThuTheoKH</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>10ca8855-82cf-443d-85f3-b6a7e0260768</testCaseGuid>
+</TestCaseEntity>

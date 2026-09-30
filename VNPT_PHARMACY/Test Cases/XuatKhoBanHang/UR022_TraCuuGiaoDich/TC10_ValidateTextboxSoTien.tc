@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC10_ValidateTextboxSoTien</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>bde4f960-6192-4086-a413-32c3ca6a8f16</testCaseGuid>
+</TestCaseEntity>

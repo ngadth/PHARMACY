@@ -32,6 +32,8 @@ WebUI.setText(findTestObject('Common/input_username'), GlobalVariable.userAdmin)
 
 WebUI.setText(findTestObject('Common/input_password'), GlobalVariable.passAdmin)
 
+WebUI.setText(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue') : 'captcha_login']), '123456')
+
 WebUI.click(findTestObject('Common/btn_DangNhap'))
 
 WebUI.waitForElementVisible(findTestObject('Common/logo_vnpt'), GlobalVariable.timeout)

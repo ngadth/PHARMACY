@@ -25,8 +25,7 @@ WebUI.click(findTestObject('Admin/Common/btn_action'))
 
 WebUI.click(findTestObject('Common/option_aDynamicLocators', [('optionName') : 'Sửa đổi']))
 
-WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Sửa phiếu nhập kho trả hàng']), 
-    5)
+WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Sửa phiếu nhập kho trả hàng']), 5)
 
 WebUI.clearText(findTestObject('Object Repository/QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Thủ kho nhập']))
 

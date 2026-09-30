@@ -6,12 +6,11 @@
    <elementGuidId>2322d3f1-3f50-49e2-aea2-e3e20ebe5c52</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//li[@id='${idValue}']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

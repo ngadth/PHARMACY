@@ -22,13 +22,15 @@ WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhC
 WebUI.delay(3)
 
 //CustomKeywords.'libKeyWords.PageObject.openSubmenu'('XUẤT KHO/BÁN HÀNG', 'Bán hàng theo giá bán buôn')
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
+
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'XUẤT KHO/BÁN HÀNG']))
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Bán hàng theo giá bán buôn']))
 
 WebUI.delay(3)
 
-WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'TFAh6E9X']), '003023')
+WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'TFAh6E9X']), '002929')
 
 //WebUI.click(findTestObject('XuatKhoBanHang/data_index', [('value') : '0']))
 TestObject dynamicObject = findTestObject('XuatKhoBanHang/data_index', [('value') : '0'])
@@ -45,7 +47,7 @@ WebUI.delay(2)
 
 GlobalVariable.maKH = 'Auto_test01'
 
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'CBth6o..']), GlobalVariable.maKH)
+WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'makh']), GlobalVariable.maKH)
 
 WebUI.click(findTestObject('Common/titlePage_bDynamicLocators', [('text') : GlobalVariable.maKH]))
 
@@ -75,6 +77,8 @@ soPhieu = WebUI.getText(findTestObject('XuatKhoBanHang/get_bSoPhieu'))
 WebUI.click(findTestObject('Common/icon_idDynamicLocators', [('idValue') : 'homepage']))
 
 WebUI.delay(3)
+
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 CustomKeywords.'libKeyWords.PageObject.openSubmenu'('XUẤT KHO/BÁN HÀNG', 'Tra cứu giao dịch')
 

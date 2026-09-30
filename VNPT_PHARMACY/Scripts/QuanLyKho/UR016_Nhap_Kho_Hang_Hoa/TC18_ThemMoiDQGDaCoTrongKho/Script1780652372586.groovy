@@ -92,12 +92,12 @@ WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators',
 WebUI.click(findTestObject('Object Repository/QuanLyKho/button_InsertFromDanhMucQuocGia'))
 
 WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Nhập từ khóa tìm kiếm']), 
-    'Harcotin')
+    'Pharcoter')
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/QuanLyKho/select_DQG_textDynamicLocators', [('nameValue') : 'Harcotin']), 
+WebUI.waitForElementVisible(findTestObject('Object Repository/QuanLyKho/select_DQG_textDynamicLocators', [('nameValue') : 'Pharcoter']), 
     5)
 
-WebUI.click(findTestObject('Object Repository/QuanLyKho/select_DQG_textDynamicLocators', [('nameValue') : 'Harcotin']))
+WebUI.click(findTestObject('Object Repository/QuanLyKho/select_DQG_textDynamicLocators', [('nameValue') : 'Pharcoter']))
 
 WebUI.delay(2)
 
@@ -138,13 +138,15 @@ WebUI.click(findTestObject('XuatKhoBanHang/button_lastDynamicLocators', [('butto
 
 WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Thực hiện thành công!']), 10)
 
-WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Nhập từ khóa tìm kiếm']), 
-    'Harcotin')
+WebUI.delay(3)
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/QuanLyKho/select_DQG_textDynamicLocators', [('nameValue') : 'Harcotin']), 
+WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Nhập từ khóa tìm kiếm']), 
+    'Pharco')
+
+WebUI.waitForElementVisible(findTestObject('Object Repository/QuanLyKho/select_DQG_textDynamicLocators', [('nameValue') : 'Pharcoter']), 
     5)
 
-WebUI.click(findTestObject('Object Repository/QuanLyKho/select_DQG_textDynamicLocators', [('nameValue') : 'Harcotin']))
+WebUI.click(findTestObject('Object Repository/QuanLyKho/select_DQG_textDynamicLocators', [('nameValue') : 'Pharcoter']))
 
 WebUI.delay(2)
 

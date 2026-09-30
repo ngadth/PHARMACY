@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>UR018_TC04_ValidateTimKiemKhoangThoiGIan</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>18933baf-c8a5-450f-8fbc-ff848107c37e</testCaseGuid>
+</TestCaseEntity>

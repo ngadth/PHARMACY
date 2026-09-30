@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC16_BanHangChoKhachCuThe</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e97c95c9-40cd-4ba3-a3a5-81f25e63fef9</testCaseGuid>
+</TestCaseEntity>

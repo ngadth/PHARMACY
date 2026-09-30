@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC04_ValidateTextareaGhiChu</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>5d9e5bdc-17e5-4d9c-a5ec-6a5c96fc39d0</testCaseGuid>
+</TestCaseEntity>

@@ -5,7 +5,9 @@
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
+   <maxConcurrentInstances>1</maxConcurrentInstances>
    <numberOfRerun>3</numberOfRerun>
+   <orchestration>CLASSIC</orchestration>
    <pageLoadTimeout>10</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>true</rerunFailedTestCasesOnly>
@@ -14,7 +16,7 @@
    <testCaseLink>
       <guid>a9b9b4a3-0283-4157-ba87-7241657973db</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/CongNo/UR023_TraCuuCongNoKhachHang/TC01_LichSuGiaoDichVoiKhachHang</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
@@ -42,7 +44,7 @@
    <testCaseLink>
       <guid>074dd640-6f4c-4828-a9e8-6d098ecdb10c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/CongNo/UR026_CapNhatCongNoNCC/TC06_BaoCaoTongHopCongNoVoiNCC</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
@@ -63,7 +65,7 @@
    <testCaseLink>
       <guid>6d2ddcc1-e7e9-4c29-b1bc-58ea9189ddf5</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/CongNo/UR024_CapNhatCongNoKhachHang/TC03_BaoCaoTongHopCongNoPhaiThuKH</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
@@ -72,13 +74,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/QuanLyKho/UR017_Nhap_hang_tra_lai/UR017_TC02_SuaPhieuNhapTraLai</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>306144fe-8f1c-4f47-bade-28c27dee1987</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/QuanLyKho/UR018b_Quan_ly_don_dat_hang_toi_NCC/UR018_TC03_XuatTraHangNCC</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>

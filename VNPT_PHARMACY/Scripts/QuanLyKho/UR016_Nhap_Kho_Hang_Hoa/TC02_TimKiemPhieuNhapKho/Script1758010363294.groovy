@@ -103,8 +103,6 @@ WebUI.delay(2)
 
 WebUI.setText(findTestObject('QuanLyKho/input_soLuongNhapKho'), '2')
 
-WebUI.setText(findTestObject('QuanLyKho/input_soLuongNhapKho'), '2')
-
 String dateHetHan = '19/02/2027'
 
 WebUI.click(findTestObject('QuanLyKho/input_loSanXuat'))
@@ -138,7 +136,7 @@ GlobalVariable.po_phieu_id = phieuID
 
 println(GlobalVariable.po_phieu_id)
 
-WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocators', [('buttonName') : 'Lưu thông tin phiếu']))
+WebUI.doubleClick(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('buttonName') : 'Lưu thông tin phiếu']))
 
 WebUI.delay(2)
 
@@ -146,6 +144,7 @@ WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') 
 
 WebUI.click(findTestObject('QuanLyKho/icon_close'))
 
+WebUI.refresh()
 WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Mã phiếu nhập']), phieuID)
 
 WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Mã phiếu nhập']), Keys.chord(Keys.ENTER))
@@ -155,15 +154,15 @@ String maPhieuCell = CustomKeywords.'libKeyWords.PageObject.getValueInTableByCol
 WebUI.verifyEqual(maPhieuCell, GlobalVariable.po_phieu_id)
 
 //XÓA SAU KHI ĐÃ TÌM KIẾM THÀNH CÔNG
-WebUI.mouseOver(findTestObject('Admin/Common/btn_action'))
+WebUI.mouseOver(findTestObject('Admin/Common/btn_actionFirst'))
 
-WebUI.delay(0.5)
+WebUI.delay(2)
 
 WebUI.click(findTestObject('Common/option_aDynamicLocators', [('optionName') : 'Xóa']))
 
 WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Xác nhận xóa phiếu nhập kho']), 3)
 
-WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('buttonName') : 'Xác nhận']))
+WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('buttonName') : 'Xác nhận xóa']))
 
 WebUI.delay(2)
 

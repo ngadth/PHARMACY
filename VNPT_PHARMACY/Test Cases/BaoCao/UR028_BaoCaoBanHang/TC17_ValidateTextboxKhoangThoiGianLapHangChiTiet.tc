@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC17_ValidateTextboxKhoangThoiGianLapHangChiTiet</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>92db5eb6-17c2-4047-9b06-47c787a8f90e</testCaseGuid>
+</TestCaseEntity>

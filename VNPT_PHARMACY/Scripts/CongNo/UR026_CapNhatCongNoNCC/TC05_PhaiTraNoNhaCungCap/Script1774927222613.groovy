@@ -23,6 +23,7 @@ WebUI.callTestCase(findTestCase('Admin/Common/TC01_DangNhap'), [:], FailureHandl
 WebUI.delay(3)
 
 //CustomKeywords.'libKeyWords.PageObject.openSubmenu'('CÔNG NỢ', 'Phải trả NCC')
+WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'CÔNG NỢ']))
 

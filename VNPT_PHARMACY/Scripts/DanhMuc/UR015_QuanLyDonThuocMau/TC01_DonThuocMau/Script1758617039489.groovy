@@ -75,7 +75,7 @@ WebUI.delay(2)
 
 WebUI.click(findTestObject('QuanLyKho/tab_aDynamicLocators', [('tabValue') : 'Danh sách thuốc']))
 
-WebUI.setText(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'TFAh6E9X3yxl6B1e43o.']), 'Apitim')
+WebUI.setText(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'TFAh6E9X3yxl6B1e43o.']), 'Apitec 20-H')
 
 WebUI.delay(3)
 
@@ -156,7 +156,7 @@ WebUI.delay(2)
 
 WebUI.click(findTestObject('QuanLyKho/tab_aDynamicLocators', [('tabValue') : 'Danh sách thuốc']))
 
-WebUI.setText(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'TFAh6E9X3yxl6B1e43o.']), 'B1-B6-B12 USP')
+WebUI.setText(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'TFAh6E9X3yxl6B1e43o.']), 'BIOCALCIUM')
 
 WebUI.delay(3)
 

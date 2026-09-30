@@ -16,8 +16,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-//import org.openqa.selenium.Keys
 
+//import org.openqa.selenium.Keys
 WebUI.openBrowser(GlobalVariable.URL)
 
 WebUI.maximizeWindow()
@@ -30,6 +30,8 @@ WebUI.click(findTestObject('Common/link_unsafe'))
 WebUI.setText(findTestObject('Common/input_username'), GlobalVariable.userAdmin)
 
 WebUI.setText(findTestObject('Common/input_password'), GlobalVariable.passAdmin)
+
+WebUI.setText(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue') : 'captcha_login']), '123456')
 
 WebUI.click(findTestObject('Common/btn_DangNhap'))
 

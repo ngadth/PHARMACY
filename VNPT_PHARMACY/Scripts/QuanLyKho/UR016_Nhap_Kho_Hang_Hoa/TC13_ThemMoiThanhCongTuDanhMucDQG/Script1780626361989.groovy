@@ -85,11 +85,11 @@ WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators',
 
 WebUI.click(findTestObject('Object Repository/QuanLyKho/button_InsertFromDanhMucQuocGia'))
 
-WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Nhập từ khóa tìm kiếm']), 'Harcotin')
+WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Nhập từ khóa tìm kiếm']), 'Pharcoter')
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/QuanLyKho/select_DQG_textDynamicLocators', [('nameValue') : 'Harcotin']), 5)
+WebUI.waitForElementVisible(findTestObject('Object Repository/QuanLyKho/select_DQG_textDynamicLocators', [('nameValue') : 'Pharcoter']), 5)
 
-WebUI.click(findTestObject('Object Repository/QuanLyKho/select_DQG_textDynamicLocators', [('nameValue') : 'Harcotin']))
+WebUI.click(findTestObject('Object Repository/QuanLyKho/select_DQG_textDynamicLocators', [('nameValue') : 'Pharcoter']))
 
 WebUI.delay(2)
 
@@ -145,6 +145,8 @@ println(GlobalVariable.po_phieu_id)
 
 WebUI.click(findTestObject('QuanLyKho/icon_close'))
 
+WebUI.refresh()
+
 WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Mã phiếu nhập']), phieuID)
 
 WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Mã phiếu nhập']), Keys.chord(Keys.ENTER))
@@ -152,6 +154,8 @@ WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('
 String maPhieuCell = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Mã phiếu', 0, 'inputtbl')
 
 WebUI.verifyEqual(maPhieuCell, GlobalVariable.po_phieu_id)
+
+
 
 WebUI.mouseOver(findTestObject('Admin/Common/btn_action'))
 
@@ -163,7 +167,7 @@ WebUI.click(findTestObject('Common/option_aDynamicLocators', [('optionName') : '
 
 WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Xác nhận xóa phiếu nhập kho']), 3)
 
-WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('buttonName') : 'Xác nhận']))
+WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('buttonName') : 'Xác nhận xóa']))
 
 WebUI.delay(2)
 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC03_ValidateTextboxTheoTenKhachHang</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ecb627f1-a78f-4df2-8936-83147ae44eab</testCaseGuid>
+</TestCaseEntity>

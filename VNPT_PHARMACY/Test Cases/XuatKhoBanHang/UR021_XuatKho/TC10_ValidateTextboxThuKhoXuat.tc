@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC10_ValidateTextboxThuKhoXuat</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>05187197-11ee-4a92-88e2-9bb77be7f3bd</testCaseGuid>
+</TestCaseEntity>

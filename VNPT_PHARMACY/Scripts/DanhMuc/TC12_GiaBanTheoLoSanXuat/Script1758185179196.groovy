@@ -85,7 +85,7 @@ WebUI.click(findTestObject('XuatKhoBanHang/span_idDynamicLocators', [('idValue')
 
 WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'Duoc pham']))
 
-WebUI.setText(findTestObject('QuanLyKho/input_idDivDynamicLocators', [('idValue') : 'CBtiCytfDzo.']), 'Viagra')
+WebUI.setText(findTestObject('QuanLyKho/input_idDivDynamicLocators', [('idValue') : 'CBtiCytfDzo.']), 'Aclovia')
 
 WebUI.sendKeys(findTestObject('QuanLyKho/input_idDivDynamicLocators', [('idValue') : 'CBtiCytfDzo.']), Keys.chord(Keys.ENTER))
 

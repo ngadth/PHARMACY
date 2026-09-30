@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC03_ValidateDroplistKhoXuat</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2a48fb2d-9963-4db4-8afd-87cb4af1bc41</testCaseGuid>
+</TestCaseEntity>

@@ -43,10 +43,10 @@ WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Mở kh�
 
 WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators', [('text') : 'Mở khóa, reset mật khẩu người dùng']))
 
-WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Tên khách hàng']), 'erp test Pharmacy')
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Tên khách hàng',('index'):'1']), 'erp test Pharmacy')
 
 // Nhấn phím Enter tại ô input đó
-WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Tên khách hàng']), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Tên khách hàng',('index'):'1']), Keys.chord(Keys.ENTER))
 
 WebUI.mouseOver(findTestObject('Admin/KichHoatDichVu/MoKhoaReSet/hover_trangThai'))
 

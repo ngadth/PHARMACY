@@ -35,6 +35,14 @@ WebUI.click(findTestObject('CongNo/button_spaceTextDynamicLocators', [('buttonNa
 
 WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Sửa hàng hóa']), 5)
 
+WebUI.click(findTestObject('XuatKhoBanHang/span_idDynamicLocators', [('idValue') : 'select2-unit-container']))
+
+WebUI.setText(findTestObject('Common/input_search'), 'Viên')
+
+//WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'Viên']))
+WebUI.delay(0.5)
+WebUI.click(findTestObject('Common/li_idDynamicLocatorsContains', [('idValue') : 'select2-unit-result']))
+
 String tenHHUD = CustomKeywords.'libKeyWords.PageObject.randomString'('QWERTYUIASDFGHJKLZXCVBNM1234567890', 5)
 
 GlobalVariable.maKH = ('UDTenHHAuto_' + tenHHUD)
@@ -90,6 +98,9 @@ WebUI.delay(2)
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('buttonName') : 'Lưu']))
 
 WebUI.acceptAlert()
+
+WebUI.acceptAlert()
+
 
 WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Cập nhật thành công']), 10)
 

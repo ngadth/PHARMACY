@@ -237,15 +237,22 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'A'</initValue>
+      <initValue>'auto_thuoc'</initValue>
       <name>maSanPham</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Apitim'</initValue>
+      <initValue>'Acirax 400'</initValue>
       <name>sanPham</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>soPhieuXuat</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>

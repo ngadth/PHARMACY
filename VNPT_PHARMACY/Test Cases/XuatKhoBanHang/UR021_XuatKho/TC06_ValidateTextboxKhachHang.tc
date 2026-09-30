@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC06_ValidateTextboxKhachHang</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>9fbe4318-6345-482c-8b1f-46e1407bcf76</testCaseGuid>
+</TestCaseEntity>

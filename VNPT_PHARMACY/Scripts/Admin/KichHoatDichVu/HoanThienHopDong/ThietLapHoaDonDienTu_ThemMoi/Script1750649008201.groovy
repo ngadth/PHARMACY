@@ -40,10 +40,10 @@ CustomKeywords.'libKeyWords.PageObject.openSubmenu'('Kích hoạt dịch vụ', 
 WebUI.verifyElementVisible(findTestObject('Common/titlePage_bDynamicLocators',[('text'):'Hợp đồng sử dụng dịch vụ']))
 
 // Nhập text vào ô input
-WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Mã hợp đồng']), 'CLOUD_003635')
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Mã hợp đồng',('index'):'1']), 'CLOUD_003635')
 
 // Nhấn phím Enter tại ô input đó
-WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Mã hợp đồng']), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Mã hợp đồng',('index'):'1']), Keys.chord(Keys.ENTER))
 
 WebUI.delay(1)
 

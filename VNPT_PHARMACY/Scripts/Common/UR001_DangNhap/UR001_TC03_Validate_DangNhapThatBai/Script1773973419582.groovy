@@ -99,6 +99,8 @@ for(def tc: testCases) {
 	
 	WebUI.setText(findTestObject('Common/input_password'), tc.password)
 	
+	WebUI.setText(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue') : 'captcha_login']), '123456')
+	
 	WebUI.click(findTestObject('Common/btn_DangNhap'))
 	
 	WebUI.delay(3)

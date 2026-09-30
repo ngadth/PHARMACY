@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC13_ValidateTextboxDonViVanChuyen</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>15a12c09-ab56-454a-92ce-a76cf7a29575</testCaseGuid>
+</TestCaseEntity>
