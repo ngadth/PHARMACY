@@ -143,6 +143,7 @@ WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') 
 
 WebUI.click(findTestObject('QuanLyKho/icon_close'))
 
+WebUI.refresh()
 //BÁN HÀNG NHẬP KHO
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'XUẤT KHO/BÁN HÀNG']))
 
@@ -190,7 +191,7 @@ WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'Nhập k
 
 
 //XÓA PHIẾU NHẬP KHO
-
+WebUI.refresh()
 
 WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Mã phiếu nhập']), phieuID)
 

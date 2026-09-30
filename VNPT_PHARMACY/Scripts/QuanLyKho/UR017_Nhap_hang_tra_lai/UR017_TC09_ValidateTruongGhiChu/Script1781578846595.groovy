@@ -111,6 +111,8 @@ WebUI.verifyEqual(setGhiChuValue, ghiChuMixed, FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('QuanLyKho/icon_closeDynamicLocators', [('titleName') : 'Sửa phiếu nhập kho trả hàng']))
 
+WebUI.refresh()
+
 WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Mã phiếu nhập']), GlobalVariable.order_id)
 
 WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Mã phiếu nhập']), Keys.chord(Keys.ENTER))

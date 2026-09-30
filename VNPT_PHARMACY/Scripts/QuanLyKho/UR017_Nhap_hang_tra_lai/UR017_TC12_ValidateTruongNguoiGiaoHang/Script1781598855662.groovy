@@ -89,6 +89,8 @@ WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators',
 
 WebUI.click(findTestObject('QuanLyKho/icon_closeDynamicLocators', [('titleName') : 'Sửa phiếu nhập kho trả hàng']))
 
+WebUI.refresh()
+
 WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Mã phiếu nhập']), GlobalVariable.order_id)
 
 WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Mã phiếu nhập']), Keys.chord(Keys.ENTER))

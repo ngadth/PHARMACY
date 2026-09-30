@@ -64,6 +64,7 @@ WebUI.click(findTestObject('Common/link_unsafe'))
 WebUI.setText(findTestObject('Common/input_username'), GlobalVariable.userAdmin)
 
 WebUI.setText(findTestObject('Common/input_password'), GlobalVariable.passAdmin)
+WebUI.setText(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue') : 'captcha_login']), '123456')
 
 WebUI.click(findTestObject('Common/btn_DangNhap'))
 
@@ -281,6 +282,8 @@ WebUI.delay(2)
 //Xóa phiếu sau khi test
 WebUI.click(findTestObject('QuanLyKho/icon_closeDynamicLocators', [('titleName') : 'Sửa phiếu nhập kho trả hàng']))
 
+WebUI.refresh()
+
 WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Mã phiếu nhập']), GlobalVariable.order_id)
 
 WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Mã phiếu nhập']), Keys.chord(Keys.ENTER))
@@ -309,7 +312,7 @@ WebUI.click(findTestObject('Common/option_aDynamicLocators', [('optionName') : '
 
 WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Xác nhận xóa phiếu nhập kho']), 3)
 
-WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('buttonName') : 'Xác nhận']))
+WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('buttonName') : 'Xác nhận xóa']))
 
 WebUI.delay(2)
 

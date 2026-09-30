@@ -45,6 +45,7 @@ CustomKeywords.'libKeyWords.PageObject.openSubmenu'('DANH MỤC', 'Quầy thu/kh
 WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Thêm mới']))
 
 WebUI.delay(1)
+WebUI.waitForElementVisible(findTestObject('Object Repository/Common/noti_h4ThanhCong',[('text') : 'Thêm quầy thu']), 5)
 
 WebUI.click(findTestObject('Object Repository/DanhMuc/select_cuahang_themquaythu'))
 

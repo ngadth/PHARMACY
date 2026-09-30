@@ -28,6 +28,8 @@ WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName'
 
 WebUI.delay(1)
 
+WebUI.waitForElementVisible(findTestObject('Object Repository/Common/noti_h4ThanhCong',[('text') : 'Thêm quầy thu']), 5)
+
 WebUI.click(findTestObject('Object Repository/DanhMuc/select_cuahang_themquaythu'))
 
 WebUI.selectOptionByIndex(findTestObject('DanhMuc/select_cuahang_themquaythu'), 1)

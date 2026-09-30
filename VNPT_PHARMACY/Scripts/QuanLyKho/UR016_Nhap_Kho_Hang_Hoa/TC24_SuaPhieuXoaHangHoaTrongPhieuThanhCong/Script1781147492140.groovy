@@ -146,6 +146,8 @@ WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') 
 
 WebUI.click(findTestObject('QuanLyKho/icon_close'))
 
+WebUI.refresh()
+
 WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Mã phiếu nhập']), phieuID)
 
 WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Mã phiếu nhập']), Keys.chord(Keys.ENTER))

@@ -82,6 +82,7 @@ String savedThuKhoValue = WebUI.getAttribute(findTestObject('QuanLyKho/input_lab
 
 WebUI.verifyEqual(savedThuKhoValue, thuKhoValue, FailureHandling.STOP_ON_FAILURE)
 
+WebUI.refresh()
 WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Mã phiếu nhập']), GlobalVariable.order_id)
 
 WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Mã phiếu nhập']), Keys.chord(Keys.ENTER))

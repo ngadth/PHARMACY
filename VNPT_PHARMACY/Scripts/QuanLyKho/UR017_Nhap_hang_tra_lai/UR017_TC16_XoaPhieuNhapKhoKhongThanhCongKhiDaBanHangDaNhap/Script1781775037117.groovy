@@ -71,6 +71,8 @@ WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators',
 
 WebUI.click(findTestObject('QuanLyKho/icon_closeDynamicLocators', [('titleName') : 'Sửa phiếu nhập kho trả hàng']))
 
+WebUI.refresh()
+
 //BÁN HÀNG NHẬP KHO
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'XUẤT KHO/BÁN HÀNG']))
 
