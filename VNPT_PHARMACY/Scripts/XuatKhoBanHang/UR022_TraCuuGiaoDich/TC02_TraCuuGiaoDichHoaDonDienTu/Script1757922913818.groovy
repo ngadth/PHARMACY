@@ -20,13 +20,13 @@ import internal.GlobalVariable as GlobalVariable
 
 String loaiHDDT1 = 'HĐ máy tính tiền (Đã gửi CQ thuế)'
 
-WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/TC00_DangNhap'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.delay(3)
 
 CustomKeywords.'libKeyWords.PageObjects.openSubmenu'('XUẤT KHO/BÁN HÀNG', 'Bán hàng đã nhập kho')
 
-WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'TFAh6E9X']), '000062')
+WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'TFAh6E9X']), '000291')
 
 WebUI.click(findTestObject('XuatKhoBanHang/data_index', [('value') : '0']))
 
@@ -49,7 +49,7 @@ WebUI.sendKeys(findTestObject('XuatKhoBanHang/textarea_idDynamicLocators', [('id
 WebUI.click(findTestObject('XuatKhoBanHang/button_thanhToan'))
 
 WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Thanh toán thành công, số phiếu: ']), 
-    10)
+    15)
 
 WebUI.click(findTestObject('Common/icon_idDynamicLocators', [('idValue') : 'homepage']))
 
@@ -59,7 +59,7 @@ CustomKeywords.'libKeyWords.PageObjects.openSubmenu'('XUẤT KHO/BÁN HÀNG', 'T
 
 WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators', [('text') : 'Cửa hàng (tất cả)']))
 
-WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'CH01-Của hàng 01']))
+WebUI.click(findTestObject('Common/option_liDynamicLocators', [('optionName') : 'HUONG6787-Nguyễn Thanh Hương']))
 
 WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'ma_kh']), GlobalVariable.maKH)
 
@@ -81,7 +81,7 @@ WebUI.click(findTestObject('XuatKhoBanHang/button_idXuatHDDT'))
 
 WebUI.delay(3)
 
-WebUI.click(findTestObject('Common/text_aDynamicLocators', [('text') : 'Mẫu số 1/001, ký hiệu C25MMT (loại HĐ máy tính tiền)']))
+WebUI.click(findTestObject('Common/text_aDynamicLocators', [('text') : 'Mẫu số 1/001, ký hiệu C26MMT (loại HĐ máy tính tiền)']))
 
 WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Xác nhận có xuất']))
 

@@ -62,7 +62,7 @@ WebUI.assertElementVisible(findTestObject('Common/noti_h4ThanhCong',[('text'): '
 
 
 // Aziflam
-WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Loại HH',('index'):'1']), 'Aziflam')
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Loại HH',('index'):'1']), 'Acirax')
 
 WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators',[('text'):'Loại HH',('index'):'1']), Keys.ENTER.toString())
 
@@ -78,6 +78,6 @@ WebUI.delay(2)
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators',[('text'):'Hàng bán trong phiếu']))
 
-WebUI.verifyTextPresent('Aziflam', false)
+WebUI.verifyTextPresent('Acirax', false)
 
 

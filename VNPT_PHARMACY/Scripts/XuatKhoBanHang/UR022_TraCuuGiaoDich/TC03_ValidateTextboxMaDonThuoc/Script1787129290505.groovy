@@ -20,7 +20,7 @@ import internal.GlobalVariable as GlobalVariable
 
 //String status = 'Chưa đồng bộ'
 String status = 'Chưa LT'
-//WebUI.callTestCase(findTestCase('Admin/Common/TC01_DangNhap'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Admin/Common/TC01_DangNhap'), [:], FailureHandling.STOP_ON_FAILURE)
 //WebUI.callTestCase(findTestCase('XuatKhoBanHang/TC01_BanThuocTheoDon'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.delay(3)

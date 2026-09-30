@@ -52,8 +52,8 @@ String total = WebUI.getText(findTestObject('XuatKhoBanHang/td_ThanhTien'))
 assert total.replace(',', '').toInteger() == value.replace(',', '').toInteger()
 
 //mac dinh
-String value = WebUI.getAttribute(findTestObject('XuatKhoBanHang/textarea_idDynamicLocators',[('idValue'):'txtGhichu']), 'value')
-assert value.trim() == ''
+String ghiChuValue  = WebUI.getAttribute(findTestObject('XuatKhoBanHang/textarea_idDynamicLocators',[('idValue'):'txtGhichu']), 'value')
+assert ghiChuValue .trim() == ''
 
 String ghiChu = '$#%@#$gvsdf435\n $#%@#$gvsdf435\n $#%@#$gvsdf435\n'
 

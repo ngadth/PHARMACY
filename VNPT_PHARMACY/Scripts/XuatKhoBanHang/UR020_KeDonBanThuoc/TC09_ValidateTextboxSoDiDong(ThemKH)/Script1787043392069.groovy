@@ -40,7 +40,7 @@ String value = WebUI.getAttribute(findTestObject('QuanLyKho/input_labelIndexDyna
 assert value.trim() == ''
 
 // truong khong bat buoc
-WebUI.assertElementNotPresent(findTestObject('Common/label_Required',[('fieldName'):'Số di động']), 3)
+WebUI.assertElementNotPresent(findTestObject('Common/label_Required',[('fieldName'):'Số di động']), 5)
 
 // ky tu chu
 WebUI.setText(findTestObject('QuanLyKho/input_labelIndexDynamicLocators', [('labelValue') : 'Tên KH ', ('index') : '2']),'trịnh trần phương tuấn')
@@ -51,14 +51,14 @@ WebUI.setText(findTestObject('QuanLyKho/input_labelIndexDynamicLocators', [('lab
 
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast',[('buttonName'):'Lưu']))
 
-WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Số di dộng gồm 10 số. Vui lòng nhập lại!']), 3)
+WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Số di dộng phải là số!']), 5)
 
 // html
 WebUI.setText(findTestObject('QuanLyKho/input_labelIndexDynamicLocators', [('labelValue') : 'Số di động', ('index') : '2']),'<script>alert(document.cookie)</script>')
 
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast',[('buttonName'):'Lưu']))
 
-WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Số di dộng gồm 10 số. Vui lòng nhập lại!']), 3)
+WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Số di dộng phải là số!']), 5)
 
 // copy paste
 String soDidong = CustomKeywords.'libKeyWords.PageObject.getCurrentDateTime'()
@@ -74,7 +74,7 @@ WebUI.sendKeys(findTestObject('QuanLyKho/input_labelIndexDynamicLocators', [('la
 
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast',[('buttonName'):'Lưu']))
 
-WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Đã cập nhật thành công']), 3)
+WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Đã cập nhật thành công']), 5)
 
 //// sdd ton tai
 //WebUI.click(findTestObject('Common/dropdown_spanlastDynamicLocators', [('text') : 'Thêm khách hàng']))

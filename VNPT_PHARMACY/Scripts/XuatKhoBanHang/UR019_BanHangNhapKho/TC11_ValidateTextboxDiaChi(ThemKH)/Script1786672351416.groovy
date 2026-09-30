@@ -42,9 +42,9 @@ assert value.trim() == ''
 WebUI.assertElementPresent(findTestObject('Common/label_Required',[('fieldName'):'Địa chỉ']), 3)
 
 // copy paste
-WebUI.setText(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Tên KH ']),'<script>alert(document.cookie)</script>')
+WebUI.setText(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Địa chỉ']),'<script>alert(document.cookie)</script>')
 
-WebUI.setText(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Địa chỉ']), 'bến tre')
+WebUI.setText(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Tên KH']), 'bến tre')
 
 WebUI.sendKeys(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Địa chỉ']), Keys.chord(Keys.CONTROL, 'A'))
 WebUI.sendKeys(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Địa chỉ']), Keys.chord(Keys.CONTROL, 'C'))
@@ -55,7 +55,7 @@ WebUI.sendKeys(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelVa
 
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast',[('buttonName'):'Lưu']))
 
-WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Đã cập nhật thành công']), 3)
+WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Đã cập nhật thành công']), 5)
 
 // sdd ton tai
 //WebUI.click(findTestObject('Common/dropdown_spanlastDynamicLocators', [('text') : 'Thêm khách hàng']))

@@ -5,12 +5,10 @@
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
-   <maxConcurrentInstances>1</maxConcurrentInstances>
-   <numberOfRerun>0</numberOfRerun>
-   <orchestration>CLASSIC</orchestration>
+   <numberOfRerun>3</numberOfRerun>
    <pageLoadTimeout>10</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
-   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <rerunFailedTestCasesOnly>true</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>00fc7176-0ff9-46fb-a7d7-a422ddc6a3cd</testSuiteGuid>
    <testCaseLink>

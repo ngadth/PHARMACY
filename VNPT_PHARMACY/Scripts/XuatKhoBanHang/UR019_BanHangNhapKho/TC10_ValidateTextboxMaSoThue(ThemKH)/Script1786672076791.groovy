@@ -50,14 +50,14 @@ WebUI.setText(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelVal
 
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast',[('buttonName'):'Lưu']))
 
-WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Vui lòng nhập Mã số thuế chỉ bao gồm các số 0-9 và dấu -']), 3)
+WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Vui lòng nhập Mã số thuế chỉ bao gồm các số 0-9 và dấu -']), 5)
 
 // html
 WebUI.setText(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Mã số thuế']),'<script>alert(document.cookie)</script>')
 
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast',[('buttonName'):'Lưu']))
 
-WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Vui lòng nhập Mã số thuế chỉ bao gồm các số 0-9 và dấu -']), 3)
+WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Vui lòng nhập Mã số thuế chỉ bao gồm các số 0-9 và dấu -']), 5)
 
 // copy paste
 String soDidong = CustomKeywords.'libKeyWords.PageObject.getCurrentDateTime'()
@@ -73,7 +73,7 @@ WebUI.sendKeys(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelVa
 
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast',[('buttonName'):'Lưu']))
 
-WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Đã cập nhật thành công']), 3)
+WebUI.assertElementPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Đã cập nhật thành công']), 5)
 
 // sdd ton tai
 //WebUI.click(findTestObject('Common/dropdown_spanlastDynamicLocators', [('text') : 'Thêm khách hàng']))

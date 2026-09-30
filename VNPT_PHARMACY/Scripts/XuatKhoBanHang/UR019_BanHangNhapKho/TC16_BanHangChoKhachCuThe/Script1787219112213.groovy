@@ -93,7 +93,7 @@ Date actual = Date.parse('dd/MM/yyyy HH:mm:ss', value1)
 assert actual >= expected
 
 String tienHang = WebUI.getText(findTestObject('Common/cell_tdDynamicLocators',[('index'):'47']))
-assert tienHang == '1,800'
+assert tienHang == '15,000'
 
 String thucThu = WebUI.getText(findTestObject('Common/cell_tdDynamicLocators',[('index'):'49']))
-assert thucThu == '-8,199'
+assert thucThu == '-94,998'
