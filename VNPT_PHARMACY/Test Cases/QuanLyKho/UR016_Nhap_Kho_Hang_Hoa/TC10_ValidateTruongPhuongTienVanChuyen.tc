@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC10_ValidateTruongPhuongTienVanChuyen</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1d7cbef6-6b2d-53c9-c952-cf40c918387b</testCaseGuid>
+</TestCaseEntity>

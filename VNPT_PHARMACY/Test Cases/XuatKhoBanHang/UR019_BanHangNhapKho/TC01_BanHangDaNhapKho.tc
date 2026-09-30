@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC01_BanHangDaNhapKho</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1686cfdc-110a-4691-bff6-263e99c16674</testCaseGuid>
+</TestCaseEntity>

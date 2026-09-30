@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC03_ValidateTextboxMaDonThuoc</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>955ede5a-1f03-4540-ab95-ee0de6fa43e6</testCaseGuid>
+</TestCaseEntity>

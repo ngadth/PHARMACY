@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>UR017_TC11_ValidateTruongDonViVanChuyen</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e8b60237-30f5-45f0-9346-98ff6cbedd7b</testCaseGuid>
+</TestCaseEntity>

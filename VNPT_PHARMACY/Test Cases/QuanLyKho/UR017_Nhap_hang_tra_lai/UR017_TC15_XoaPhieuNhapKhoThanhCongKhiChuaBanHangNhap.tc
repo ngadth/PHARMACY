@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>UR017_TC15_XoaPhieuNhapKhoThanhCongKhiChuaBanHangNhap</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8e46986f-e3f6-4394-ae3b-01c8b03d05ff</testCaseGuid>
+</TestCaseEntity>

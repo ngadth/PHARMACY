@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC06_ValidateTextboxTongKhuyenMai</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ee1f458d-f73c-4951-a3da-db42066c723d</testCaseGuid>
+</TestCaseEntity>

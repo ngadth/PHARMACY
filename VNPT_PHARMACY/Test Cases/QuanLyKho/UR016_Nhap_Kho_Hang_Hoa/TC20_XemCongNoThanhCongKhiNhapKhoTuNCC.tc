@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC20_XemCongNoThanhCongKhiNhapKhoTuNCC</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>fa9ef48e-9671-417b-a26f-34323032919c</testCaseGuid>
+</TestCaseEntity>

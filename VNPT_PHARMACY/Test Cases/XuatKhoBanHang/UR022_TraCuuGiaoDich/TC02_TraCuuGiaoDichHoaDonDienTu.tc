@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC02_TraCuuGiaoDichHoaDonDienTu</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>170cfa71-a666-4075-9468-0285d8c9f05c</testCaseGuid>
+</TestCaseEntity>

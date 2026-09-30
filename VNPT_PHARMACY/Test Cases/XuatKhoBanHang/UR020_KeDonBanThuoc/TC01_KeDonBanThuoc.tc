@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC01_KeDonBanThuoc</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a77899da-8cbb-42a3-9eed-7b8b412d58f7</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>UR018_TC09_ValidateLapPhieuGhiChu</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>6bca6901-edae-4a1d-8976-ed5a8b55c3ed</testCaseGuid>
+</TestCaseEntity>

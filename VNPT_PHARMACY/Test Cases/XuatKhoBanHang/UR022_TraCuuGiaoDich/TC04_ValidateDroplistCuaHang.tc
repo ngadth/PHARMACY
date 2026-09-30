@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC04_ValidateDroplistCuaHang</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1e1d4b55-9985-498c-ab54-521b369d7562</testCaseGuid>
+</TestCaseEntity>

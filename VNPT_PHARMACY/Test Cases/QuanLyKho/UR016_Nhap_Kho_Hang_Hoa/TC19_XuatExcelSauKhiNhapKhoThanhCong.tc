@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC19_XuatExcelSauKhiNhapKhoThanhCong</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>74d39655-368b-4cc1-bbb9-27950a990b36</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC02_BaoCaoBanThuocTheoDon_XuatExcel</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>5a2911be-0870-4df3-81d2-ba7086237c1b</testCaseGuid>
+</TestCaseEntity>

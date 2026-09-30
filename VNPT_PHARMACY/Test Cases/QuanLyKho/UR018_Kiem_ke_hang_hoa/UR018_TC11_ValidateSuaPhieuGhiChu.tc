@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>UR018_TC11_ValidateSuaPhieuGhiChu</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ab966657-94ca-48b7-9ebd-e0fc20e8b164</testCaseGuid>
+</TestCaseEntity>

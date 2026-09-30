@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC02_PhaiThuKhachHang</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e0d05e09-3b93-4045-8d40-ede9c7b856fc</testCaseGuid>
+</TestCaseEntity>

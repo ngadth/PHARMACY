@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC06_ValidateTruongEmail</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8b9f0c1e-5f2a-6d3b-9e4c-7f5a6b8c9d0e</testCaseGuid>
+</TestCaseEntity>

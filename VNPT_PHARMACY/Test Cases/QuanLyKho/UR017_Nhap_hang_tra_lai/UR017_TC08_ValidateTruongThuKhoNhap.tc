@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>UR017_TC08_ValidateTruongThuKhoNhap</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>dd7aaa28-52ac-4548-9abd-c91872e96531</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC05_BangKeHoaDonNhap_TraCuu</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>08794981-086e-41f7-bae3-0043f98724f8</testCaseGuid>
+</TestCaseEntity>

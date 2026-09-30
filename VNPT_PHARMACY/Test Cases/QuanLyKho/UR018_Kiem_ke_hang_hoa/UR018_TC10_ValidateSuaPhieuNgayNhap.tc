@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>UR018_TC10_ValidateSuaPhieuNgayNhap</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>38513b06-e40d-44db-90f8-82aa5a819ab9</testCaseGuid>
+</TestCaseEntity>

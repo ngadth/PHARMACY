@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC14_ValidateHetHanKhac</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>028452f1-9ec9-411c-a6bb-97361b8bebd6</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC09_ValidateTextboxNgayThucHien</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>336c8fd9-48b6-4c8c-b4c1-f67f1150d95b</testCaseGuid>
+</TestCaseEntity>

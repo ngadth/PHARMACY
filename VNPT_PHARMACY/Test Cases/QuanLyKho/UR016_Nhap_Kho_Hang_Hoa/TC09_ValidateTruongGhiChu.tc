@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC09_ValidateTruongGhiChu</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>0c6beef5-5a1c-42b8-b941-be39b817376a</testCaseGuid>
+</TestCaseEntity>

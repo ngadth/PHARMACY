@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC17_QuanLyDanhMucBacSi</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>88ac94b7-8e7a-4b56-84c4-214c15aed368</testCaseGuid>
+</TestCaseEntity>

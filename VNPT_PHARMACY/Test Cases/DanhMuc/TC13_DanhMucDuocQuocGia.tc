@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC13_DanhMucDuocQuocGia</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>9bdcb51e-d5e3-4b39-8554-fe3b0f87a965</testCaseGuid>
+</TestCaseEntity>

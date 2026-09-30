@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Tạo mới khách hàng thành công khi nhập đầy đủ các trường thông tin</description>
+   <name>TC10_ThemMoiNhapDuCacTruong</name>
+   <tag></tag>
+   <comment>&#xd;
+   </comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>00000000-0000-0000-0000-000000000010</testCaseGuid>
+</TestCaseEntity>

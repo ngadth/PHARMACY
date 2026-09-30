@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>UR001_TC02_Validate_DangNhapThanhCong</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>590292c4-bd05-4102-a9de-3f550bb0d62a</testCaseGuid>
+</TestCaseEntity>

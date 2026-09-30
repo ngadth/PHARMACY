@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC01_NhapKhoThanhCong</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>bf59a51f-70e3-46c7-84e9-38e2ce31d8fb</testCaseGuid>
+</TestCaseEntity>

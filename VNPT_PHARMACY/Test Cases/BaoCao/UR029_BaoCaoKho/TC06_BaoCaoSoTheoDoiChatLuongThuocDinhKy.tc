@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC06_BaoCaoSoTheoDoiChatLuongThuocDinhKy</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>eae85094-455f-413f-81d2-04331288545a</testCaseGuid>
+</TestCaseEntity>

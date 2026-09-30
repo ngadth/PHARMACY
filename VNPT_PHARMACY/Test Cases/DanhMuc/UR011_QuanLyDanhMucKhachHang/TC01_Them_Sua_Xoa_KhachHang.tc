@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC01_Them_Sua_Xoa_KhachHang</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>f068cd0b-e3f8-42b7-a376-ca5a4af2b0e4</testCaseGuid>
+</TestCaseEntity>

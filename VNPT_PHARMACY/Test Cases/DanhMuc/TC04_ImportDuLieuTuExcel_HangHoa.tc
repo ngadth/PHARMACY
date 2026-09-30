@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC04_ImportDuLieuTuExcel_HangHoa</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c1fd838b-40e6-4daf-96a9-2e1916c702b0</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC04_LichSuGiaoDichVoiNCC</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d808990b-68b0-420f-a624-2656d409e617</testCaseGuid>
+</TestCaseEntity>

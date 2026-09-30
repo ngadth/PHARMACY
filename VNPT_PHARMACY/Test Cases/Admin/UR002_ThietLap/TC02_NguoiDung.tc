@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC02_NguoiDung</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>3f952f13-a9d4-4c04-862b-fc3a3b3bf9ba</testCaseGuid>
+</TestCaseEntity>

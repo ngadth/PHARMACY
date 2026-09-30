@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC07_ValidateTruongSoHoaDon</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>0bb84233-3be7-461e-aab2-c388b2e67b0c</testCaseGuid>
+</TestCaseEntity>

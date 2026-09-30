@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC02_TraCuuTonKho_XuatExcel</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b5be6ab5-6519-4bbe-b9c3-b6aa6286a4e1</testCaseGuid>
+</TestCaseEntity>

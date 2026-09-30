@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC03_ValidateTextboxNgayBan</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d72ee535-70a1-4d86-9cff-860242e163c7</testCaseGuid>
+</TestCaseEntity>

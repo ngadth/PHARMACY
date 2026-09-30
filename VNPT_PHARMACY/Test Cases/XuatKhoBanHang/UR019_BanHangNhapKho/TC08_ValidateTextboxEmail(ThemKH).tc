@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC08_ValidateTextboxEmail(ThemKH)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>465a94b4-1729-41c2-b96e-b748d3fbab12</testCaseGuid>
+</TestCaseEntity>

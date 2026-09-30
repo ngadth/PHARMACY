@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC01_BaoCaoBanHangTH_TraCuu</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>af02095e-f1ed-4575-9670-6d37b04de56b</testCaseGuid>
+</TestCaseEntity>

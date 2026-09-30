@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>UR017_TC03_TimKiemKhongCoDuLieu</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>417130e8-86f7-4873-8dd0-fd390017ba60</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>UR001_TC03_Validate_DangNhapThatBai</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1e5281e0-e364-4722-b56b-944ae6d404a0</testCaseGuid>
+</TestCaseEntity>

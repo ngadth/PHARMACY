@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC03_QuanLyNhietDoDoAmNhaThuoc</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>cfd3215a-7d64-48c0-98e3-b35110775369</testCaseGuid>
+</TestCaseEntity>

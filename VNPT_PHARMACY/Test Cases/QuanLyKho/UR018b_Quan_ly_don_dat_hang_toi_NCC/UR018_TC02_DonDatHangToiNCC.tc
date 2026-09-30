@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>UR018_TC02_DonDatHangToiNCC</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e78087de-e3ce-4add-8fe7-13638f0b1ff6</testCaseGuid>
+</TestCaseEntity>

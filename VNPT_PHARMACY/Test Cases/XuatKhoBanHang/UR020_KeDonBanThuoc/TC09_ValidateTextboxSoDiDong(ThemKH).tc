@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC09_ValidateTextboxSoDiDong(ThemKH)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ecf40e24-0c90-4906-abb1-4fe84a4586c7</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC08_QuanLyChuongTrinhTichDiem</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>7c42e2b5-12d7-4f5a-a4c4-570dfea58726</testCaseGuid>
+</TestCaseEntity>

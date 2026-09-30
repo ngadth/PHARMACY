@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC09_ValidateSoTTTrongQuyen</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c4e2f8a3-1d06-5c3b-9f72-2b3c4d5e6f78</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Validate các trường bắt buộc khi thêm hàng hóa trong danh mục dược quốc gia khi lập phiếu nhập kho</description>
+   <name>TC14_ValidateCacTruongBatBuocDMDuocQuocGia</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8271e4fa-3af9-5cd3-c397-g1g719155326</testCaseGuid>
+</TestCaseEntity>

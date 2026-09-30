@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC16_ValidateTextboxLoaiSPHangChiTiet</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>6acd82e5-5008-48bf-b4df-03df235fac70</testCaseGuid>
+</TestCaseEntity>

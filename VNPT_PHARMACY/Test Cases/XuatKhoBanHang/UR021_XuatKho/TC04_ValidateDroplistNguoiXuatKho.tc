@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC04_ValidateDroplistNguoiXuatKho</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>eb8b05e1-4c37-4f90-9957-18d013ff8b49</testCaseGuid>
+</TestCaseEntity>

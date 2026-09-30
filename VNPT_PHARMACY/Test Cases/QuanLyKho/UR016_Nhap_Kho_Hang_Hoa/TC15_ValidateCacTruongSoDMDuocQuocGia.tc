@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Validate các trường số không được nhập quá 15 ký tự khi thêm hàng hóa từ danh mục dược quốc gia</description>
+   <name>TC15_ValidateCacTruongSoDMDuocQuocGia</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2f6dfb4e-41d8-4fe4-b6f5-0d69029cb6c1</testCaseGuid>
+</TestCaseEntity>

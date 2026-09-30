@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC00_DangNhap</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>325fe671-1974-49bd-9f80-3b567fe61c4d</testCaseGuid>
+</TestCaseEntity>
