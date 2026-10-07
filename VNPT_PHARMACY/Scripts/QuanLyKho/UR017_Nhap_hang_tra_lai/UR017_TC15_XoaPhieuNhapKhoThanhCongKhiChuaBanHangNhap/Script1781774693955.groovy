@@ -64,6 +64,8 @@ WebUI.click(findTestObject('Common/checkbox_nameDynamicLocators', [('nameValue')
 
 WebUI.click(findTestObject('XuatKhoBanHang/button_lastDynamicLocators', [('buttonName') : 'Nhập kho']))
 
+WebUI.acceptAlert(FailureHandling.OPTIONAL)
+
 WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Nhập kho thành công!']), 5)
 
 WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Sửa phiếu nhập kho trả hàng']), 5)
