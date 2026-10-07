@@ -74,5 +74,9 @@ if (WebUI.verifyElementPresent(dynamicObject2, 5, FailureHandling.OPTIONAL)) {
 }
 
 BigDecimal slTon2 = new BigDecimal(WebUI.getText(findTestObject('XuatKhoBanHang/td_tonKho')).trim())
-
-assert slTon2 == slTon - 1
+WebUI.delay(10)
+if (slTon < 1) {
+	assert slTon2 == slTon
+	}
+else { assert slTon2 == slTon - 1}
+	

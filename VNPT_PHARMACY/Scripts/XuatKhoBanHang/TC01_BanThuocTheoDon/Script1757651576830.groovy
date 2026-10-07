@@ -60,6 +60,8 @@ WebUI.delay(3)
 
 WebUI.click(findTestObject('XuatKhoBanHang/button_thanhToan'))
 
+WebUI.refresh()
+
 WebUI.click(findTestObject('Common/icon_idDynamicLocators', [('idValue') : 'homepage']))
 
 WebUI.delay(3)

@@ -74,6 +74,7 @@ WebUI.delay(3)
 
 //KÊ ĐƠN BÁN THUỐC
 //WebUI.delay(5)
+WebUI.verifyElementPresent(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), 2, FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
 WebUI.click(findTestObject('Common/menu_aDynamicLocators', [('text') : 'XUẤT KHO/BÁN HÀNG']))
 

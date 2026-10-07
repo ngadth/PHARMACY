@@ -21,11 +21,11 @@ WebUI.callTestCase(findTestCase('Admin/Common/TC01_DangNhap'), [:], FailureHandl
 
 CustomKeywords.'libKeyWords.PageObject.openSubmenu'('THIẾT LẬP', 'Người dùng')
 
-WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'txtUSERID']), GlobalVariable.username)
+WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'txtUSERID']), GlobalVariable.userAdmin)
 
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'txtUSERID']), Keys.chord(Keys.ENTER))
 
-String value = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Tên truy cập', 0, 'userListTable')
+String value = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Tên truy cập', 1, 'userListTable')
 
-WebUI.verifyEqual(value, GlobalVariable.username)
+WebUI.verifyEqual(value, GlobalVariable.userAdmin)
 
