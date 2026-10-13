@@ -34,9 +34,9 @@ WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName'
 WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Tra cứu giao dịch cần nhập kho trả hàng']), 
     5)
 
-WebUI.click(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']))
+//WebUI.click(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']))
 
-WebUI.selectOptionByIndex(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']), 0)
+//WebUI.selectOptionByValue(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']), '6', false)
 
 String currentDate = CustomKeywords.'libKeyWords.PageObject.getCurrentDate'()
 

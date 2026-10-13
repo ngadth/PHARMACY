@@ -146,8 +146,8 @@ WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName'
 WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Tra cứu giao dịch cần nhập kho trả hàng']),
 	5)
 
-WebUI.click(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']))
-WebUI.selectOptionByIndex(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']), 0)
+//WebUI.click(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']))
+//WebUI.selectOptionByIndex(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'khoxuat']), 0)
 
 String currentDate = CustomKeywords.'libKeyWords.PageObject.getCurrentDate'()
 
@@ -202,6 +202,8 @@ GlobalVariable.order_id = soPhieu
 CustomKeywords.'libKeyWords.PageObject.deleteFilesWithPrefixStartEnd'(pathFileDownload, startName, endName)
 
 //Xuất file
+WebUI.scrollToElement(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Xuất Excel']), 5)
+
 WebUI.click(findTestObject('Object Repository/Common/button_buttonDynamicLocators', [('buttonName') : 'Xuất Excel']))
 
 WebUI.click(findTestObject('Object Repository/QuanLyKho/li_aTextDynamicLocators', [('textValue') : 'Xuất phiếu nhập kho']))

@@ -68,10 +68,10 @@ String nghValue = 'Giao123'
 WebUI.waitForElementVisible(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Người giao hàng']), 10)
 WebUI.click(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Người giao hàng']), FailureHandling.OPTIONAL)
 WebUI.sendKeys(findTestObject('QuanLyKho/input_labelDynamicLocators', [('labelValue') : 'Người giao hàng']), nghValue)
-
+WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong',[('text'):'Sửa phiếu nhập kho']), 5)
 WebUI.click(findTestObject('XuatKhoBanHang/button_lastDynamicLocators', [('buttonName') : 'Lưu']))
 
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'TFAh6E9X3yxl6B1e43o.']), GlobalVariable.maSanPham)
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Tìm loại hàng theo mã, tên, từ khóa (F3)', ('index'):'1']), GlobalVariable.maSanPham)
 
 TestObject dynamicObject = findTestObject('XuatKhoBanHang/data_index', [('value') : '0'])
 

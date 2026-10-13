@@ -128,11 +128,11 @@ WebUI.click(findTestObject('Common/li_idDynamicLocatorsContains', [('idValue') :
 
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('buttonName') : 'Lưu']))
 
-WebUI.delay(3)
+WebUI.waitForAlert(5)
+
 WebUI.acceptAlert()
-//WebUI.delay(3)
-//
-//WebUI.acceptAlert()
+
+WebUI.acceptAlert()
 
 
 WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Cập nhật thành công']), 10)

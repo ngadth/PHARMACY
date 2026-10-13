@@ -139,7 +139,8 @@ GlobalVariable.po_phieu_id = phieuID
 
 println(GlobalVariable.po_phieu_id)
 
-WebUI.isElementClickable(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('buttonName') : 'Lưu thông tin phiếu']), 5)
+//WebUI.isElementClickable(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('buttonName') : 'Lưu thông tin phiếu']), 5)
+WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong',[('text'):'Sửa phiếu nhập kho']), 5)
 
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('buttonName') : 'Lưu thông tin phiếu']))
 
