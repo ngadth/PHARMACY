@@ -84,7 +84,7 @@ WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('button
 
 WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Thêm mới khách hàng thành công']), 5)
 
-WebUI.delay(1)
+WebUI.refresh()
 
 WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Thêm mới']))
 

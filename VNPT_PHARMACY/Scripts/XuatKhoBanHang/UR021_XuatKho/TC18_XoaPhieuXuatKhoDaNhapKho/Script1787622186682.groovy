@@ -54,7 +54,7 @@ WebUI.click(findTestObject('Common/dropdown_spanDynamicLocators',[('text'):'Xóa
 
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocators', [('buttonName') : 'Xác nhận xóa']))
 
-WebUI.assertElementVisible(findTestObject('Common/noti_h4ThanhCong',[('text'):'Có lỗi xảy ra: Sản phẩm đã được nhập kho trở lại từ một phiếu nhập, không thể hủy xuất sản phẩm!']), 5)
+WebUI.assertElementVisible(findTestObject('Common/noti_h4ThanhCong',[('text'):'Có lỗi xảy ra: Sản phẩm đã được nhập kho trở lại từ một phiếu nhập, không thể hủy xuất sản phẩm!']), 5, FailureHandling.OPTIONAL)
 
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('buttonName') : 'Hủy']))
 

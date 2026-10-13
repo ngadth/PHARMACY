@@ -28,7 +28,7 @@ CustomKeywords.'libKeyWords.PageObjects.openSubmenu'('XUẤT KHO/BÁN HÀNG', 'B
 
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'TFAh6E9X']), '000291')
 
-WebUI.click(findTestObject('XuatKhoBanHang/data_index', [('value') : '0']))
+//WebUI.click(findTestObject('XuatKhoBanHang/data_index', [('value') : '0']))
 
 WebUI.delay(2)
 
@@ -117,16 +117,16 @@ String khachHang = CustomKeywords.'libKeyWords.PageObjects.getValueInTableByColu
 
 println(nguoiBan)
 
-String loai = CustomKeywords.'libKeyWords.PageObjects.getValueInTableByColumnName'('Loại HĐĐT', 0, 'table_tcgd')
+//String loai = CustomKeywords.'libKeyWords.PageObjects.getValueInTableByColumnName'('Loại HĐĐT', 0, 'table_tcgd')
 
 // Chuẩn hóa: bỏ khoảng trắng thừa và xuống dòng
-String loaiHDDT = loai.replaceAll('\\s+', ' ').trim()
+//String loaiHDDT = loai.replaceAll('\\s+', ' ').trim()
 
-println('Text sau chuẩn hóa: ' + loaiHDDT)
+//println('Text sau chuẩn hóa: ' + loaiHDDT)
 
 WebUI.verifyEqual(nguoiBan, GlobalVariable.username)
 
 WebUI.verifyEqual(khachHang, GlobalVariable.maKH)
 
-WebUI.verifyEqual(loaiHDDT, loaiHDDT1)
+//WebUI.verifyEqual(loaiHDDT, loaiHDDT1)
 

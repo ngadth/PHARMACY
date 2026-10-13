@@ -130,9 +130,9 @@ WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('button
 
 WebUI.delay(3)
 WebUI.acceptAlert()
-WebUI.delay(3)
-
-WebUI.acceptAlert()
+//WebUI.delay(3)
+//
+//WebUI.acceptAlert()
 
 
 WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Cập nhật thành công']), 10)

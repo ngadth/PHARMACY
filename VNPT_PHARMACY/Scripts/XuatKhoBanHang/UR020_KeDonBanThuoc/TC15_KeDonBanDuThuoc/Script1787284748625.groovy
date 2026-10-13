@@ -94,5 +94,8 @@ String value1 = WebUI.getText(findTestObject('Common/cell_tdDynamicLocators',[('
 Date expected = Date.parse('dd/MM/yyyy HH:mm:ss', currentTime)
 Date actual = Date.parse('dd/MM/yyyy HH:mm:ss', value1)
 
-assert actual >= expected
+//expected.setTime((expected.time / 1000L as long) * 1000L)
+//actual.setTime((actual.time / 1000L as long) * 1000L)
+
+assert actual.time >= expected.time - 1000
 

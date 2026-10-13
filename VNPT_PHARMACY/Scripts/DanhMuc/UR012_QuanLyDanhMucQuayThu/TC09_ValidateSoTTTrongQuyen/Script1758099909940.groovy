@@ -42,6 +42,7 @@ WebUI.delay(3)
 CustomKeywords.'libKeyWords.PageObject.openSubmenu'('DANH MỤC', 'Quầy thu/kho')
 
 /* ===== Case 1: Số TT trong quyển không phải là trường bắt buộc => tạo mới thành công ===== */
+WebUI.refresh()
 WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Thêm mới']))
 
 WebUI.delay(1)
