@@ -205,6 +205,7 @@ CustomKeywords.'libKeyWords.PageObject.deleteFilesWithPrefixStartEnd'(pathFileDo
 WebUI.scrollToElement(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Xuất Excel']), 5)
 
 WebUI.click(findTestObject('Object Repository/Common/button_buttonDynamicLocators', [('buttonName') : 'Xuất Excel']))
+//WebUI.executeJavaScript("arguments[0].click()", Arrays.asList(WebUI.findWebElement(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Xuất Excel']), 10)))
 
 WebUI.click(findTestObject('Object Repository/QuanLyKho/li_aTextDynamicLocators', [('textValue') : 'Xuất phiếu nhập kho']))
 

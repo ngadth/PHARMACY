@@ -6,12 +6,11 @@
    <elementGuidId>65047108-57a4-402d-915c-749ebafcf5f3</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//table[@id='eiNewPtbl']//tbody//input[contains(@class,'number p-none qtt')]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//table[@id='eiNewPtbl']//tbody//input[contains(@class,'p-none qtt')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -26,11 +26,11 @@ CustomKeywords.'libKeyWords.PageObject.openSubmenu'('THIẾT LẬP', 'Khai báo 
 WebUI.waitForElementVisible(findTestObject('XuatKhoBanHang/text_bDynamicLocators', [('text') : 'Khai báo tham số hệ thống']), 
     5)
 
-WebUI.scrollToElement(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'cbbPROMOTION_VAT_INPUT44']), 
-    5)
+WebUI.delay(20)
 
-WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'cbbPROMOTION_VAT_INPUT44']), 
-    'Có', false)
+WebUI.scrollToElement(findTestObject('QuanLyKho/select_labelOptionDynamicLocators', [('labelValue') : 'Quản lý chiết khấu và thuế suất trong nhập kho', ('valueName') : 'co']), 5)
+
+WebUI.selectOptionByValue(findTestObject('QuanLyKho/select_labelDynamicLocators', [('labelValue') : 'Quản lý chiết khấu và thuế suất trong nhập kho']), 'co', false)
 
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('buttonName') : 'Cập nhật']))
 

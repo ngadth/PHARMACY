@@ -38,9 +38,9 @@ WebUI.setText(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue'
 
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('buttonName') : 'Lưu']))
 
-WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'CB9w4O..']), GlobalVariable.maDonHang)
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Mô tả chi tiết',('index'):'1']), GlobalVariable.maDonHang)
 
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'CB9w4O..']), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Mô tả chi tiết',('index'):'1']), Keys.chord(Keys.ENTER))
 
 WebUI.delay(1)
 
@@ -61,7 +61,7 @@ String sXuatUD = CustomKeywords.'libKeyWords.PageObject.randomString'('QWERTYUIA
 
 GlobalVariable.maDonHang = ('UDGiaAuto_' + sXuatUD)
 
-WebUI.setText(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue') : 'CB9w4A9b5Ebw']), GlobalVariable.maDonHang)
+WebUI.setText(findTestObject('QuanLyKho/input_labelIndexDynamicLocators', [('labelValue') : 'Mô tả chi tiết',('index'):'2']), GlobalVariable.maDonHang)
 
 WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsLast', [('buttonName') : 'Lưu']))
 
@@ -69,9 +69,9 @@ WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') 
 
 WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : '4yXf53Ph6Etx5EnV6BO.']), inputValue)
 
-WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'CB9w4O..']), GlobalVariable.maDonHang)
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Mô tả chi tiết',('index'):'1']), GlobalVariable.maDonHang)
 
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'CB9w4O..']), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Mô tả chi tiết',('index'):'1']), Keys.chord(Keys.ENTER))
 
 WebUI.delay(2)
 
@@ -103,9 +103,9 @@ WebUI.click(findTestObject('QuanLyKho/icon_closeDynamicLocators', [('titleName')
 
 WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : '4yXf53Ph6Etx5EnV6BO.']), inputValue)
 
-WebUI.setText(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'CB9w4O..']), GlobalVariable.maDonHang)
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Mô tả chi tiết',('index'):'1']), GlobalVariable.maDonHang)
 
-WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') : 'CB9w4O..']), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Mô tả chi tiết',('index'):'1']), Keys.chord(Keys.ENTER))
 
 WebUI.delay(2)
 
