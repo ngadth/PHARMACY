@@ -28,9 +28,8 @@ CustomKeywords.'libKeyWords.PageObject.openSubmenu'('QUẢN LÝ KHO', 'Đơn đ�
 WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : ' Thêm mới']))
 
 WebUI.waitForElementVisible(findTestObject('Admin/Common/text_hDynamicLocators', [('text') : 'Lập đơn đặt hàng']), 5)
-
-WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : '4yHYPE9kTcbV5Etw6Etk5m..']), 
-    'SHOP6-CH 6', false)
+WebUI.delay(20)
+WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : '4yHYPE9kTcbV5Etw6Etk5m..']), 'SHOP6-CH 6', false)
 
 WebUI.selectOptionByLabel(findTestObject('Common/dropdown_selectDynamicLocators', [('idValue') : 'cbbNhacungung']), '001_NT Gia Huy', 
     false)

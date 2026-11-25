@@ -99,7 +99,7 @@ if (WebUI.verifyElementPresent(dynamicObject, 5, FailureHandling.OPTIONAL)) {
     println('Không tìm thấy element có value = 0 → bỏ qua')
 }
 
-WebUI.delay(30)
+WebUI.delay(2)
 
 WebUI.setText(findTestObject('QuanLyKho/input_soLuongNhapKho'), '2')
 

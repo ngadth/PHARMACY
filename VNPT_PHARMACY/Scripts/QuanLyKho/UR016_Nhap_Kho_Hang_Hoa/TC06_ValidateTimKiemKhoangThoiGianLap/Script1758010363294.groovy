@@ -38,6 +38,8 @@ WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('
 
 WebUI.sendKeys(findTestObject('QuanLyKho/search_placeholderDynamicLocators', [('placeholderValue') : 'Khoảng thời gian lập']), Keys.chord(Keys.ENTER))
 
+WebUI.delay(2)
+
 WebUI.verifyElementNotPresent(findTestObject('Common/text_tdDynamicLocators', [('text') : 'Không có dữ liệu']), 5)
 
 String maPhieuCell = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Mã phiếu', 0, 'inputtbl')

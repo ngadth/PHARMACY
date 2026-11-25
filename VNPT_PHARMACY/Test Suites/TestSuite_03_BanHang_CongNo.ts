@@ -54,52 +54,10 @@
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>d2517af2-c631-4c89-9dfc-ec28d6a64e23</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/XuatKhoBanHang/UR019_BanHangNhapKho/TC07_ValidateTextboxTenKhachHang(ThemKH)</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>e993465b-b965-4c0a-85fc-1cd19ecc4046</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/XuatKhoBanHang/UR019_BanHangNhapKho/TC08_ValidateTextboxEmail(ThemKH)</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>5e5045a9-0411-4026-9852-290dedd55bb1</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/XuatKhoBanHang/UR019_BanHangNhapKho/TC09_ValidateTextboxSoDiDong(ThemKH)</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>066a91c6-269f-4b2d-a551-e667a33aa0f6</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/XuatKhoBanHang/UR019_BanHangNhapKho/TC10_ValidateTextboxMaSoThue(ThemKH)</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>8a235352-930c-47a0-924d-8c8d8ef2be5d</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/XuatKhoBanHang/UR019_BanHangNhapKho/TC11_ValidateTextboxDiaChi(ThemKH)</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
       <guid>23296a67-7923-42b2-8ec6-d5d8a5d42c9d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/XuatKhoBanHang/UR019_BanHangNhapKho/TC12_ValidateQuayThu</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>99947a53-369b-44de-a7f2-8099eef3ee7e</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/XuatKhoBanHang/UR019_BanHangNhapKho/TC13_ValidateHetHanTatCa</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
@@ -166,41 +124,6 @@
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>15c5aac0-9c61-4b29-ba5f-cb031207c12e</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/XuatKhoBanHang/UR020_KeDonBanThuoc/TC07_ValidateTextboxTenKhachHang(ThemKH)</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>e428a00a-cef0-44d1-aa1e-a88ea5c8a52e</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/XuatKhoBanHang/UR020_KeDonBanThuoc/TC08_ValidateTextboxEmail(ThemKH)</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>b33dd985-7f3d-4258-993a-3ee5cae57e36</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/XuatKhoBanHang/UR020_KeDonBanThuoc/TC09_ValidateTextboxSoDiDong(ThemKH)</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>a5b58e6d-f9d0-4630-bf0e-2e65c0946306</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/XuatKhoBanHang/UR020_KeDonBanThuoc/TC10_ValidateTextboxMaSoThue(ThemKH)</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>f7d770a7-7b2c-4a86-a45a-af15ed6b6f62</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/XuatKhoBanHang/UR020_KeDonBanThuoc/TC11_ValidateTextboxDiaChi(ThemKH)</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
       <guid>f5669a4a-7c09-4696-8137-7ca68cc1d803</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -233,13 +156,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/XuatKhoBanHang/UR020_KeDonBanThuoc/TC16_KeDonBanThieuThuoc</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>0e2e5e62-cb71-4d55-9cdf-09be81e31d55</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/XuatKhoBanHang/UR021_XuatKho/TC01_XuatKho</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
@@ -355,59 +271,10 @@
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>106268b2-bbbd-4eb6-affb-5d51cd9c5c91</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/XuatKhoBanHang/UR021_XuatKho/TC18_XoaPhieuXuatKhoDaNhapKho</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>82cac7d0-a4ad-4316-9432-51c96b8530f8</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/XuatKhoBanHang/UR021_XuatKho/TC19_XuatKhoMoi</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>8cb00472-8a85-4775-a8d3-252b10ae9fc4</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/XuatKhoBanHang/UR021_XuatKho/TC20_PhieuXuatKhoaVaMoKhoa</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>7c6bab57-82a6-4218-98aa-32acd5f8d392</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/XuatKhoBanHang/UR022_TraCuuGiaoDich/TC01_TraCuuGiaoDich</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>1f905dd5-d493-4fbf-b8ca-9d1fe5f9acca</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/XuatKhoBanHang/UR022_TraCuuGiaoDich/TC02_TraCuuGiaoDichHoaDonDienTu</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
       <guid>f088cd47-9546-4653-b2ee-c43b43a90dfc</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/XuatKhoBanHang/UR022_TraCuuGiaoDich/TC03_ValidateTextboxMaDonThuoc</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>d35e93b1-60ec-401c-a057-5be1254b7ccc</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/XuatKhoBanHang/UR022_TraCuuGiaoDich/TC04_ValidateDroplistCuaHang</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>542d9957-076d-4c74-b8af-a044215b72a2</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/XuatKhoBanHang/UR022_TraCuuGiaoDich/TC05_ValidateTextboxLoaiHangHoa</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
@@ -450,20 +317,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/XuatKhoBanHang/UR022_TraCuuGiaoDich/TC11_TimKiemGiaoDichBanHang</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>68e1a759-cd0c-48d1-8d48-79b6f8231ac9</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/XuatKhoBanHang/UR022_TraCuuGiaoDich/TC12_HuyBanHang</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>f591fb76-5c77-4159-8fef-386b0b3925aa</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/XuatKhoBanHang/UR022_TraCuuGiaoDich/TC13_XoaBanHang</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>

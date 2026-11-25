@@ -52,8 +52,10 @@ for (def tc : testCases) {
 
     WebUI.click(findTestObject('Common/btn_DangNhap'))
 	
-	
+	WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Mã OTP', ('index'):'1']), '123456')
 
+	WebUI.click(findTestObject('Common/btn_DangNhap'))
+	
     WebUI.delay(3)
 
     // verify lỗi

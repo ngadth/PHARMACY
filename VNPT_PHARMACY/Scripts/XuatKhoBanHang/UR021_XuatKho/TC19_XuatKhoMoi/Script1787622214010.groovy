@@ -101,6 +101,8 @@ WebUI.sendKeys(findTestObject('XuatKhoBanHang/input_tenKhachHang', [('idValue') 
 
 String value = WebUI.executeJavaScript("return document.evaluate('(//tbody/tr/td)[2]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.innerText", null)
 
+WebUI.delay(2)
+
 assert value.trim() == soPhieuXuat
 
 GlobalVariable.soPhieuXuat = soPhieuXuat

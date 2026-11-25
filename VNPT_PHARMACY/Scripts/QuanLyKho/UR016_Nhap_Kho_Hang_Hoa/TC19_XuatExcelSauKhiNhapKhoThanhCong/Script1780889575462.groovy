@@ -70,6 +70,10 @@ WebUI.setText(findTestObject('Admin/Common/input_idDynamicLocators', [('idValue'
 
 WebUI.click(findTestObject('Common/btn_DangNhap'))
 
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Mã OTP', ('index'):'1']), '123456')
+
+WebUI.click(findTestObject('Common/btn_DangNhap'))
+
 WebUI.waitForElementVisible(findTestObject('Common/logo_vnpt'), GlobalVariable.timeout)
 
 WebUI.delay(3)

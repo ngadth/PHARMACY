@@ -70,7 +70,7 @@ WebUI.click(findTestObject('QuanLyKho/button_textDynamicLocatorsFirst', [('butto
 
 WebUI.waitForElementVisible(findTestObject('Common/noti_h4ThanhCong', [('text') : 'Thực hiện thành công!']), 10)
 
-WebUI.delay(3)
+WebUI.delay(300)
 
 String soPhieuID = WebUI.getText(findTestObject('QuanLyKho/get_labelDynamicLocators', [('labelValue') : 'Số phiếu']))
 
@@ -104,6 +104,8 @@ WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators', [('idValue') : '
 String soPhieuXuat = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Số phiếu xuất', 0, 'outputtbl')
 
 String soLuongCell = CustomKeywords.'libKeyWords.PageObject.getValueInTableByColumnName'('Số lượng xuất', 0, 'outputtbl')
+
+WebUI.delay(2)
 
 WebUI.verifyEqual(soPhieuXuat, GlobalVariable.phieuban_id)
 

@@ -5,9 +5,7 @@
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
-   <maxConcurrentInstances>1</maxConcurrentInstances>
    <numberOfRerun>0</numberOfRerun>
-   <orchestration>CLASSIC</orchestration>
    <pageLoadTimeout>10</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
@@ -18,13 +16,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/QuanLyKho/UR016_Nhap_Kho_Hang_Hoa/TC00_NhapKho</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>5fc1d930-1bb9-49fd-a88d-95133a1aebba</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/QuanLyKho/UR016_Nhap_Kho_Hang_Hoa/TC01_NhapKhoThanhCong</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
@@ -56,24 +47,10 @@
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>72eed13f-551e-4168-ad77-8579469f1d74</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/QuanLyKho/UR016_Nhap_Kho_Hang_Hoa/TC06_ValidateTimKiemKhoangThoiGianLap</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
       <guid>ffe53316-f75f-4a50-9de1-6b0ad8183773</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/QuanLyKho/UR016_Nhap_Kho_Hang_Hoa/TC07_ValidateTruongSoHoaDon</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>8e00fe97-0bf7-417c-9964-155320333867</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/QuanLyKho/UR016_Nhap_Kho_Hang_Hoa/TC08_ValidateTruongThuKhoNhap</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
@@ -147,20 +124,6 @@
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>5e0f9e18-bc28-487f-af7c-d97e6b16b10d</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/QuanLyKho/UR016_Nhap_Kho_Hang_Hoa/TC19_XuatExcelSauKhiNhapKhoThanhCong</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>27954d5e-008e-4b68-975b-28b5b97f9f11</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/QuanLyKho/UR016_Nhap_Kho_Hang_Hoa/TC20_XemCongNoThanhCongKhiNhapKhoTuNCC</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
       <guid>9d05a615-689b-4712-b9ac-59e5e647d8d2</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -189,20 +152,6 @@
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>b5a49b6a-dc41-4c26-8a8b-978f4eab21d4</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/QuanLyKho/UR016_Nhap_Kho_Hang_Hoa/TC25_NhapKhoTheoPhieuXuatKho</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>0c48b809-f1fa-46b5-9910-71e2a603bf71</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/QuanLyKho/UR017_Nhap_hang_tra_lai/UR017_TC01_NhapHangTraLai</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
       <guid>d7faf420-6acb-4fdc-9dac-5b6bfd78b8a8</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -214,13 +163,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/QuanLyKho/UR017_Nhap_hang_tra_lai/UR017_TC03_TimKiemKhongCoDuLieu</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>10e79db6-a7e4-40d4-9059-84411ffbc464</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/QuanLyKho/UR017_Nhap_hang_tra_lai/UR017_TC04_TimKiemThanhCong</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
@@ -280,24 +222,10 @@
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>aa6f2859-a491-4c4f-8330-b9b00aee8666</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/QuanLyKho/UR017_Nhap_hang_tra_lai/UR017_TC13_XuatExcelSauKhiNhapKhoThanhCong</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
       <guid>5a5798cf-614a-446c-9f08-1c6bc9cee15b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/QuanLyKho/UR017_Nhap_hang_tra_lai/UR017_TC14_XemCongNoThanhCong</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>f03ae579-4236-406c-8508-0b6efbddb22b</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/QuanLyKho/UR017_Nhap_hang_tra_lai/UR017_TC15_XoaPhieuNhapKhoThanhCongKhiChuaBanHangNhap</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
@@ -382,20 +310,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/QuanLyKho/UR018_Kiem_ke_hang_hoa/UR018_TC11_ValidateSuaPhieuGhiChu</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>e29848db-7954-4ceb-b4d2-0cc788890396</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/QuanLyKho/UR018b_Quan_ly_don_dat_hang_toi_NCC/UR018_TC02_DonDatHangToiNCC</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>6e7eff34-b3bd-407c-8387-08f5d044a74d</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/QuanLyKho/UR018b_Quan_ly_don_dat_hang_toi_NCC/UR018_TC03_XuatTraHangNCC</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>
