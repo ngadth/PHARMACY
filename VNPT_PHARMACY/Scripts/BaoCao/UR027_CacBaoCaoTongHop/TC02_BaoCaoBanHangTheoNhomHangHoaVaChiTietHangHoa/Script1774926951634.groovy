@@ -70,6 +70,10 @@ WebUI.setText(findTestObject('Common/input_password'), GlobalVariable.passAdmin)
 
 WebUI.click(findTestObject('Common/btn_DangNhap'))
 
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Mã OTP', ('index'):'1']), '123456')
+
+WebUI.click(findTestObject('Common/btn_DangNhap'))
+
 WebUI.waitForElementVisible(findTestObject('Common/logo_vnpt'), GlobalVariable.timeout)
 WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 
@@ -101,6 +105,8 @@ String currentDate = CustomKeywords.'libKeyWords.PageObject.getCurrentDate'()
 
 String date = ('08/09/2026' + ' - ') + currentDate
 
+WebUI.delay(2)
+
 WebUI.click(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'searchDate']))
 
 WebUI.setText(findTestObject('Common/input_idDynamicLocators', [('idValue') : 'searchDate']), date)
@@ -115,6 +121,8 @@ WebUI.delay(2)
 
 //Xóa file
 CustomKeywords.'libKeyWords.PageObject.deleteFilesWithPrefixStartEnd'(pathFileDownload, startName, endName)
+
+WebUI.delay(2)
 
 // Tải file
 WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Xuất Excel']))

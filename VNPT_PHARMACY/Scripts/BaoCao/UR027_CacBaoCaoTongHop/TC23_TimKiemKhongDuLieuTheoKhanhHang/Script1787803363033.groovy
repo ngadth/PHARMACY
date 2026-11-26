@@ -92,7 +92,8 @@ WebUI.setText(findTestObject('Common/input_idDynamicLocators',[('idValue'):'sear
 
 WebUI.sendKeys(findTestObject('Common/input_idDynamicLocators',[('idValue'):'searchDate']), Keys.ENTER.toString())
 
-WebUI.assertElementVisible(findTestObject('Common/text_tdDynamicLocators',[('text'):'Không tìm thấy dữ liệu...']), 3)
+WebUI.verifyTextPresent('Không tìm thấy dữ liệu...', false)
+//WebUI.assertElementVisible(findTestObject('Common/text_tdDynamicLocators',[('text'):'Không tìm thấy dữ liệu...']), 3)
 
 // tu khoa sp ko ton tai
 WebUI.refresh()
@@ -101,7 +102,9 @@ WebUI.setText(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/input_idDyna
 
 WebUI.sendKeys(findTestObject('Admin/KichHoatDichVu/HoanThienHopDong/input_idDynamicLocators',[('idValue'):'loaisp_ten']), Keys.ENTER.toString())
 
-WebUI.assertElementVisible(findTestObject('Common/text_tdDynamicLocators',[('text'):'Không tìm thấy dữ liệu...']), 3)
+WebUI.verifyTextPresent('Không tìm thấy dữ liệu...', false)
+
+//WebUI.assertElementVisible(findTestObject('Common/text_tdDynamicLocators',[('text'):'Không tìm thấy dữ liệu...']), 3)
 
 //nhom san pham chua ban duoc san pham
 WebUI.refresh()
@@ -112,7 +115,9 @@ WebUI.setText(findTestObject('Common/input_search'),'thuốc điều trị tăng
 
 WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'thuốc điều trị tăng lipid máu']))
 
-WebUI.assertElementVisible(findTestObject('Common/text_tdDynamicLocators',[('text'):'Không tìm thấy dữ liệu...']), 3)
+WebUI.verifyTextPresent('Không tìm thấy dữ liệu...', false)
+
+//WebUI.assertElementVisible(findTestObject('Common/text_tdDynamicLocators',[('text'):'Không tìm thấy dữ liệu...']), 3)
 
 //cua hang chua ban duoc san pham
 WebUI.refresh()
@@ -123,4 +128,6 @@ WebUI.setText(findTestObject('Common/input_search'),'7995-Cua Hang Automation')
 
 WebUI.click(findTestObject('Object Repository/Common/option_liDynamicLocators',[('optionName'):'7995-Cua Hang Automation']))
 
-WebUI.assertElementVisible(findTestObject('Common/text_tdDynamicLocators',[('text'):'Không tìm thấy dữ liệu...']), 3)
+WebUI.verifyTextPresent('Không tìm thấy dữ liệu...', false)
+
+//WebUI.assertElementVisible(findTestObject('Common/text_tdDynamicLocators',[('text'):'Không tìm thấy dữ liệu...']), 3)

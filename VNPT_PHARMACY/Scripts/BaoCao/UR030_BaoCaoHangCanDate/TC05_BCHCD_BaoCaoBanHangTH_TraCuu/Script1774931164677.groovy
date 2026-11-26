@@ -22,7 +22,7 @@ String columnTable = 'Nhóm hàng hoá;Mã hàng;Tên hàng;Đơn vị tính;S�
 //String date = ('29/05/2023' + ' - ') + '29/05/2023'
 
 //String loaiSanPham = 'Penaciline'
-String loaiSanPham = 'Pharcoter'
+String loaiSanPham = 'HaiNM_Test'
 WebUI.callTestCase(findTestCase('Common/UR001_DangNhap/UR001_TC01_DangNhapThanhCong'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 WebUI.delay(2)
@@ -73,6 +73,8 @@ String[] subStr = columnTable.split(';')
 for (int i = 0; i < subStr.length; i++) {
     WebUI.verifyElementPresent(findTestObject('Common/text_thDynamicLocators', [('text') : subStr[i]]), 10)
 }
+
+WebUI.delay(1)
 
 loaiSP = WebUI.getText(findTestObject('Common/cell_tdDynamicLocators', [('index') : '3']))
 

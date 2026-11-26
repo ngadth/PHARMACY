@@ -69,6 +69,10 @@ WebUI.setText(findTestObject('Common/input_password'), GlobalVariable.passAdmin)
 
 WebUI.click(findTestObject('Common/btn_DangNhap'))
 
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Mã OTP', ('index'):'1']), '123456')
+
+WebUI.click(findTestObject('Common/btn_DangNhap'))
+
 WebUI.waitForElementVisible(findTestObject('Common/logo_vnpt'), GlobalVariable.timeout)
 WebUI.verifyElementVisible(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more']), FailureHandling.OPTIONAL) ? WebUI.click(findTestObject('Common/li_idDynamicLocators', [('idValue') : 'more'])) : null
 

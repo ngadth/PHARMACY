@@ -25,7 +25,7 @@ import java.nio.file.*
 
 //String date = ('29/05/2023' + ' - ') + '29/05/2023'
 
-String loaiSanPham = 'Pharcoter'
+String loaiSanPham = 'Omega Sheng'
 
 String dirName = RunConfiguration.getProjectDir()
 
@@ -68,6 +68,10 @@ WebUI.click(findTestObject('Common/link_unsafe'))
 WebUI.setText(findTestObject('Common/input_username'), GlobalVariable.userAdmin)
 
 WebUI.setText(findTestObject('Common/input_password'), GlobalVariable.passAdmin)
+
+WebUI.click(findTestObject('Common/btn_DangNhap'))
+
+WebUI.setText(findTestObject('Common/input_placeholderDynamicLocators', [('text') : 'Mã OTP', ('index'):'1']), '123456')
 
 WebUI.click(findTestObject('Common/btn_DangNhap'))
 
@@ -116,7 +120,7 @@ CustomKeywords.'libKeyWords.PageObject.deleteFilesWithPrefixStartEnd'(pathFileDo
 // Tải file
 WebUI.click(findTestObject('Common/button_buttonDynamicLocators', [('buttonName') : 'Xuất Excel']))
 
-WebUI.delay(10)
+WebUI.delay(1)
 
 // Kiểm tra file đã được tải về
 CustomKeywords.'libKeyWords.PageObject.checkFileDownloadedStartEnd'(pathFileDownload, startName, endName)

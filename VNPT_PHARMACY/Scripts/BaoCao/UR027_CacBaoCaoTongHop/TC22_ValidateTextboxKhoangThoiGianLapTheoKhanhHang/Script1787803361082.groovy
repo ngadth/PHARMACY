@@ -140,7 +140,7 @@ for (int i = 0; i < invalidDate.size(); i++) {
 	
 }
 
-WebUI.delay(2)
+WebUI.waitForElementNotPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Định dạng ngày tháng không hợp lệ!']), 10)
 
 // ngay thang hop le
 def validDate = [
@@ -172,6 +172,8 @@ for (int i = 0; i < validDate.size(); i++) {
 	WebUI.verifyElementNotPresent(findTestObject('Common/noti_h4ThanhCong',[('text'):'Định dạng ngày tháng không hợp lệ!']), 3)
 	
 }
+
+WebUI.delay(5)
 
 WebUI.setText(findTestObject('Common/input_idDynamicLocators',[('idValue'):'searchDate']),'12/02/2019 - 01/02/2019')
 
